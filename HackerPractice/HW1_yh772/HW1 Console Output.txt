@@ -1,0 +1,185 @@
+/** Last Update: 02/10/2018; Author: Yuan He (yh772); Platform: Eclipse, Java8 */
+
+Hacker Practice HW1 Console Outputs:
+
+#### HP1: ###################################################################
+  
+    Roots of f1:
+    0.0
+    -1.0000000000000001E23
+
+    Roots of f2:
+    -1.0
+    -Infinity
+    
+   
+#### HP2: ###################################################################
+  
+    double-Result 1 = Infinity
+    double-Result 2 = NaN
+    Exception in thread "main" java.lang.ArithmeticException: / by zero
+	  at HP2.main(HP2.java:13)
+    
+    
+#### HP3: ###################################################################
+  
+    //When factorial primitive type is int:
+    2 2
+    3 6
+    4 24
+    5 120
+    6 720
+    7 5040
+    8 40320
+    9 362880
+    10 3628800
+    11 39916800
+    12 479001600
+    13 1932053504
+    14 1278945280
+    15 2004310016
+    16 2004189184
+    17 -288522240
+    18 -898433024
+    19 109641728
+    20 5482086
+    19 288530
+    18 16029
+    17 942
+    16 58
+    15 3
+    14 0
+    13 0
+    12 0
+    11 0
+    10 0
+    9 0
+    8 0
+    7 0
+    6 0
+    5 0
+    4 0
+    3 0
+    2 0
+    
+    //When factorial primitive type is int:
+    2 2
+    3 6
+    4 24
+    5 120
+    6 720
+    7 5040
+    8 40320
+    9 362880
+    10 3628800
+    11 39916800
+    12 479001600
+    13 6227020800
+    14 87178291200
+    15 1307674368000
+    16 20922789888000
+    17 355687428096000
+    18 6402373705728000
+    19 121645100408832000
+    20 6082255020441600
+    19 320118685286400
+    18 17784371404800
+    17 1046139494400
+    16 65383718400
+    15 4358914560
+    14 311351040
+    13 23950080
+    12 1995840
+    11 181440
+    10 18144
+    9 2016
+    8 252
+    7 36
+    6 6
+    5 1
+    4 0
+    3 0
+    2 0
+
+
+#### HP4: ###################################################################
+  
+    1.0 isPositiveZero? false
+    1.0 isNegativeZero? false
+    1.0 isNINF? false
+    1.0 isINF? false
+    1.0 isNaN? false
+
+    -1.0 isPositiveZero? false
+    -1.0 isNegativeZero? false
+    -1.0 isNINF? false
+    -1.0 isINF? false
+    -1.0 isNaN? false
+
+    1.7976931348623157E308 isPositiveZero? false
+    1.7976931348623157E308 isNegativeZero? false
+    1.7976931348623157E308 isNINF? false
+    1.7976931348623157E308 isINF? false
+    1.7976931348623157E308 isNaN? false
+
+    -1.7976931348623157E308 isPositiveZero? false
+    -1.7976931348623157E308 isNegativeZero? false
+    -1.7976931348623157E308 isNINF? false
+    -1.7976931348623157E308 isINF? false
+    -1.7976931348623157E308 isNaN? false
+
+    0.0 isPositiveZero? true
+    0.0 isNegativeZero? false
+    0.0 isNINF? false
+    0.0 isINF? false
+    0.0 isNaN? false
+
+    -0.0 isPositiveZero? false
+    -0.0 isNegativeZero? true
+    -0.0 isNINF? false
+    -0.0 isINF? false
+    -0.0 isNaN? false
+
+    Infinity isPositiveZero? false
+    Infinity isNegativeZero? false
+    Infinity isNINF? false
+    Infinity isINF? true
+    Infinity isNaN? false
+
+    -Infinity isPositiveZero? false
+    -Infinity isNegativeZero? false
+    -Infinity isNINF? true
+    -Infinity isINF? false
+    -Infinity isNaN? false
+
+    NaN isPositiveZero? false
+    NaN isNegativeZero? false
+    NaN isNINF? false
+    NaN isINF? false
+    NaN isNaN? false
+
+
+#### HP5: ###################################################################
+
+    1.234567890123456E-308
+    1.234567890123457E-309
+    1.23456789012346E-310
+    1.2345678901233E-311
+    1.234567890124E-312
+    1.2345678901E-313
+    1.23456789E-314
+    1.23456789E-315
+    1.2345679E-316
+    1.234568E-317
+    1.234566E-318
+    1.23457E-319
+    1.2347E-320
+    1.235E-321
+    1.24E-322
+    1.0E-323
+    0.0
+    0.0
+    0.0
+
+    Another implementation of testing the existence of gradual underflow:
+    (1.0 * 10^-320) - (2.0 * 10^-320) != 0 ?  true
