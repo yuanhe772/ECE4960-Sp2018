@@ -22,14 +22,6 @@ public class HP3 {
 		return Math.abs((3-x));
 	}
 
-//	private static double err3(double x, double h) {
-//		return 3*h*x;
-//	}
-//
-//	private static double err4(double x, double h) {
-//		return 6*h*x;
-//	}
-
 	private static double A(double x, double h) {
 		return (f(x+h)-f(x)) / h;
 	}
