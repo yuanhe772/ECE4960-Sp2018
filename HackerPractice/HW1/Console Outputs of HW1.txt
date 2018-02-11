@@ -1,3 +1,5 @@
+/** Last Update: 02/10/2018; Author: Yuan He (yh772); Platform: Eclipse, Java8 */
+
 Hacker Practice HW1 Console Outputs:
 
 #### HP1: ###################################################################
