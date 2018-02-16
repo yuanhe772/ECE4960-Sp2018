@@ -19,7 +19,7 @@ public class Pi {
 		for(double n=0; n<10000; n++) {
 			if(prev != pi) {
 
-				if(n%2==1)
+				if(n%5==1)
 					Main.fileChaseFW("second-level.txt","\nn = " + n + "   pi_first_half = " + pi);
 			}
 			else {

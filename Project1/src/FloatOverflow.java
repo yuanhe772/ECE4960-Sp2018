@@ -15,7 +15,7 @@ public class FloatOverflow {
 		Main.fileChaseFW("second-level.txt","\n\nOUTPUT: ");
 
 		while(f!=(f/weight)) {
-			if(n%2 == 0)
+			if(n%7 == 3)
 				Main.fileChaseFW("second-level.txt", "\nn = " + n + "   " + "float number= " + f);
 			prev = f;
 			f = f*weight;

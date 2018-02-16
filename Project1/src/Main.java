@@ -14,20 +14,20 @@ public class Main {
 		// Experiments
 
 		//1.
-		fileChaseFW("second-level.txt","\n\n\n\n\n1. Integer overflow:");
+		fileChaseFW("second-level.txt","\n\n1. Integer overflow:");
 		IntOverflow.factorial();
 
 		//2.
-		fileChaseFW("second-level.txt","\n\n\n\n\n2. Integer / 0:");
+		fileChaseFW("second-level.txt","\n\n2. Integer / 0:");
 		IntDivided0.intDivided0();
 
 		//3.
-		fileChaseFW("second-level.txt","\n\n\n\n\n3. Single-precision float Overflow:");
+		fileChaseFW("second-level.txt","\n\n3. Single-precision float Overflow:");
 		FloatOverflow.multiply10();
 		FloatOverflow.floatIncrement();
 
 		//4.
-		fileChaseFW("second-level.txt","\n\n\n\n\n4. INF and NINF operations:");
+		fileChaseFW("second-level.txt","\n\n4. INF and NINF operations:");
 		FloatINF.generateINF();
 		FloatINF.divideINF();
 		FloatINF.sinINF();
@@ -36,24 +36,24 @@ public class Main {
 		FloatINF.interactINF();
 
 		//5.
-		fileChaseFW("second-level.txt","\n\n\n\n\n5. NaN operations:");
+		fileChaseFW("second-level.txt","\n\n5. NaN operations:");
 		NaN.generateNaN();
 		NaN.propagateNaN();
 		NaN.interactNaN();
 
 		//6.
-		fileChaseFW("second-level.txt","\n\n\n\n\n6. Signed 0 operations:");
+		fileChaseFW("second-level.txt","\n\n6. Signed 0 operations:");
 		Signed0.check0();
 		Signed0.log0();
 		Signed0.sinx_x();
 
 		//7.
-		fileChaseFW("second-level.txt","\n\n\n\n\n7. Gradual Overflow:");
+		fileChaseFW("second-level.txt","\n\n7. Gradual Overflow:");
 		Gradual.generateXY();
 		Gradual.sinx_x();
 
 		//8.
-		fileChaseFW("second-level.txt","\n\n\n\n\n*8.  Pi with more than 30 digits: ");
+		fileChaseFW("second-level.txt","\n\n*8.  Pi with more than 30 digits: ");
 		fileChaseFW("second-level.txt","\n\n  Therefore,  Pi with more than 30 digits = " + Pi.pi());
 	}
 

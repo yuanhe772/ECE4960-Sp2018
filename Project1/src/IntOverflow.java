@@ -8,7 +8,7 @@ public class IntOverflow {
 			int i = 1, factorial = 1;
 			Main.fileChaseFW("Second-level.txt","\n\nOUTPUT:" );
 			while(IntOverflow.help_fact(i, factorial) ==0 ) {
-				if(i%2 == 0)
+				if(i%4 == 0)
 					Main.fileChaseFW("second-level.txt","\n i = " + i + "   factorial = " + factorial);
 				i++;
 				factorial = factorial * i;
