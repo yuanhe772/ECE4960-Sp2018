@@ -7,7 +7,7 @@
 </br>    
     
 ********Only imported one package******
-</br>  Only imported "java.io.*" for the purpose of streaming out the auto-reports.
+</br>  Only imported package of "java.io.*" for the purpose of streaming out the auto-generated reports.
 </br>
 </br>
 </br>
