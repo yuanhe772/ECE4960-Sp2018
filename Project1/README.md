@@ -15,6 +15,6 @@
 ********Tips on how to read the 1st and 2nd level reports******
 </br>  For the purpose of increasing the readability of the reports:
 </br>
-</br>  Violated behaviors' ouptputs such as ArithmeticExceptions, concept errors(creating a incorrect +0 for instance), and overflows are marked with *** . 
+</br>  Violated behaviors' ouptputs such as ArithmeticExceptions, concept errors(creating an incorrect +0 for instance), and overflows are marked with *** . 
 </br>
 </br>  The outputs of additional application (Pi with 30 digits) is marked with *.
