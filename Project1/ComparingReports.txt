@@ -1,4 +1,4 @@
 I wrote the project on MacOS (64bits), using IDE of Eclipse - Java8. 
 The project was also run on Windows (64bits), with command-line prompt terminal (javac, java to run the scripts).
 
-After running on both of these two OSes with the exact same code, the reports generated respectively have the exact same result as well (it could have been that I imported only java.io*).
+After running on both of these two OSes with the exact same code, the reports generated respectively have the exact same results as well (It could have been that I imported only java.io* for this project, which is a very basic and common package for every JDK environment. Therefore the behavior between these two OSes doesn't deviate, and the poratablility is quite well in this case).
