@@ -4,13 +4,13 @@
 </br>  The other one class is the main class, providing entry for the entire project, calling functions in other 8 classes to instantiate  exception handling behaviors stated by the handout. The main class also automatically generated two reports.
 </br>
 </br>
-    
+</br>    
     
 **********Only imported one package******
 </br>  Only imported "java.io.*" for the purpose of streaming out the auto-reports.
 </br>
 </br>
-
+</br>
 
 **********Tips on how to read the 1st and 2nd level reports******
 </br>  For the purpose of increasing the readability of the reports:
