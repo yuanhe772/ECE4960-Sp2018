@@ -1,56 +1,30 @@
 Second Level Report
 
-
-
-
 1. Integer overflow:
 
 OUTPUT:
- i = 2   factorial = 2
  i = 4   factorial = 24
- i = 6   factorial = 720
  i = 8   factorial = 40320
- i = 10   factorial = 3628800
  i = 12   factorial = 479001600
 
 CONCLUSION:
 ***with factorial calculation, overflow occurs at: n=13, factorial = 1932053504
-
-
-
 
 2. Integer / 0:
 
 OUTPUT: 
 ***trying with 1/0, the Exception was caught as: ArithmeticException: / by zero
 
-
-
-
 3. Single-precision float Overflow:
 
 3.1 Single-precision float multiplying 10^n: 
 
 OUTPUT: 
-n = 0   float number= 1.2345678
-n = 2   float number= 123.45677
-n = 4   float number= 12345.678
-n = 6   float number= 1234567.8
-n = 8   float number= 1.23456784E8
+n = 3   float number= 1234.5677
 n = 10   float number= 1.23456778E10
-n = 12   float number= 1.23456782E12
-n = 14   float number= 1.2345678E14
-n = 16   float number= 1.23456784E16
-n = 18   float number= 1.2345678E18
-n = 20   float number= 1.2345678E20
-n = 22   float number= 1.2345678E22
+n = 17   float number= 1.23456782E17
 n = 24   float number= 1.2345678E24
-n = 26   float number= 1.2345678E26
-n = 28   float number= 1.2345678E28
-n = 30   float number= 1.2345678E30
-n = 32   float number= 1.2345678E32
-n = 34   float number= 1.2345678E34
-n = 36   float number= 1.2345678E36
+n = 31   float number= 1.2345679E31
 n = 38   float number= 1.2345678E38
 
 CONCLUSION:
@@ -61,9 +35,6 @@ CONCLUSION:
 
 CONCLUSION:
 *** Float.MAX_VALUE incrementing with 1, overflows when it stops incrementing, float number = 3.4028235E38
-
-
-
 
 4. INF and NINF operations:
 
@@ -121,9 +92,6 @@ INF * 0 = NaN
 CONCLUSION:
  INF || NINF interaction: comply with expectation, correct
 
-
-
-
 5. NaN operations:
 
 5.1
@@ -150,9 +118,6 @@ NaN * 0 = NaN
 CONCLLUSION:
  Interactions with NaN are still NaN, correct
 
-
-
-
 6. Signed 0 operations:
 
 6.1
@@ -174,9 +139,6 @@ sin(-0)/|-0| = NaN
 
 CONCLUSION:
  sin(-0)/0, sin(+0)/0, sin(-0)/|-0| are all NaN, correct
-
-
-
 
 7. Gradual Overflow:
 
@@ -210,17 +172,11 @@ x = 1.4E-45    sin(1.2345..*x)/x = 1.23456789012345
 CONCLLUSION:
 When normalized smallest single-precision float divided by 10^n, denormalized bottom is 1.4E-45
 
-
-
-
 *8.  Pi with more than 30 digits: 
 
 Process of generating the first half of pi:
 n = 1.0   pi_first_half = 3.1333333333333333
-n = 3.0   pi_first_half = 3.1415873903465816
-n = 5.0   pi_first_half = 3.1415926454603365
-n = 7.0   pi_first_half = 3.141592653572881
-n = 9.0   pi_first_half = 3.1415926535897523
+n = 6.0   pi_first_half = 3.141592653228088
 n = 11.0   pi_first_half = 3.141592653589793
 As soon as the first half stops changing, the first half is generated, as: 3.141592653589793
 
