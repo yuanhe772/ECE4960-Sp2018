@@ -1,0 +1,231 @@
+Second Level Report
+
+
+
+
+1. Integer overflow:
+
+OUTPUT:
+ i = 2   factorial = 2
+ i = 4   factorial = 24
+ i = 6   factorial = 720
+ i = 8   factorial = 40320
+ i = 10   factorial = 3628800
+ i = 12   factorial = 479001600
+
+CONCLUSION:
+***with factorial calculation, overflow occurs at: n=13, factorial = 1932053504
+
+
+
+
+2. Integer / 0:
+
+OUTPUT: 
+***trying with 1/0, the Exception was caught as: ArithmeticException: / by zero
+
+
+
+
+3. Single-precision float Overflow:
+
+3.1 Single-precision float multiplying 10^n: 
+
+OUTPUT: 
+n = 0   float number= 1.2345678
+n = 2   float number= 123.45677
+n = 4   float number= 12345.678
+n = 6   float number= 1234567.8
+n = 8   float number= 1.23456784E8
+n = 10   float number= 1.23456778E10
+n = 12   float number= 1.23456782E12
+n = 14   float number= 1.2345678E14
+n = 16   float number= 1.23456784E16
+n = 18   float number= 1.2345678E18
+n = 20   float number= 1.2345678E20
+n = 22   float number= 1.2345678E22
+n = 24   float number= 1.2345678E24
+n = 26   float number= 1.2345678E26
+n = 28   float number= 1.2345678E28
+n = 30   float number= 1.2345678E30
+n = 32   float number= 1.2345678E32
+n = 34   float number= 1.2345678E34
+n = 36   float number= 1.2345678E36
+n = 38   float number= 1.2345678E38
+
+CONCLUSION:
+*** Single-precision float Overflow: 1.2345678 multiplying with 10^n, overflows at n = 38, float number = 1.2345678E38
+
+
+3.2 Single-precision float Overflow: 
+
+CONCLUSION:
+*** Float.MAX_VALUE incrementing with 1, overflows when it stops incrementing, float number = 3.4028235E38
+
+
+
+
+4. INF and NINF operations:
+
+4.1
+
+OUTPUT:
+1/INF = 0.0
+1/NINF = -0.0
+
+CONCLUSION:
+ 1/INF == 0, 1/NINF == -0, correct
+
+4.2
+
+OUTPUT:
+sin(INF) = NaN
+sin(NINF) = NaN
+
+CONCLLUSION:
+ sin(INF) and sin(NINF) are NaN, correct
+
+4.3
+
+OUTPUT:
+exp(INF) = Infinity
+exp(INF) = 0.0
+
+CONCLUSION:
+ exp(INF) is infinity, exp(NINF) is 0, correct
+
+4.4
+
+OUTPUT:
+INF + INF = Infinity
+INF - INF = NaN
+INF * 2 = Infinity
+NINF + NINF = -Infinity
+NINF - NINF = NaN
+NINF * 2 = -Infinity
+
+CONCLUSION:
+ INF || NINF propagation: comply with expectation, correct
+
+4.5
+
+OUTPUT:
+INF + NINF = NaN
+INF - NINF = Infinity
+INF * NINF = -Infinity
+INF / NINF = NaN
+INF % NINF = NaN
+INF * 0 = NaN
+0 * NINF = NaN
+
+CONCLUSION:
+ INF || NINF interaction: comply with expectation, correct
+
+
+
+
+5. NaN operations:
+
+5.1
+
+OUTPUT:
+NaN + NaN = NaN
+NaN - NaN = NaN
+NaN * 2 = NaN
+NaN * NaN = NaN
+
+CONCLLUSION:
+ Propagations of NaN are still NaN, correct
+
+5.2
+
+OUTPUT:
+NaN + NINF = NaN
+NaN + INF = NaN
+NaN * NINF = NaN
+NaN / NINF = NaN
+NaN % NINF = NaN
+NaN * 0 = NaN
+
+CONCLLUSION:
+ Interactions with NaN are still NaN, correct
+
+
+
+
+6. Signed 0 operations:
+
+6.1
+
+OUTPUT:
+log(+0) = -Infinity
+log(-0) = -Infinity
+log(0) = -Infinity
+
+CONCLUSION:
+ log(-0), log(+0), log(0) are all NINF, correct
+
+6.2
+
+OUTPUT:
+sin(+0)/(+0) = NaN
+sin(-0)/(-0) = NaN
+sin(-0)/|-0| = NaN
+
+CONCLUSION:
+ sin(-0)/0, sin(+0)/0, sin(-0)/|-0| are all NaN, correct
+
+
+
+
+7. Gradual Overflow:
+
+7.1
+
+OUTPUT:
+ x and y are generated from decrementing the smallest normalized single-precision float number as: x = 5.6E-45, y = 1.4E-45
+
+7.2
+
+OUTPUT:
+X - Y = 4.2E-45
+
+7.3
+
+OUTPUT:
+X / Y = 4.0
+
+7.4
+
+OUTPUT: 
+x = 1.17549435E-38    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.175495E-39    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.1755E-40    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.1755E-41    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.176E-42    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.18E-43    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.1E-44    sin(1.2345..*x)/x = 1.23456789012345
+x = 1.4E-45    sin(1.2345..*x)/x = 1.23456789012345
+
+CONCLLUSION:
+When normalized smallest single-precision float divided by 10^n, denormalized bottom is 1.4E-45
+
+
+
+
+*8.  Pi with more than 30 digits: 
+
+Process of generating the first half of pi:
+n = 1.0   pi_first_half = 3.1333333333333333
+n = 3.0   pi_first_half = 3.1415873903465816
+n = 5.0   pi_first_half = 3.1415926454603365
+n = 7.0   pi_first_half = 3.141592653572881
+n = 9.0   pi_first_half = 3.1415926535897523
+n = 11.0   pi_first_half = 3.141592653589793
+As soon as the first half stops changing, the first half is generated, as: 3.141592653589793
+
+  Subtract the already generated pi with first half, therefore what's left behind would be the latter half of pi. Following the process of generating the former half of pi, the latter half would be generated as: 5.751351121349423E-18
+
+  Subtract the already generated pi with first half, therefore what's left behind would be the latter half of pi. Following the process of generating the former half of pi, the latter half would be generated as: 5.751351121349423E-18
+
+  Therefore,  Pi with more than 30 digits = 3.141592653589793005751351121349423

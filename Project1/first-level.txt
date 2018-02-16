@@ -1,0 +1,10 @@
+First Level Report
+***1. Integer overflow: with factorial calculation, overflow occurs at: n=13, factorial = 1932053504
+***2. Integer / 0: ArithmeticException: / by zero detected
+***3.1 Single-precision float Overflow: 1.2345678 multiplying with 10^n, overflows at n = 38, float number = 1.2345678E38
+***3.2 Single-precision float Overflow: Float.MAX_VALUE incrementing with 1, overflows when it stops incrementing, float number = 3.4028235E38
+4. INF and NINF operations: correct. 
+5. NaN operations: correct. 
+6. Signed 0 operations: correct. 
+7. Gradual Overflow: correct. 
+ * 8. Pi with 30 digits= 3.141592653589793005751351121349423
