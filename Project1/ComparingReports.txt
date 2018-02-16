@@ -1,0 +1,4 @@
+I wrote the project on MacOS (64bits), using IDE of Eclipse - Java8. 
+The project was also run on Windows (64bits), with command-line prompt terminal (javac, java to run the scripts).
+
+After running on both of these two OSes with the exact same code, the reports generated respectively have the exact same result as well (it could have been that I imported only java.io*).
