@@ -47,7 +47,6 @@ The compressed matrix is consistent with the full matrix.
 
 
 
-
 *********************************Hacker practice 3's output:********************************************
 /** Implement the compressed matrix and verify that it's consistent with the
  * full matrix, by comparing it's product with vector {5,4,3,2,1} with that of
