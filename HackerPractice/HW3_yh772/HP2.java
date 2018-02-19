@@ -78,7 +78,8 @@ public class HP2 {
 			}
 		}
 
-		System.out.println("\nThe compressed matrix is " + (flag == 0? "consistent" : "inconsistent") +
+		System.out.println("\nAfter comparing with the full matrix, "
+				+ "the compressed matrix is " + (flag == 0? "consistent" : "inconsistent") +
 				" with the full matrix.");
 	}
 }

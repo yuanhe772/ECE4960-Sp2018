@@ -34,14 +34,14 @@ public class HP3 {
 		int flag = 0; // 0 means the compressed matrix == desired full matrix, 1 means inconsistent
 
 		for(int i=0; i<5; i++) {
-			System.out.println("Full matrix with vector b = [5,4,3,2,1]'s product's "+i+"th element is " + b_full[i]);
-			System.out.println("Full matrix with vector b = [5,4,3,2,1]'s product's "+i+"th element is " + b_compressed[i]);			if(b_full[i] != b_compressed[i]) {
+			System.out.println("Full matrix multiplying vector b = [5,4,3,2,1], the product's "+i+"th element is " + b_full[i]);
+			System.out.println("Compressed matrix multiplying vector b = [5,4,3,2,1], the product's "+i+"th element is " + b_compressed[i]);			if(b_full[i] != b_compressed[i]) {
 				flag = 1;
 				break;
 			}
 		}
 
 		System.out.println("\nTherefore, the compressed matrix's product with vector b = [5,4,3,2,1] "
-				+ "is " + (flag == 0? "consistent" : "inconsistent") + " with the full matrix.");
+				+ "is " + (flag == 0? "consistent" : "inconsistent") + " with the full matrix's product.");
 	}
 }

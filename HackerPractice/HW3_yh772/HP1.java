@@ -64,11 +64,11 @@ public class HP1 {
 
 	public static void main(String args[]) {
 
-		String[] name = {"Rantangle", "Trapezoid", "Midpoint", "Simpson", "TwoGaussian"};
+		String[] name = {"Rantangle", "Trapezoid", "Midpoint", "Simpson", "Two-Point Gaussian"};
 		double[] value = {Rectangle(), Trapezoid(), Midpoint(), Simpson(),TwoGaussian()};
 
 		for (int i = 0; i<5; i++) {
-			System.out.println("The integration for exp(x) using " + name[i] + "quadrature scheme is "
+			System.out.println("The integration for exp(x) using " + name[i] + " quadrature scheme is "
 					+ value[i] + ", the error would then be " + Math.abs(value[i] - 2.3504));
 		}
 	}
