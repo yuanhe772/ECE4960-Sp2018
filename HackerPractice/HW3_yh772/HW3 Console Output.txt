@@ -1,11 +1,11 @@
 *********************************Hacker practice 1's output:********************************************
 /** Calculation for 5 different Quadrature Schemes, and their errors*/
 
-The integration for exp(x) using Rantanglequadrature scheme is 2.5066687930581293, the error would then be 0.15626879305812924
-The integration for exp(x) using Trapezoidquadrature scheme is 2.6384831221968787, the error would then be 0.2880831221968787
-The integration for exp(x) using Midpointquadrature scheme is 2.635188450329785, the error would then be 0.28478845032978484
-The integration for exp(x) using Simpsonquadrature scheme is 2.6362866742854827, the error would then be 0.28588667428548264
-The integration for exp(x) using TwoGaussianquadrature scheme is 2.636286521769206, the error would then be 0.28588652176920615
+The integration for exp(x) using Rantangle quadrature scheme is 2.5066687930581293, the error would then be 0.15626879305812924
+The integration for exp(x) using Trapezoid quadrature scheme is 2.6384831221968787, the error would then be 0.2880831221968787
+The integration for exp(x) using Midpoint quadrature scheme is 2.635188450329785, the error would then be 0.28478845032978484
+The integration for exp(x) using Simpson quadrature scheme is 2.6362866742854827, the error would then be 0.28588667428548264
+The integration for exp(x) using Two-Point Gaussian quadrature scheme is 2.636286521769206, the error would then be 0.28588652176920615
 
 
 
@@ -41,7 +41,7 @@ compressed matrix[4][2] = 0
 compressed matrix[4][3] = 0
 compressed matrix[4][4] = 12
 
-The compressed matrix is consistent with the full matrix.
+After comparing with the full matrix, the compressed matrix is consistent with the full matrix.
 
 
 
@@ -52,17 +52,15 @@ The compressed matrix is consistent with the full matrix.
  * full matrix, by comparing it's product with vector {5,4,3,2,1} with that of
  * the full matrix.*/
  
-Full matrix with vector b = [5,4,3,2,1]'s product's 0th element is 16
-Full matrix with vector b = [5,4,3,2,1]'s product's 0th element is 16
-Full matrix with vector b = [5,4,3,2,1]'s product's 1th element is 58
-Full matrix with vector b = [5,4,3,2,1]'s product's 1th element is 58
-Full matrix with vector b = [5,4,3,2,1]'s product's 2th element is 61
-Full matrix with vector b = [5,4,3,2,1]'s product's 2th element is 61
-Full matrix with vector b = [5,4,3,2,1]'s product's 3th element is 20
-Full matrix with vector b = [5,4,3,2,1]'s product's 3th element is 20
-Full matrix with vector b = [5,4,3,2,1]'s product's 4th element is 67
-Full matrix with vector b = [5,4,3,2,1]'s product's 4th element is 67
+Full matrix multiplying vector b = [5,4,3,2,1], the product's 0th element is 16
+Compressed matrix multiplying vector b = [5,4,3,2,1], the product's 0th element is 16
+Full matrix multiplying vector b = [5,4,3,2,1], the product's 1th element is 58
+Compressed matrix multiplying vector b = [5,4,3,2,1], the product's 1th element is 58
+Full matrix multiplying vector b = [5,4,3,2,1], the product's 2th element is 61
+Compressed matrix multiplying vector b = [5,4,3,2,1], the product's 2th element is 61
+Full matrix multiplying vector b = [5,4,3,2,1], the product's 3th element is 20
+Compressed matrix multiplying vector b = [5,4,3,2,1], the product's 3th element is 20
+Full matrix multiplying vector b = [5,4,3,2,1], the product's 4th element is 67
+Compressed matrix multiplying vector b = [5,4,3,2,1], the product's 4th element is 67
 
-Therefore, the compressed matrix's product with vector b = [5,4,3,2,1] is consistent with the full matrix.
-
-
+Therefore, the compressed matrix's product with vector b = [5,4,3,2,1] is consistent with the full matrix's product.
