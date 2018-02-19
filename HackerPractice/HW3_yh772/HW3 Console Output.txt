@@ -1,3 +1,6 @@
+/** Last Update: 02/18/2018; Author: Yuan He (yh772); Platform: Eclipse, Java8 */
+
+
 *********************************Hacker practice 1's output:********************************************
 /** Calculation for 5 different Quadrature Schemes, and their errors*/
 
@@ -6,9 +9,6 @@ The integration for exp(x) using Trapezoid quadrature scheme is 2.63848312219687
 The integration for exp(x) using Midpoint quadrature scheme is 2.635188450329785, the error would then be 0.28478845032978484
 The integration for exp(x) using Simpson quadrature scheme is 2.6362866742854827, the error would then be 0.28588667428548264
 The integration for exp(x) using Two-Point Gaussian quadrature scheme is 2.636286521769206, the error would then be 0.28588652176920615
-
-
-
 
 
 *********************************Hacker practice 2's output:********************************************
@@ -42,9 +42,6 @@ compressed matrix[4][3] = 0
 compressed matrix[4][4] = 12
 
 After comparing with the full matrix, the compressed matrix is consistent with the full matrix.
-
-
-
 
 
 *********************************Hacker practice 3's output:********************************************
