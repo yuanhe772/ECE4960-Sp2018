@@ -35,7 +35,8 @@ public class HP3 {
 
 		for(int i=0; i<5; i++) {
 			System.out.println("Full matrix multiplying vector b = [5,4,3,2,1], the product's "+i+"th element is " + b_full[i]);
-			System.out.println("Compressed matrix multiplying vector b = [5,4,3,2,1], the product's "+i+"th element is " + b_compressed[i]);			if(b_full[i] != b_compressed[i]) {
+			System.out.println("Compressed matrix multiplying vector b = [5,4,3,2,1], the product's "+i+"th element is " + b_compressed[i]);			
+			if(b_full[i] != b_compressed[i]) {
 				flag = 1;
 				break;
 			}
