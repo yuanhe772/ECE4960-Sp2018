@@ -1,0 +1,6 @@
+The outputs for part 1:
+The second norm error for permuting a sparse matrix's row 1&3 is 0.0
+The second norm error for permuting a sparse matrix's row 1&5 is 0.0
+The second norm error for first time scaling a sparse matrix is 0.0
+The second norm error for second time scaling a sparse matrix is 0.0
+The second norm error for multiplying a sparse matrix is 0.0
