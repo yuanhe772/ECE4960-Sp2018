@@ -1,6 +1,19 @@
-The outputs for part 1:
-The second norm error for permuting a sparse matrix's row 1&3 is 0.0
-The second norm error for permuting a sparse matrix's row 1&5 is 0.0
-The second norm error for first time scaling a sparse matrix is 0.0
-The second norm error for second time scaling a sparse matrix is 0.0
-The second norm error for multiplying a sparse matrix is 0.0
+Outputs for testing part 1:
+
+  Part 1: Passed second-norm checking for permuting row 1&3 !
+  Part 1: Passed second-norm checking for permuting row 1&5 !
+  Part 1: Passed second-norm checking for 1st time rowScaling!
+  Part 1: Passed second-norm checking for 2nd time rowScaling!
+  Part 1: Passed second-norm checking of multipying a sparse matrix!
+
+
+
+Outputs for testing part 2:
+
+  Part 2: permutations spent time: 36521019 ns
+  Part 2: permutations cost memory: 191096152 bytes
+  Part 2: Passed permutation check!
+
+  Part 2: row-scaling spent time: 9282231265 ns
+  Part 2: row-scaling cost memory: 56787216 bytes
+  Part 2: Passed CheckSum testing!
