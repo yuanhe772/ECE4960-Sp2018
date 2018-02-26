@@ -10,10 +10,10 @@ Outputs for testing part 1:
 
 Outputs for testing part 2:
 
-  Part 2: permutations spent time: 36521019 ns
-  Part 2: permutations cost memory: 191096152 bytes
+  Part 2: permutations spent time: 32461543 ns
+  Part 2: permutations cost memory: 69332336 bytes
   Part 2: Passed permutation check!
 
-  Part 2: row-scaling spent time: 9282231265 ns
-  Part 2: row-scaling cost memory: 56787216 bytes
+  Part 2: row-scaling spent time: 9892155995 ns
+  Part 2: row-scaling cost memory: 235218440 bytes
   Part 2: Passed CheckSum testing!
