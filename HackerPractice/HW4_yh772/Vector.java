@@ -1,18 +1,15 @@
 /** Last Update: 02/25/2018; Author: Yuan He (yh772); Platform: MacOS, Eclipse, Java8 */
 
 
-
 public class Vector {
 	double[] v;
 	int len;
-	
 	
 	/**Constructor*/
 	public Vector(double[] a) {
 		v = a.clone();
 		len = v.length;
 		}
-	
 	
 	/**Switch row[i] and row[j] for matrix A and Vector x*/
 	public void rowPermute(int i, int j) {
@@ -22,7 +19,6 @@ public class Vector {
 		v[j] = temp;
 		return;
 	}
-	
 	
 	/**Add a*row[i] to row[j] for Matrix A and Vector x*/
 	public void rowScale(int i, int j, double a) {

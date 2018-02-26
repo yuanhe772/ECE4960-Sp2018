@@ -1,7 +1,6 @@
 /** Last Update: 02/25/2018; Author: Yuan He (yh772); Platform: MacOS, Eclipse, Java8 */
 
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +9,6 @@ public class SparseMatrix {
 	ArrayList<Integer> rowPtr = new ArrayList<Integer>();
 	ArrayList<Integer> colInd = new ArrayList<Integer>();
 	
-	
 	/**Constructor*/
 	public SparseMatrix(ArrayList<Double> value2, ArrayList<Integer> rowPtr2, ArrayList<Integer> colInd2) {
 		value = value2;
@@ -18,7 +16,6 @@ public class SparseMatrix {
 		colInd = colInd2;
 	}
 
-	
 	/**Retrieve element (r,c) from sparse matrix*/
 	public double retrieveElement(int r, int c) {
 		List<Integer> sub = colInd.subList(rowPtr.get(r), rowPtr.get(r+1));
@@ -32,7 +29,6 @@ public class SparseMatrix {
 		return value;
 	}
 
-	
 	/**Switch row[i] and row[j] for matrix A and Vector x*/
 	public int rowPermute(int i, int j) {
 		try {
@@ -78,7 +74,6 @@ public class SparseMatrix {
 		}
 	}
 
-
 	/**Add a*row[i] to row[j] for Matrix A and Vector x*/
 	public int rowScale(int i, int j, double a) {
 		try {
@@ -93,7 +88,6 @@ public class SparseMatrix {
 		}
 	}
 
-
 	/**Return the product of Ax = b*/
 	public Vector product(Vector vec) {
 		double[] r = new double[vec.len];
@@ -105,7 +99,6 @@ public class SparseMatrix {
 		}
 		return new Vector(r);
 	}
-
 
 	// Helper functions:
 	/**Set the [r,c] element in matrix to v*/
