@@ -1,13 +1,13 @@
-/** Last Update: 02/25/2018; Author: Yuan He (yh772); Platform: Eclipse, Java8 */
+/** Last Update: 02/25/2018; Author: Yuan He (yh772); Platform: MacOS, Eclipse, Java8 */
 
 
 
 public class Vector {
-
 	double[] v;
 	int len;
 	
 	
+	/**Constructor*/
 	public Vector(double[] a) {
 		v = a.clone();
 		len = v.length;
@@ -30,6 +30,4 @@ public class Vector {
 		v[j] += v[i]*a;
 		return;
 	}
-	
-	
 }
