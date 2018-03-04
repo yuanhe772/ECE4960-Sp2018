@@ -1,7 +1,13 @@
-/** Last Update: 02/27/2018; Author: Yuan He (yh772); Platform: MacOS, Eclipse, Java8 */
 
-
-
+/**
+ * @author Yuan He(yh772)
+ * Last Update: 2018-02-27
+ * Platform: Java 8, Eclipse, MacOS
+ * 
+ * Hacker Practice Purpose:
+ * For e = 10-2, 10-3, ..., 10-9. Print out the value of (x, y) and 
+ * the second norm of the residual vector:
+ */
 public class HP1 {
 
 	public static double y(double e) {

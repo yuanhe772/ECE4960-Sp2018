@@ -1,7 +1,14 @@
-/** Last Update: 03/03/2018; Author: Yuan He (yh772); Platform: MacOS, Eclipse, Java8 */
 
-
-
+/**
+ * @author Yuan He(yh772)
+ * Last Update: 2018-02-27
+ * Platform: Java 8, Eclipse, MacOS
+ * 
+ * Hacker Practice Purpose:
+ * Use the full matrix format and only row permutation (easier to implement in 
+ * a short time, and a good check for your sparse matrix later on), perform the 
+ * minimal fill-in algorithm for choosing the sequence of pivoting to solve:
+ */
 import java.util.HashMap;
 
 public class HP2 {
