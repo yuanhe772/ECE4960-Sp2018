@@ -43,7 +43,7 @@ b(2) = 2.9999999999999973
 b(3) = 2.0
 b(4) = 1.0
 
-The second norm error for computing this function group is:
+The second norm error of (Ax-b) for computing this function group is:
 2.6645352591003757E-15
 
 
