@@ -2,6 +2,7 @@
 
 
 public class Vector {
+	
 	double[] v;
 	int len;
 	
@@ -10,6 +11,7 @@ public class Vector {
 		v = a.clone();
 		len = v.length;
 		}
+	
 	
 	/**Constructor*/
 	public Vector(double x, double y) {

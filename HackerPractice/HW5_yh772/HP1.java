@@ -31,9 +31,6 @@ public class HP1 {
 			double norm = Math.pow(diff.v[0],2) + Math.pow(diff.v[1], 2);
 			System.out.println("second-norm = "+ norm);
 			
-		}
-		
+		}	
 	}
-	
-	
 }

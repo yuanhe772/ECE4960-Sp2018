@@ -1,12 +1,12 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+/** Last Update: 03/03/2018; Author: Yuan He (yh772); Platform: MacOS, Eclipse, Java8 */
+
+
+
 import java.util.HashMap;
 
-// 课上的full matrix通过row permutation去找每一步的pivot
 public class HP2 {
 
-	// r=0 when you want to sort the full array
-	/** Return the min's index in an array*/
+	/** Return the min's index in an array, r=0 when you want to sort the full array*/
 	public static int arrayMin(int[] counter, int r) {
 		int min = counter[r];
 		int index = r;
@@ -19,17 +19,20 @@ public class HP2 {
 		return index;
 	}
 
-	/** Return the pivot's column in a row in A*/
+	/** Return the pivot's column in a row in A (Choose the left ones when tie occurs)*/
 	public static int pivotMin(FullMatrix A, int[] counter, int r) {
 		int min = counter[0];
-		int index = 0;
 		for(int i=0; i<counter.length; i++) {
 			if(counter[i]<=min && A.full[r][i]!=0) {
 				min = counter[i];
-				index = i;
 			}
 		}
-		return index;
+		for(int i=0; i<counter.length; i++) {
+			if(counter[i]==min && A.full[r][i]!=0) {
+				return i;
+			}
+		}
+		return 0;
 	}
 
 	/** Permute to have the first row with more sparsity*/
@@ -37,7 +40,7 @@ public class HP2 {
 		int counter[] = new int[A.rank];
 		for(int i=r; i<A.rank; i++) {
 			for(int j=0; j<A.rank; j++) {
-				if(A.full[i][j]>0) {
+				if(A.full[i][j]!=0) {
 					counter[i]+=1;
 				}
 			}
@@ -69,24 +72,18 @@ public class HP2 {
 		if (soleEle(A,r)>=0) {
 			return soleEle(A,r);
 		}
-
 		int[] counter = new int[A.rank];
 		double common = 0;
-		// pivot is A[r][i] (traverse all potential pivots)
-		for(int i=0; i<A.rank; i++) {
-			//for row j:
-			for(int j=r+1; j<A.rank; j++) {
-				//potential pivots operated with every row below
-				// pivot is A[r][i]
-				if(A.full[r][i]!=0) {
+		for(int i=0; i<A.rank; i++) {// pivot is A[r][i] (traverse all potential pivots)
+			for(int j=r+1; j<A.rank; j++) {//for row j:
+				if(A.full[r][i]!=0) {//potential pivots operated with every row below
 					common = A.full[j][i]/A.full[r][i];
-					//The j1-th column
-					for(int j1=0; j1<A.rank; j1++) {
+					for(int j1=0; j1<A.rank; j1++) {//The j1-th column
 						if(j1!=i && A.full[j][i]!=0) {
-							if(A.full[j][j1] - common*A.full[r][j1] != 0 && A.full[j][j1]==0) {//多啦
+							if(A.full[j][j1] - common*A.full[r][j1] != 0 && A.full[j][j1]==0) {//Fill-in!
 								counter[i]+=1;
 							}
-							else if(A.full[j][j1] - common*A.full[r][j1] == 0 && A.full[j][j1]!=0) {//少啦
+							else if(A.full[j][j1] - common*A.full[r][j1] == 0 && A.full[j][j1]!=0) {//Less fill-in!
 								counter[i]-=1;
 							}
 						}
@@ -95,55 +92,18 @@ public class HP2 {
 			}
 		}
 		return pivotMin(A,counter,r);
-
 	}
 
 	/** Cancel with one pivot*/
 	public static void cancel(FullMatrix A, Vector V,int r) {
-
-//		System.out.println("\n\nBefore bubbling up:\n");
-//		for(int i=0; i<A.rank; i++) {
-//			for(int j=0; j<A.rank; j++) {
-//				System.out.println(A.full[i][j]);
-//			}
-//		}
-//		for(int i=0; i<A.rank; i++) {
-//			System.out.println("Vector = "+V.v[i]);
-//		}
-
 		bubbleUp(A,V,r);
-
-//		System.out.println("\n\nBefore pivoting\n");
-//		for(int i=0; i<A.rank; i++) {
-//			for(int j=0; j<A.rank; j++) {
-//				System.out.println(A.full[i][j]);
-//			}
-//		}
-//		for(int i=0; i<A.rank; i++) {
-//			System.out.println("Vector = "+V.v[i]);
-//		}
-//		System.out.print("\npivot = "+pivot(A,r)+"\n\n\n");
-		
-		
 		int index = pivot(A,r);
 		double common=0;
-		//i is each row:
-		for(int i=r+1; i<A.rank; i++) {
+		for(int i=r+1; i<A.rank; i++) {//i is each row:
 			common = - A.full[i][index]/A.full[r][index];
 			A.rowScale(r, i, common);
 			V.rowScale(r, i, common);
 		}
-		
-		
-//		for(int i=0; i<A.rank; i++) {
-//			for(int j=0; j<A.rank; j++) {
-//				System.out.println(A.full[i][j]);
-//			}
-//		}
-//		for(int i=0; i<A.rank; i++) {
-//			System.out.println("Vector = "+V.v[i]);
-//		}
-
 		return;
 	}
 
@@ -155,49 +115,69 @@ public class HP2 {
 		}
 	}
 
-	/** Check if this Matrix is now diagnal*/
-	public static boolean diagnal(FullMatrix A) {
-		int counter[]=new int[A.rank];
+	/** Diagnalize the LU matrix*/
+	public static void Diagnal(FullMatrix A, Vector V) {
+		cancelAll(A,V);
 		for(int i=0; i<A.rank; i++) {
-			for(int j=0; j<A.rank; j++) {
-				if(A.full[i][j]!=0) {counter[i]+=1;}
-				if(counter[i]>1) {return false; }
-			}
-		}
-		int[] standard= new int[A.rank];
-		for(int i=0; i<A.rank; i++) {
-			standard[i]=1;
-		}
-
-		if(Arrays.equals(counter,standard)) {
-			return true;
-		}
-		return false;
-	} 
-
-	/** normalize the diagnal matrix to get the answer for x*/
-	public static void normal(FullMatrix A, Vector V, HashMap<Integer, Double> X) {
-		for(int i=0; i<A.rank; i++) {
-			for(int j=0; j<A.rank; j++) {
-				if(A.full[i][j]!=0) {
-					X.put(j, V.v[i]/A.full[i][j]);
+			for(int j=i; j<A.rank; j++) {
+				if(A.full[j][i]!=0) {
+					A.rowPermute(i, j);
+					V.rowPermute(i, j);
+					break;
 				}
 			}
 		}
 	}
 
-	/**Check iff Ax-b==0 */
-	public static boolean test(FullMatrix A, Vector V, Vector X) {
-		return((A.product(X)).equals(V));
+	/**Back substitution, from left to right*/
+	public static void backSub(FullMatrix A, Vector V, HashMap<Integer, Double> X) {
+		for(int i=4; i>=0; i--) {//For each X(i)
+			X.put(i, V.v[i]/A.full[i][i]);
+			for(int j=i-1; j>=0; j--) {//For previous rows
+				if(A.full[j][i]!=0) {
+					V.v[j] = V.v[j] - X.get(i) * A.full[j][i];
+					A.full[j][i]=0;
+				}
+			}
+		}
+		System.out.println("\nThe X computed from the matrix would be:");
+		for(int i=0; i<A.rank; i++) {
+			System.out.println("X("+i+") = "+X.get(i));
+		}
 	}
 
 
+	/**Check iff Ax-b==0 */
+	public static void error(HashMap<Integer, Double> X) {
+		double[][] AA = {{1,2,0,0,3},{4,5,6,0,0},{0,7,8,0,9},{0,0,0,10,0},{11,0,0,0,12}};
+		double[] BB = {5,4,3,2,1};
+		FullMatrix A = new FullMatrix(AA);
+		Vector B = new Vector(BB);
+		double error = 0;
+		double x[] = new double[A.rank];
+		for(int i=0; i<A.rank; i++) {
+			x[i] = X.get(i);
+		}
+		Vector XX = new Vector(x);
+		Vector P = A.product(XX);
+		System.out.println("\nA multipying with computed X:");
+		for(int i=0; i<A.rank; i++) {
+			System.out.println("b("+i+") = "+P.v[i]);
+			error += Math.pow(P.v[i] - B.v[i], 2);	
+		}
+		error = Math.pow(error, 0.5);
+		System.out.println("\nThe second norm error for computing this function group is:\n"+error);
+	}
+
+
+	/**Main function*/
 	public static void main (String args[]) {
 
-		double[][] AA = {{1,2,0},{0,5,5},{1,0,2}};
-		double[] VV = {3,2,1};
-		//		double[][] AA = {{1,2,0,0,3},{4,5,6,0,0},{0,7,8,0,9},{0,0,0,10,0},{11,0,0,0,12}};
-		//		double[] VV = {5,4,3,2,1};
+		//Initializing:
+		//		double[][] AA = {{1,2,0},{0,5,4},{1,0,2}};
+		//		double[] VV = {3,2,1};
+		double[][] AA = {{1,2,0,0,3},{4,5,6,0,0},{0,7,8,0,9},{0,0,0,10,0},{11,0,0,0,12}};
+		double[] VV = {5,4,3,2,1};
 		FullMatrix A =  new FullMatrix(AA);
 		Vector V = new Vector(VV);
 		HashMap<Integer, Double> X=new HashMap<Integer, Double>();  
@@ -205,23 +185,15 @@ public class HP2 {
 			X.put(i,0.0);
 		}
 
-		while(!diagnal(A)) {
-			cancelAll(A,V);
-		}
+
+		//Solving the function group:
+		Diagnal(A, V);
+		backSub(A,V,X);
 		
-		normal(A,V,X);
-		
-//		for(int i=0; i<A.rank; i++) {
-//			System.out.println(X.get(i));
-//		}
-		
-		double x[] = new double[A.rank];
-		for(int i=0; i<A.rank; i++) {
-			x[i] = X.get(i);
-//			System.out.println("\n"+x[i]);
-		}
-//		System.out.println("The matrix's answer is "+ test(A,V,new Vector(x)) == true ?"correct":"wrong"+" !");
-		System.out.println(test(A,V,new Vector(x)));
+
+		//Check the solution with Ax-b =?= 0
+		error(X);
+
 	}
 }
 
