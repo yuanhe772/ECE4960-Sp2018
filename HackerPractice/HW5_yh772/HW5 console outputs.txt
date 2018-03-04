@@ -1,1 +1,59 @@
+/** Hacker Practice Purpose:
+ * For e = 10-2, 10-3, ..., 10-9. Print out the value of (x, y) and 
+ * the second norm of the residual vector*/
+############################### Output for HP1:#####################################
+x = 2.089   y = -0.1
+second-norm = 4.0000000000040925E-4
+x = 2.979999999998199   y = -0.999999999998181
+second-norm = 3.999999999992724E-4
+x = 11.889999999963983   y = -9.99999999996362
+second-norm = 3.9999999999017747E-4
+x = 100.98999999783904   y = -99.99999999781721
+second-norm = 4.000000000174623E-4
+x = 991.9899997983105   y = -999.9999997962732
+second-norm = 3.9999999958090487E-4
+x = 9901.989889935136   y = -9999.99988882337
+second-norm = 3.9999999143183236E-4
+x = 99001.99250095041   y = -100000.00252621254
+second-norm = 3.9999990761280593E-4
+x = 990001.6548497151   y = -999999.6614643587
+second-norm = 3.9999923706091067E-4
+x = 9899926.607089639   y = -9999923.8556461
+second-norm = 3.9999446870808697E-4
 
+
+
+
+/** Hacker Practice Purpose:
+ * Use the full matrix format and only row permutation (easier to implement in 
+ * a short time, and a good check for your sparse matrix later on), perform the 
+ * minimal fill-in algorithm for choosing the sequence of pivoting to solve:*/
+############################### Output for HP2:#####################################
+The X computed from the matrix would be:
+X(0) = 0.2915360501567399
+X(1) = 2.6300940438871474
+X(2) = -1.7194357366771162
+X(3) = 0.2
+X(4) = -0.18390804597701157
+
+A multipying with computed X:
+b(0) = 5.0
+b(1) = 4.0
+b(2) = 2.9999999999999973
+b(3) = 2.0
+b(4) = 1.0
+
+The second norm error for computing this function group is:
+2.6645352591003757E-15
+
+
+
+
+/**Hacker Practice Purpose:
+ * For e = 10-2, 10-3, ..., 10-9. Print out the value of (x, y) and 
+ * the second norm of the residual vector:*/
+############################### Output for HP3:#####################################
+Upperbound of ||A|| 1 (Maximum column vector sum) is 24.0.
+Upperbound of ||A|| INF (Maximum column vector sum) is 24.0.
+Upperbound of ||A|| 1 (Maximum row vector sum) is 24.0.
+Upperbound of ||A|| INF (Maximum row vector sum) is 24.0.
