@@ -57,3 +57,5 @@ Upperbound of ||A|| 1 (Maximum column vector sum) is 24.0.
 Upperbound of ||A|| INF (Maximum column vector sum) is 24.0.
 Upperbound of ||A|| 1 (Maximum row vector sum) is 24.0.
 Upperbound of ||A|| INF (Maximum row vector sum) is 24.0.
+
+
