@@ -173,7 +173,7 @@ public class HP2 {
 			error += Math.pow(P.v[i] - B.v[i], 2);	
 		}
 		error = Math.pow(error, 0.5);
-		System.out.println("\nThe second norm error for computing this function group is:\n"+error);
+		System.out.println("\nThe second norm error of (Ax-b) for computing this function group is:\n"+error);
 	}
 
 
