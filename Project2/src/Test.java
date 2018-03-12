@@ -56,7 +56,7 @@ public class Test {
 		 * the function's invariants of "input element's index(i,j) should be in-bound" */
 		verifyInput("retrieveTest");
 
-		/* Verify the function's OUTPUT correctness with Wilkinson Principal, by knowing the ground 
+		/* Verify the function's OUTPUT correctness with Wilkinson Principal, knowing the ground 
 		 * truth of two equivalent full and sparse matrixes, and compare the retrieving output between them*/ 
 
 		// Time-stamp for measuring function's computational time
@@ -79,11 +79,11 @@ public class Test {
 
 		/* Verify the function's INPUT invariant:
 		 * Check: whether an error is thrown to terminate the program, when input violates
-		 * the function's invariants of "input element's index(i,j) should be in-bound" */
+		 * the function's invariants of "input element's index(i,j) in-bound of matrix rank" */
 		verifyInput("matrixSetterTest");
 
 		/* Verify the function's OUTPUT correctness, knowing the ground truth*/
-		/* Check1: add SparseMatrix sp's elements to an empty SparseMatrix "sp2" from scratch, 
+		/* Check1: set SparseMatrix sp's elements to an empty SparseMatrix "sp2" from scratch, 
 		 * and compare it with an equivalent known full matrix "full", considering that 
 		 * SparseMatrix.retrieveElement() passed the test*/ 
 
@@ -120,8 +120,9 @@ public class Test {
 		full[2][0] = 0;
 
 		// Check sparse matrix's data structure - no zeroes in value[], value.len = colInd.len
+		// Because retrieving the correct value does not guarantee a correct data structure 
 		output("\n	"+ (!sp2.value.contains(0) && sp2.value.size()==sp2.colInd.size() ? "PASSED" : "FAILED") + 
-				": Function's output correctness testing! The data structures of modified sparse martrix satisfies"
+				": Function's output correctness testing! The modified sparse martrix satisfies"
 				+ " SparseMatrix's data structure invariants");
 
 		// Check sparse matrix value's correctness
@@ -142,28 +143,28 @@ public class Test {
 		output("\n\n\n  SparseMatrix.product() Testing, GROUND-TRUTH UNKNOWN: ");
 
 		/* Verify the function's INPUT invariant:
-		 * Check: whether an error is thrown to terminate the program,  when input violates
+		 * Check: whether an error is thrown to terminate the program, when input violates
 		 * the function's invariants of "SparseMatrix's rank == Vector's length" */
 		verifyInput("productTest");
 
 		/* Verify the function's OUTPUT correctness, without knowing the ground truth*/ 
 		/* Check 1: when Vector is an all-1, check whether |A*X1 - X2| == 0, 
-		 * where Vector x2 has each element being the sum of A's row, and A is an arbitrary Sparse Matrix*/ 
+		 * where Vector x2 has each element being the sum of A's row*/ 
 
 		// Time-stamp for measuring function's computational time
 		start = System.nanoTime();
 
-		// Sum up each row of the matrix == rowSum
+		// Sum up each row of the mat1
 		Vector rowSum = new Vector(mat1.rank);
 		for(int i=0; i<mat1.rank; i++) {
 			for(int j=0; j<mat1.rank; j++) {rowSum.v[i] += mat1.retrieveElement(i, j)[1];}
 		}
 
-		// Create a Vector with its values all 1
+		// Create a Vector with its values being all 1
 		Vector all1 = new Vector(mat1.rank);
 		for(int i=0; i<mat1.rank; i++) {all1.v[i] = 1;}
 
-		// Create a Vector containing the product of matrix * Vector-all1
+		// Create a Vector containing the product of matrix * VectorAll1
 		Vector Ax1 = mat1.product(all1);
 
 		// Output whether the product is correct (by telling whether ||rowSum - Ax1|| == 0)
@@ -184,7 +185,7 @@ public class Test {
 		// The product of all-1 matrix and Vector X1
 		Vector All1xX1 = All1.product(X1); 
 
-		// Output whether the product is correct (by telling whether ||VectorSum - All1Matrix x Vector|| == 0)
+		// Output whether the product is correct (by telling whether ||VectorColSum - All1Matrix x Vector|| == 0)
 		output("\n	"+ (vecNorm(All1xX1, X2)==0 ? "PASSED" : "FAILED") +
 				": Function's output correctness testing! By checking ||VectorColSum - All1Matrix * Vector|| == 0");
 
@@ -201,7 +202,7 @@ public class Test {
 		output("\n\n\n  SparseMatrix.leftMult() Testing, GROUND-TRUTH UNKNOWN: ");
 
 		/* Verify the function's INPUT invariant:
-		 * Check: whether an error is thrown to terminate the program,  when input violates
+		 * Check: whether an error is thrown to terminate the program, when input violates
 		 * the function's invariants of "SparseMatrix1's rank == SparseMatrix2's rank" */
 		verifyInput("leftMultTest");
 
@@ -219,12 +220,10 @@ public class Test {
 		output("\n	"+ (matNorm(diaProduct, mat1)==0 ? "PASSED" : "FAILED") 
 				+ ": Function's output correctness testing! By checking ||mat1 - MatrixDiagonal1 * mat1|| == 0");
 
-
 		// Output the computational costs
 		end = System.nanoTime();
 		computation("9 * n^2 + n^1.5 + 3 * n", 8375530, end - start);
 	}
-
 
 	/**Function: Test SparseMatrix.add()
 	 * Parameter: None
@@ -234,7 +233,7 @@ public class Test {
 		output("\n\n\n  SparseMatrix.add() Testing, GROUND-TRUTH UNKNOWN: ");
 
 		/* Verify the function's INPUT invariant:
-		 * Check: whether an error is thrown to terminate the program,  when input violates
+		 * Check: whether an error is thrown to terminate the program, when input violates
 		 * the function's invariants of "SparseMatrix1's rank == SparseMatrix2's rank" */;
 		 verifyInput("addTest");
 
@@ -275,7 +274,7 @@ public class Test {
 
 		/* Verify the function's INPUT invariant:
 		 * Check: whether an error is thrown to terminate the program, when the input violates
-		 * the function invariants that the three input empty matrixes are not of the same size */
+		 * the function invariants that "the three input matrixes are of the same size" */
 		verifyInput("JacobiDecomTest");
 
 		/* Verify the function's OUTPUT correctness, knowing the ground truth,
@@ -306,8 +305,8 @@ public class Test {
 		// Output whether the JacobiDecom() satisfies self-regression transform
 		output("\n	"+ (matNorm(mat1, M2)==0 ? "PASSED" : "FAILED") + ": Function's output correctness testing! "
 				+ "By Jacobi-decomposing mat1 into M1 = (-L + D - U), and then Jacobi-decomposing M1 into M2 = "
-				+ "(-L2 + D2 -U2), then check whether ||mat1 - M1|| = 0 (Namely check whether twice Jacobi-Decomposition "
-				+ "would equal itself.)");		
+				+ "(-L2 + D2 -U2), then check whether ||mat1 - M1|| = 0 (Namely check whether twice Jacobi-"
+				+ "Decomposition would equal itself.)");		
 
 		// Output the computational costs
 		end = System.nanoTime();
@@ -324,12 +323,12 @@ public class Test {
 
 		/* Verify the function's INPUT invariant:
 		 * Check: whether an error is thrown to terminate the program, when the input violates
-		 * the function invariants that the three input empty Vectors are not of the same size */
+		 * the function invariants that "the Vectors are of the same length" */
 		verifyInput("VectorAddTest");
 
 		/* Verify the function's OUTPUT correctness, knowing the ground truth,
-		 * Check: With Wilkinson Principle, and considering that the ground truth known, Vector v + v*1,
-		 * then all values doubled */ 
+		 * Check: With Wilkinson Principle, considering that the ground truth known, whether 
+		 * Vector v + v*1 ==> all values doubled in v */ 
 
 		// Time-stamp for measuring function's computational time
 		start = System.nanoTime();
@@ -345,7 +344,7 @@ public class Test {
 
 		// Output whether the JacobiDecom() satisfies self-regression transform
 		output("\n	"+ (i==v.len ? "PASSED" : "FAILED") + ": Function's output correctness testing! "
-				+ "By checking whether the values in Vector + Vector*1 is twice as much as the original Vector");		
+				+ "By checking whether the values in Vector + Vector*1 is twice as much as the original Vector.");		
 
 		// Output the computational costs
 		end = System.nanoTime();
@@ -397,8 +396,8 @@ public class Test {
 
 	// Helper functions:
 	/** Function: Creating violations (assertion errors) for each SparseMatrix Function's input invariant,
-	 * 			  and make sure that the assertion errors are indeed thrown to terminate the program when 
-	 * 			  there are invariant violation
+	 * 			  to make sure that the assertion errors are indeed thrown to terminate the program when 
+	 * 			  there are invariant violations
 	 * Parameter: String funcName
 	 * Return: void*/
 	public static void verifyInput(String funcName) {
@@ -455,6 +454,8 @@ public class Test {
 		int i,j = 0;
 		for(i=0; i<sp.rank; i++) {
 			for(j=0; j<sp.rank; j++) {
+				
+				// Compare the values one-by-one
 				if(full[i][j]!=sp.retrieveElement(i, j)[1])
 					break;
 			}
@@ -505,6 +506,7 @@ public class Test {
 		// Return the second norm difference
 		return Math.pow(value, 0.5);
 	}
+
 
 	// Helper functions - File operations:
 	/**Function: Create report

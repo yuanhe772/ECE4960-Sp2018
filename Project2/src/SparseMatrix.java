@@ -86,8 +86,7 @@ public class SparseMatrix {
 		// Verify function invariant: index i, j are in bound
 		assertInd(i,j);
 
-		try {
-			// The range of value(colInd) = [start, end]
+		try {// The range of value(colInd) = [start, end]
 			int start = rowPtr.get(i);
 			int end = rowPtr.get(j);
 
@@ -109,8 +108,7 @@ public class SparseMatrix {
 			}
 
 			// Iff value==0 (new zeros brought into the matrix)
-			else {	
-				for(int k=start; k<end; k++) {
+			else {	for(int k=start; k<end; k++) {
 
 					// Iff position (i,j) originally non-zero
 					if(j == colInd.get(k)) {
@@ -203,7 +201,7 @@ public class SparseMatrix {
 	}
 
 	
-	/**Function: Decompose this matrix into L, D-Inverse, and U for Jacobi Iterative Solver
+	/**Function: Decompose this matrix into (-L) + D-Inverse + (-U) for Jacobi Iterative Solver
 	 * Parameters: SparseMatrix L, SparseMatrix DInverse, SparseMatrix U
 	 * Return: None */
 	public void JacobiDecom(SparseMatrix L, SparseMatrix DInverse, SparseMatrix U) {

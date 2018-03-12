@@ -13,7 +13,8 @@ public class Vector {
 	int len;
 
 	/**Function: Constructor, construct a Vector by passing in an array
-	 * Parameters: double[] a*/
+	 * Parameters: double[] a
+	 * Return : None*/
 	public Vector(double[] a) {
 		// Update the data structures
 		v = a.clone();
@@ -21,7 +22,8 @@ public class Vector {
 	}
 
 	/**Function: Constructor2, construct an empty Vector by indicating its length
-	 * Parameters: */
+	 * Parameters: int length
+	 * Return: None*/
 	public Vector(int len) {
 		// Update the data structures
 		v = new double[len];
@@ -45,7 +47,9 @@ public class Vector {
 		return sum;
 	}
 
-	/**Keep function invariants true: 0 <= index < size*/
+	/**Function: Keep function invariants true: 0 <= index < size
+	 * Parameter: int i, int j
+	 * Return: None*/
 	public void assertInd(int i, int j) {
 		assert i>=0 && i<len;
 		assert j>=0 && j<len;

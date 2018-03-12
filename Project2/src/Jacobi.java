@@ -1,13 +1,16 @@
-
 /**
  * Jacobi.java, ECE4960-P2
  * Created by Yuan He(yh772) on 2018/03/07
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  */
+
+
 public class Jacobi {
 
-	/**Implement the Jacobi Iterative solver*/
+	/**Funtion: Implement the Jacobi Iterative solver
+	 * Parameter: SparseMatrix A, Vector b
+	 * Return: int IteratedNum*/
 	public static int solver(SparseMatrix A, Vector b) {
 		// Decompose matrix sp into the form of L, D, U
 		SparseMatrix L = new SparseMatrix(A.rank);
@@ -56,7 +59,7 @@ public class Jacobi {
 			
 			// Output current iteration's normalized norm to check its convergence
 			currNN = normalNorm(A,currX,b);
-			Test.output("\n		The "+i+"th iteration's precision: ||A*x - b|| / ||b|| = "+currNN);
+			Test.output("\n		The "+i+"th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = "+currNN);
 			
 			// Iff the precision decreases with more iteration
 			if(currNN < prevNN) {flag = false;}
@@ -72,7 +75,9 @@ public class Jacobi {
 	}
 
 	// Helper functions:
-	/** Calculate the second norm of (delta / v), for convergence evaluation of (delta X / X) */
+	/**Function: Calculate the second norm of (delta / v), for convergence evaluation of (delta X / X) 
+	 * Parameter: Vector u, Vector v
+	 * Return: double error*/
 	public static double convNorm(Vector u, Vector v) {
 		// Accumulating the norms of ||u - v|| and v
 		double normDiff = 0;
@@ -86,7 +91,9 @@ public class Jacobi {
 		return Math.pow(normDiff/normV, 0.5);
 	}
 
-	/** The normalized residual norm for X, ||Ax-b|| / ||b|| */
+	/**Function: The normalized residual norm for X, ||Ax-b|| / ||b|| 
+	 * Parameter: SparseMatrix A, Vector x, Vector b
+	 * Return: double error (of ||Ax-b|| / ||b|| )*/
 	public static double normalNorm(SparseMatrix A, Vector x, Vector b) {
 		// A*x-b:
 		Vector err = (A.product(x)).add(b,-1);
