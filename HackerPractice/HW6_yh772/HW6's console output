@@ -1,6 +1,6 @@
 /** Hacker Practice Purpose:
  * Use the Jacobi iterations to solve the problem from finite element*/
-############################### Output for HP1:#####################################
+##################################### Output for HP1:###########################################
 
 Precision: ||A*x - b|| norm = 0.4050462936504913
 Current X = [-0.25, -0.25, 0.0, 0.0, -0.0625]
@@ -117,7 +117,6 @@ The upper bound of infinite norm for DI*(L+U): 1.25
 #################################################################
 For two-dimensional: The computed mid point is:
 
-
 x= 3.725290298461914E-8, y= 3.725290298461914E-8
 The residual for first function: 0.0
 The residual for second function: 7.450580730150591E-8
@@ -126,9 +125,15 @@ The residual for second function: 7.450580730150591E-8
 
 
 
+
+
+
+
+
+
 /** Hacker Practice Purpose:
  * Use the SOR matrix solver for solving the same matrix:*/
-############################### Output for HP2:#####################################
+##################################### Output for HP2:###########################################
 The 0th iteration, X = [-0.25, -0.25, 0.0, 0.0, -0.0625]
   ||delta X|| = 1.0307764064044151
   || R(k) || = 1.0
@@ -314,7 +319,7 @@ The 34th iteration, X = [-0.37931031198315196, -0.4083483960392904, -0.116152417
 /** Hacker Practice Purpose:
  * Use the bisection method to solve the following nonlinear equation:
  * f(x) = ex – 1 = 0 */
-############################### Output for HP3:#####################################
+##################################### Output for HP3:###########################################
 f(mid) = 0.2865047968601901, when mid = -1.25, with range = [-5.0, 2.5]
 f(mid) = 1.8682459574322223, when mid = 0.625, with range = [-1.25, 2.5]
 f(mid) = 0.7316156289466418, when mid = -0.3125, with range = [-1.25, 0.625]
@@ -343,9 +348,16 @@ f(mid) = 0.9999999254941968, when mid = -7.450580596923828E-8, with range = [-2.
 The computed mid point is -7.450580596923828E-8
 
 
+
+
+
+
+
+
+
 /** Hacker Practice Purpose:
  * Use the Newton method to solve the following nonlinear equation:*/
-############################### Output for HP4:#####################################
+##################################### Output for HP4:###########################################
 when x(0) = 10.0
 x = 10.0, delta x = -0.02, f(x) = 1.4035922178528375E217
 x = 9.98, delta x = -0.02, f(x) = 5.1635272073628715E216
