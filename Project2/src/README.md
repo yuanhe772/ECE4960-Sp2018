@@ -1,1 +1,1 @@
-## src files for ECE4960-P2
+## Programming assignment 2's src files
