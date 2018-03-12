@@ -8,10 +8,14 @@
 
 public class Main {
 	public static void main(String args[]) {
+
 		// Generate report:
 		Test.createFile("report.txt","\nECE4960-Project 2 Report: ");
 
-		// Modular testing for class SparseMatrix:
+		// Modular testing for class Vector.java:
+		Test.VectorAddTest();
+
+		// Modular testing for class SparseMatrix.java:
 		Test.retrieveTest();
 		Test.matrixSetterTest();
 		Test.productTest();
@@ -19,10 +23,8 @@ public class Main {
 		Test.addTest();
 		Test.JacobiDecomTest();
 
-		// Modular testing for class Vector:
-		Test.VectorAddTest();
-
 		// Convergence testing for Jacobi-Iterative-Solver
 		Test.mat1JacobiTest();
+
 	}
 }
