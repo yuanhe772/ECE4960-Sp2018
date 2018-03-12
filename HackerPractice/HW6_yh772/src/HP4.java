@@ -4,6 +4,9 @@
  * Created by Yuan He(yh772) on 2018/03/08
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
+ * 
+ * HP Purpose:
+ * Use the Newton method to solve the following nonlinear equation:
  */
 public class HP4 {
 
