@@ -6,4 +6,4 @@ Assertion Enabling Configurations:
 	Eclipse: 
 	Enable assertions by modifying in the Run Configurations -> VM Arguments -> Manually adding "-ea";
 	Linux Command-Line: 
-	Before running programs, ¡°java -ea ProjectName¡± to enable assertions.
+	Before running programs, run "java -ea ProjectName" to enable assertions for a specific project.
