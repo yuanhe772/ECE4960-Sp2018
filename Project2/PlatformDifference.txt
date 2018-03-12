@@ -4,6 +4,6 @@ Only one difference is observed when comparing results generated from these two 
 
 Assertion Enabling Configurations:
 	Eclipse: 
-	Enable assertions by modifying the Run Configurations -> VM Arguments -> Manually adding ¡°-ea¡±;
+	Enable assertions by modifying in the Run Configurations -> VM Arguments -> Manually adding "-ea";
 	Linux Command Line: 
 	Before running programs, ¡°java -ea ProjectName¡± to enable assertions.
