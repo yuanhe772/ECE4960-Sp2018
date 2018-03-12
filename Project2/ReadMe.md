@@ -3,7 +3,7 @@
 
 #### 1. Overview:
 
-This program is written in java, and compiled with both Eclipse on Mac OS and Command Line in Linux.
+This program is written in java, and compiled with Eclipse on Mac OS and Command-line in Linux.
 
 #### 2. Program Breakdown:
 
