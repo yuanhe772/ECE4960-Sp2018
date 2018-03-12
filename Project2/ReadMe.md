@@ -15,7 +15,7 @@ The program breaks down into 5 classes, Main.java, Test.java, SparseMatrix.java,
  
  - ***Jacobi.java:*** implemented the iterative steps of Jacobi-Iterative solver;
  
- - ***Test.java:*** verify both the **inputs** and **outputs** of SparseMatrix's functions. Further discussions are in Algorithm&Design.txt;
+ - ***Test.java:*** verify both the **inputs** and **outputs** of SparseMatrix's functions. Further discussions are in Algorithm&Design.pdf;
  
  - ***Main.java:*** main entry for entire program, calls the modular testing funcions and the Jacobi-solver function;
 
