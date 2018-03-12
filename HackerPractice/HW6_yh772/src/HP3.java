@@ -36,7 +36,6 @@ public class HP3 {
 		return mid;
 	}
 	
-	
 	public static void main(String Args[]) {
 		System.out.println("The computed mid point is " + bisection(-5,10));
 	}
