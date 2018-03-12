@@ -1,4 +1,4 @@
-## Python-generated sparse matrix test input data
+### Python-generated sparse matrix test input data
 
 "value1.csv", "rowPtr1.csv", "colInd1.csv" generate an all-1 SparseMatrix, with rank of 500
 
