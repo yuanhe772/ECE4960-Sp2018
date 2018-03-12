@@ -1,0 +1,9 @@
+The same Java program is run with Eclipse on MAC OS, and with Linux¡¯s command line on Cornell ECE department¡¯s Linux server. 
+
+Only one difference is observed when comparing results generated from these two platforms:
+
+Assertion Enabling Configurations:
+	Eclipse: 
+	enable assertions by modifying the Run Configurations -> VM Arguments -> Manually adding ¡°-ea¡±;
+	Linux Command Line: 
+	Before running programs, ¡°java -ea ProjectName¡± to enable assertions.
