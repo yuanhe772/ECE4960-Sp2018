@@ -1,4 +1,5 @@
 # ECE4960 - Programming Assignment 2
+### Name: Yuan He(yh772)
 
 #### 1. Overview:
 
@@ -21,5 +22,7 @@ The program is broken into 5 classes, Main.java, Test.java, SparseMatrix.java, V
  - ***report.txt:*** The **program-generated** report for entire project, consists of testing methods and outcome, estimated number of operations, measured computation time and MEM usage for each function;
  
  - ***Alhgorithm&Design.txt:*** The algo and design for implementing the modular testing;
+ 
+ - ***PlatformDifference.txt:*** The difference observed with different platforms;
  
  - ***PythonGeneratedTestingData:*** The large testing data for verifying sparse matrix functions.
