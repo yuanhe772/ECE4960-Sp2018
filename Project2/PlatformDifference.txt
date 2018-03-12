@@ -1,4 +1,4 @@
-The same Java program is run with Eclipse on MAC OS, and with Linux's command-line on Cornell ECE Linux server. 
+This Java program is run with Eclipse on MAC OS, and with Linux's command-line on Cornell ECE Linux server. 
 
 Only one difference is observed when comparing results generated from these two platforms:
 
