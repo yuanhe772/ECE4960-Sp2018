@@ -23,6 +23,6 @@ The program breaks down into 5 classes, Main.java, Test.java, SparseMatrix.java,
  
  - ***Algorithm&Design.txt:*** The algo and design for implementing the modular testing;
  
- - ***PlatformDifference.txt:*** The difference observed with different platforms;
+ - ***PlatformDifference.txt:*** The differences observed within different platforms;
  
  - ***PythonGeneratedTestingData:*** The large testing data for verifying sparse matrix functions.
