@@ -21,7 +21,7 @@ The program breaks down into 5 classes, Main.java, Test.java, SparseMatrix.java,
 
  - ***report.txt:*** The **program-generated** report for entire project, consists of brief description and outcome, estimated number of operations, measured computation time and MEM usage for each function being tested;
  
- - ***Alhgorithm&Design.txt:*** The algo and design for implementing the modular testing;
+ - ***Algorithm&Design.txt:*** The algo and design for implementing the modular testing;
  
  - ***PlatformDifference.txt:*** The difference observed with different platforms;
  
