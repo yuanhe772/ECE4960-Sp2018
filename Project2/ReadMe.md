@@ -16,8 +16,10 @@ The program is broken into 5 classes, Main.java, Test.java, SparseMatrix.java, V
  
  - ***Test.java:*** verify both the **inputs** and **outputs** of SparseMatrix's functions. Further discussion is in Algorithm&Design.txt;
  
- - ***Main.java:*** main entry for entire program, call the modular testing funcions, and the Jacobi-solver function.
+ - ***Main.java:*** main entry for entire program, calls the modular testing funcions and the Jacobi-solver function;
 
- - ***report.txt:*** The **program-generated** report for entire project, consists of testing methods and outcome, estimated number of operations, measured computation time and MEM usage for each function.
+ - ***report.txt:*** The **program-generated** report for entire project, consists of testing methods and outcome, estimated number of operations, measured computation time and MEM usage for each function;
  
- - ***Alhgorithm&Design.txt:*** The algo and design for implementing the modular testing.
+ - ***Alhgorithm&Design.txt:*** The algo and design for implementing the modular testing;
+ 
+ - ***PythonGeneratedTestingData:*** The large testing data for verifying sparse matrix functions.
