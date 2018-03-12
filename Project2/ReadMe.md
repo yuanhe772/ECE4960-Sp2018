@@ -25,4 +25,4 @@ The program breaks down into 5 classes, Main.java, Test.java, SparseMatrix.java,
  
  - ***PlatformDifference.txt:*** The differences observed within different platforms;
  
- - ***PythonGeneratedTestingData:*** The large testing data for verifying sparse matrix functions.
+ - ***PythonGeneratedTestingData:*** Batches of large testing data for sparse matrix functions' black-box testing.
