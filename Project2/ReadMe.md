@@ -7,7 +7,7 @@ This program is written in java, and compiled with Eclipse on Mac OS and Command
 
 #### 2. Program Breakdown:
 
-The program is broken into 5 classes, Main.java, Test.java, SparseMatrix.java, Vector.java, and Jacobi.java:
+The program breaks down into 5 classes, Main.java, Test.java, SparseMatrix.java, Vector.java, and Jacobi.java:
 
  - ***SparseMatrix.java:*** construct the sparse matrix's data structures into an instantiable class, and implemented the sparse matrix basic operations including addition(subtraction), matrix multiplication, element - retrieving, value-setting, and Jacobi-decomposition;
  
