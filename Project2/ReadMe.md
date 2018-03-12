@@ -1,4 +1,4 @@
-：# ECE4960 - Programming Assignment 2：
+:# ECE4960 - Programming Assignment 2:
 ### Name: Yuan He(yh772)
 
 #### 1. Overview:
