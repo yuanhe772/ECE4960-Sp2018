@@ -2,22 +2,30 @@
 ECE4960-Project 2 Report: 
 
 
+  Vector.add() Testing, GROUND-TRUTH KNOWN: 
+	PASSED: Function's input invariants verification testing!
+	PASSED: Function's output correctness testing! By checking whether the values in Vector + Vector*1 is twice as much as the original Vector.
+		<STATISTICS>: 
+		0 ns/operation, with Measured time = 164107ns, Estimated # of operations = 60 * n^2.5 + 60 * n^2 + 3 * n^1.5 = 335446237.
+		Current MEM usage = 79615096 bytes
+
+
   SparseMatrix.retrieveElement() Testing, GROUND-TRUTH KNOWN: 
 	PASSED: Function's input invariants verification testing!
 	PASSED: Function's output correctness testing! By comparing the retrieved elements with SparseMatrix's and fullMatrix's retrieving methods
 		<STATISTICS>: 
-		417 ns/operation, with Measured time = 156393ns, Estimated # of operations = 3 * n * n^0.5 = 375.
-		Current MEM usage = 79607216 bytes
+		471 ns/operation, with Measured time = 176701ns, Estimated # of operations = 3 * n * n^0.5 = 375.
+		Current MEM usage = 79615096 bytes
 
 
   SparseMatrix.matrixSetter() Testing, GROUND-TRUTH KNOWN: 
 	PASSED: Function's input invariants verification testing!
 	PASSED: Function's output correctness testing! By comparing the matrix created by matrixSetter() from another sparse matrix, and an equivalent full matrix
-	PASSED: Function's output correctness testing! The data structures of modified sparse martrix satisfies SparseMatrix's data structure invariants
+	PASSED: Function's output correctness testing! The modified sparse martrix satisfies SparseMatrix's data structure invariants
 	PASSED: Function's output correctness testing! The sparse matrix modified by matrixSetter() and the full matrix modified with 2D-array operation have same values for each element
 		<STATISTICS>: 
-		2 ns/operation, with Measured time = 684081ns, Estimated # of operations = n^2.5 + 9 * n^2 + 6 * n^1.5 + 13 * n + 16 * n^0.5 = 275567.
-		Current MEM usage = 79607216 bytes
+		2 ns/operation, with Measured time = 565353ns, Estimated # of operations = n^2.5 + 9 * n^2 + 6 * n^1.5 + 13 * n + 16 * n^0.5 = 275567.
+		Current MEM usage = 79615096 bytes
 
 
   SparseMatrix.product() Testing, GROUND-TRUTH UNKNOWN: 
@@ -25,16 +33,16 @@ ECE4960-Project 2 Report:
 	PASSED: Function's output correctness testing! By checking ||mat1RowSum - mat1 * All1Vector|| == 0
 	PASSED: Function's output correctness testing! By checking ||VectorColSum - All1Matrix * Vector|| == 0
 		<STATISTICS>: 
-		45 ns/operation, with Measured time = 3061006599ns, Estimated # of operations = 6 * n^1.5 + 6 * n^0.5 = 67082039.
-		Current MEM usage = 39759696 bytes
+		44 ns/operation, with Measured time = 2998426136ns, Estimated # of operations = 6 * n^1.5 + 6 * n^0.5 = 67082039.
+		Current MEM usage = 39758832 bytes
 
 
   SparseMatrix.leftMult() Testing, GROUND-TRUTH UNKNOWN: 
 	PASSED: Function's input invariants verification testing!
 	PASSED: Function's output correctness testing! By checking ||mat1 - MatrixDiagonal1 * mat1|| == 0
 		<STATISTICS>: 
-		508 ns/operation, with Measured time = 4263143865ns, Estimated # of operations = 9 * n^2 + n^1.5 + 3 * n = 8375530.
-		Current MEM usage = 75051856 bytes
+		546 ns/operation, with Measured time = 4580673066ns, Estimated # of operations = 9 * n^2 + n^1.5 + 3 * n = 8375530.
+		Current MEM usage = 76408376 bytes
 
 
   SparseMatrix.add() Testing, GROUND-TRUTH UNKNOWN: 
@@ -42,49 +50,52 @@ ECE4960-Project 2 Report:
 	PASSED: Function's output correctness testing! By checking ||(mat1 + mat1*1) - (MatrixDiagonal2 * mat1)|| == 0
 	PASSED: Function's output correctness testing! By checking ||mat1 + mat1*(-1)|| == 0
 		<STATISTICS>: 
-		110 ns/operation, with Measured time = 14774287526ns, Estimated # of operations = 24 * n^2.5 + 38 * n^2 = 134259078.
-		Current MEM usage = 149604064 bytes
+		115 ns/operation, with Measured time = 15519781235ns, Estimated # of operations = 24 * n^2.5 + 38 * n^2 = 134259078.
+		Current MEM usage = 149722368 bytes
 
 
   SparseMatrix.JacobiDecom() Testing, GROUND-TRUTH UNKNOWN: 
 	PASSED: Function's input invariants verification testing!
 	PASSED: Function's output correctness testing! By Jacobi-decomposing mat1 into M1 = (-L + D - U), and then Jacobi-decomposing M1 into M2 = (-L2 + D2 -U2), then check whether ||mat1 - M1|| = 0 (Namely check whether twice Jacobi-Decomposition would equal itself.)
 		<STATISTICS>: 
-		108 ns/operation, with Measured time = 36261252290ns, Estimated # of operations = 60 * n^2.5 + 60 * n^2 + 3 * n^1.5 = 335446237.
-		Current MEM usage = 135496520 bytes
-
-
-  Vector.add() Testing, GROUND-TRUTH KNOWN: 
-	PASSED: Function's input invariants verification testing!
-	PASSED: Function's output correctness testing! By checking whether the values in Vector + Vector*1 is twice as much as the original Vector
-		<STATISTICS>: 
-		0 ns/operation, with Measured time = 218697ns, Estimated # of operations = 60 * n^2.5 + 60 * n^2 + 3 * n^1.5 = 335446237.
-		Current MEM usage = 135496520 bytes
+		110 ns/operation, with Measured time = 36991624310ns, Estimated # of operations = 60 * n^2.5 + 60 * n^2 + 3 * n^1.5 = 335446237.
+		Current MEM usage = 629343408 bytes
 
 
   Jacobi.solver() Testing: 
 	b = b1:
-		The 1th iteration's precision: ||A*x - b|| / ||b|| = 4.671088362233026E-5
-		The 2th iteration's precision: ||A*x - b|| / ||b|| = 8.925580049279586E-7
-		The 3th iteration's precision: ||A*x - b|| / ||b|| = 3.5229790439103625E-8
-		The 4th iteration's precision: ||A*x - b|| / ||b|| = 1.458435828213199E-9
+		The 1th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.671088362233026E-5
+		The 2th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 8.925580049279586E-7
+		The 3th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 3.5229790439103625E-8
+		The 4th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.458435828213199E-9
  			To converge to |delta| / |x| < 10^-7, it took iteration times of 4
 	b = b2:
-		The 1th iteration's precision: ||A*x - b|| / ||b|| = 5.102178154645007E-5
-		The 2th iteration's precision: ||A*x - b|| / ||b|| = 1.0134741350734058E-6
-		The 3th iteration's precision: ||A*x - b|| / ||b|| = 4.0233733326412927E-8
-		The 4th iteration's precision: ||A*x - b|| / ||b|| = 1.6660286669987395E-9
+		The 1th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 5.102178154645007E-5
+		The 2th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.0134741350734058E-6
+		The 3th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.0233733326412927E-8
+		The 4th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.6660286669987395E-9
  			To converge to |delta| / |x| < 10^-7, it took iteration times of 4
 	b = b3:
-		The 1th iteration's precision: ||A*x - b|| / ||b|| = 0.0017416703429693416
-		The 2th iteration's precision: ||A*x - b|| / ||b|| = 7.220224525315974E-5
-		The 3th iteration's precision: ||A*x - b|| / ||b|| = 2.993154996232751E-6
-		The 4th iteration's precision: ||A*x - b|| / ||b|| = 1.2408112428756825E-7
-		The 5th iteration's precision: ||A*x - b|| / ||b|| = 5.143778253347723E-9
-		The 6th iteration's precision: ||A*x - b|| / ||b|| = 2.1323520988518484E-10
+		The 1th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0017416703429693416
+		The 2th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 7.220224525315974E-5
+		The 3th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.993154996232751E-6
+		The 4th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.2408112428756825E-7
+		The 5th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 5.143778253347723E-9
+		The 6th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.1323520988518484E-10
  			To converge to |delta| / |x| < 10^-7, it took iteration times of 6
 
 	PASSED: Jacobi-Iterative-Solver convergence test!
 		<STATISTICS>: 
-		68 ns/operation, with Measured time = 82426151138ns, Estimated # of operations = 54 * n^2.5 + 61 * n^2 + 9 * n^1.5 + (i1+i2+i3) * (24 * n^2.5 + 36 * n^2)) = 1200419392.
-		Current MEM usage = 199685896 bytes
+		69 ns/operation, with Measured time = 83335372864ns, Estimated # of operations = 54 * n^2.5 + 61 * n^2 + 9 * n^1.5 + (i1+i2+i3) * (24 * n^2.5 + 36 * n^2)) = 1200419392.
+		Current MEM usage = 312409744 bytes
+
+
+
+
+Discussion:
+
+The program passed all the tests designed in Test.java, including the SparseMatrix and Vector's functions, and the Jacobi-Solver's convergence test. For Jacobi convergence test, the in-code check has already ensured that the normalized-second-norm error(||Ax - b||/||b||) is decreasing with iterations, A.K.A, this Jacobi-Iterative-Solver is generating a convergent solution.
+
+The modular design and test strategies are further disccussed in Algorithm&Design.pdf and is therefore neglected here. 
+
+One of the abnormalty observed from the output report is that, for different testing, each function's (computational time)/(estimated number of operations) is not constant accross the program, which could be resulted from an under-estimate of the actual runtime time complexity. My estimation of # of operations was derived by manually calculate each testing function's time complexity, and it can improved by adding counters to count the number of operations instead to achieve better estimation precision.
