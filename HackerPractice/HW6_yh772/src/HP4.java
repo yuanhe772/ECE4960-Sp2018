@@ -12,38 +12,31 @@ public class HP4 {
 
 	public static double f(double x) {return Math.exp(50*x);}
 
-	public static double fD(double x, int it_num) {
-		int e = 50;
-		for(int i=50; i>50-it_num; i--) {
-			if(e!=0)
-				e *= i;
+	public static double f_fD(double x, double diff) {
+		if(x == 1) diff = 1;
+		return (f(x)-1)/((-50)*Math.exp(49*x));
 		}
-		//System.out.println(e*Math.exp((50-it_num)*x));
-		return e*Math.exp((49-it_num)*x);
-	}
 
 	public static double itNorm(double prev, double curr) {
 		return Math.abs(prev-curr)/prev;
 	}
 
-	public static void main(String args[]) {
-
-		double prevX = 0;
-		double currX = 1;
-		int i = 0;
-
-		while(itNorm(prevX,currX)>Math.pow(10, -7)) {
-			prevX = currX;
-			currX = prevX - f(prevX)/fD(prevX, i);
-			i+=1;
-//			System.out.println(prevX);
-//			System.out.println(currX);
-			System.out.println(itNorm(prevX, currX));
+	public static void newton(double x) {
+		System.out.println("When x(" + (int)x + ") = " + x);
+		int diff = 0;
+		if(x == 1) {diff = 1;}
+		double fx = f(x) - diff;
+		double ffd = f_fD(x,diff);
+		while(Math.abs(fx)>Math.pow(10, -7)) {
+			System.out.println("x = "+x+", delta x = "+ffd+", f(x) = "+fx);
+			x= x+ffd;
+			fx= Math.exp(50*x)-1;
+			ffd= fx/(-50*Math.exp(50*x));
 		}
-
 	}
 
-
-
-
+	public static void main(String args[]) {
+		newton(1);
+		newton(10);
+	}
 }
