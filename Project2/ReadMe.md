@@ -9,9 +9,9 @@ This program is written in java, and compiled with Eclipse on Mac OS and Command
 
 The program breaks down into 5 classes, Main.java, Test.java, SparseMatrix.java, Vector.java, and Jacobi.java:
 
- - ***SparseMatrix.java:*** construct the sparse matrix's data structures into an instantiable class, and implemented the sparse matrix basic operations including addition(subtraction), matrix multiplication, element - retrieving, value-setting, and Jacobi-decomposition;
+ - ***SparseMatrix.java:*** constructs the sparse matrix's data structures into an instantiable class, and implements sparse matrix's basic operations of addition(subtraction), matrix multiplication, element - retrieving, value-setting, and Jacobi-decomposition;
  
- - ***Vector. java:*** construct vector's data structures into an instantiable class, providing more flexibilty in development than simple Arrays when operated with sparse matrix. Also implemented basic vector operation of addition(subtraction);
+ - ***Vector. java:*** construct vector's data structures into an instantiable class, providing more flexibilty in development than simple Arrays when interacted with sparse matrix. Also implemented basic vector operation of addition(subtraction);
  
  - ***Jacobi.java:*** implemented the iterative steps of Jacobi-Iterative solver;
  
