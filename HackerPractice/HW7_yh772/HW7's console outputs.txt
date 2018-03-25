@@ -513,6 +513,11 @@ To converge, it took 504 times of iterations.
 
 
 
+
+
+
+
+
 /** Hacker Practice Purpose:
  * Note 5, slide 30:
  * Use the quasi-Newton method with line search to solve the same 
@@ -579,12 +584,21 @@ To converge, it took 54 times of iterations.
 
 
 
+
+
+
+
+
 /**Hacker Practice Purpose:
  * note 5, slide 37:
  * Use the quasi-Newton method with line search to solve the nonlinear 
  * optimization function V by making x(0) = (2, 2) and the local 
  * analysis of the Hessian matrix by 10-4 perturbation.
 ############################### Output for HP3:#####################################
+
+
+
+
 
 
 
