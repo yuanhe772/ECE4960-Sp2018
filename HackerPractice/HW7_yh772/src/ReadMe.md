@@ -1,0 +1,1 @@
+- Source file for hacker practice week7, note 5.
