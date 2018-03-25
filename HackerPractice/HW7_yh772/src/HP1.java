@@ -19,6 +19,7 @@ public class HP1 {
 		double t = 1;
 		double norm1 = 0;
 		double norm2 = 0;
+		int counter = 0;
 		while(Math.abs(fx(x))>Math.pow(10, -7)) {
 			t = 1;
 			norm1 = fx(x+t*dx(x));
@@ -30,10 +31,13 @@ public class HP1 {
 				t/=2;
 				norm2 = fx(x+(t/2)*dx(x));
 				System.out.println(t);
+				counter+=1;
 			}
 			x = x+(t)*dx(x);
+			counter+=1;
 			System.out.println("x = "+x+"\tt = "+t+"\tdx(x) = "+dx(x)+"\tfx(x) ="+fx(x));
 		}
+		System.out.println("To converge, it took "+counter+" times of iterations.");
 	}
 
 	public static void main(String args[]) {
