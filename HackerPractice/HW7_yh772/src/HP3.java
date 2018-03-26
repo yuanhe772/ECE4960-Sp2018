@@ -50,6 +50,7 @@ public class HP3 {
 		return r;
 	}
 
+	// Newton Method
 	public static void Newton(Vector x) {
 		double t = 1;
 		double norm1 = 0;
@@ -63,9 +64,8 @@ public class HP3 {
 			while(norm1>norm2) {
 				norm1 = norm2;
 				t /= 2;
-				norm2 = vx(x.add(dx(x),t/2)).secondNorm();;
+				norm2 = vx(x.add(dx(x),t/2)).secondNorm();
 				System.out.println(t);
-				counter += 1;
 			}
 			x = x.add(dx(x),t);
 			System.out.println("|| x || = "+x.secondNorm()+"     [x1, x2] = "+Arrays.toString(x.v)+

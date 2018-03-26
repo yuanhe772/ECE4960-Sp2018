@@ -31,7 +31,6 @@ public class HP1 {
 				t/=2;
 				norm2 = fx(x+(t/2)*dx(x));
 				System.out.println(t);
-				counter+=1;
 			}
 			x = x+(t)*dx(x);
 			counter+=1;
