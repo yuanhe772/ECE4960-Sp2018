@@ -1,0 +1,100 @@
+/** Hacker Practice Purpose:
+ * Note 6, p10: 
+ * Note6: Use the Quasi Newton method to perform the parameter extraction 
+ * for the power-law function y = axm with the known measurements:*/
+############################### Output for HP1:#####################################
+     [a, m] = [80.06043014127827, 1.9046864680252837]     || dx(am) ||= 0.11743154801914814     t = 1.0     || V(a, m) || =2.398568791043372E12
+[a, m] = [80.1301522804056, 1.8101931254783938]     || dx(am) ||= 0.12257773647600272     t = 1.0     || V(a, m) || =8.500306179489116E11
+[a, m] = [80.20990489199373, 1.7171080975498778]     || dx(am) ||= 0.12803877778536882     t = 1.0     || V(a, m) || =2.9358328518357465E11
+[a, m] = [80.3002921513288, 1.6264214283715188]     || dx(am) ||= 0.13364556849644724     t = 1.0     || V(a, m) || =9.70306244615981E10
+[a, m] = [80.40206527258057, 1.5397994348051525]     || dx(am) ||= 0.14034434252254677     t = 1.0     || V(a, m) || =2.969953991834577E10
+[a, m] = [80.51753667596049, 1.4600317127644726]     || dx(am) ||= 0.15502159708403607     t = 1.0     || V(a, m) || =7.916986462821093E9
+[a, m] = [80.65666149234424, 1.3916505674927575]     || dx(am) ||= 0.21491097561573214     t = 1.0     || V(a, m) || =1.62573620048091E9
+[a, m] = [80.86555693858472, 1.3411587861803664]     || dx(am) ||= 0.5320531941194121     t = 1.0     || V(a, m) || =2.0016924737036854E8
+[a, m] = [81.3969084900939, 1.3138434044066087]     || dx(am) ||= 3.1780105977755637     t = 1.0     || V(a, m) || =1.4242544491313968E7
+[a, m] = [84.57488862155506, 1.2999278155962832]     || dx(am) ||= 94.23719552021588     t = 1.0     || V(a, m) || =7932789.942044935
+[a, m] = [72.79527050919283, 1.3270950170653326]     || dx(am) ||= 5.502340642489017     t = 0.125     || V(a, m) || =6454716.3693357855
+[a, m] = [67.29295516363632, 1.3437798616789407]     || dx(am) ||= 8.283919941210383     t = 1.0     || V(a, m) || =5234636.5848519085
+[a, m] = [63.15101337758527, 1.3560533721779497]     || dx(am) ||= 4.875651489716792     t = 0.5     || V(a, m) || =4844872.032127198
+[a, m] = [58.275387169363384, 1.3717545465733174]     || dx(am) ||= 2.2150168621622237     t = 1.0     || V(a, m) || =4520823.476179934
+[a, m] = [56.060384782770015, 1.3797624831779132]     || dx(am) ||= 1.7526795528765025     t = 1.0     || V(a, m) || =4394963.808549026
+[a, m] = [54.3077162890189, 1.3859887247052705]     || dx(am) ||= 0.30864465043701006     t = 1.0     || V(a, m) || =4370219.9286789475
+[a, m] = [53.999073980999434, 1.3871911987390346]     || dx(am) ||= 0.05186299876746222     t = 1.0     || V(a, m) || =4368102.981384796
+[a, m] = [53.94721133015248, 1.3873811678947334]     || dx(am) ||= 2.3290728951810594E-4     t = 1.0     || V(a, m) || =4368086.609127158
+[a, m] = [53.94697842471706, 1.3873820972303958]     || dx(am) ||= 3.711731860662799E-8     t = 1.0     || V(a, m) || =4368086.607611612
+
+
+
+
+
+
+
+
+
+
+/** Hacker Practice Purpose:
+ * Note6, p22:
+ * Construct a B-Spline curve with the following anchor points.
+############################### Output for HP1:#####################################
+The 1th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.3590351654086268
+The 2th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.2939826206597934
+The 3th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.20331271374489226
+The 4th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.1668779305761517
+The 5th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.11605953323278284
+The 6th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.09524897428270675
+The 7th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.06632059021075007
+The 8th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.05442019817754968
+The 9th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.03790592670332673
+The 10th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.031101916058583697
+The 11th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0216665609369161
+The 12th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.01777696077064189
+The 13th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.012384557286698978
+The 14th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.010161161245069808
+The 15th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.007079027889598786
+The 16th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.005808109049605867
+The 17th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0040463896340142075
+The 18th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0033199245226247366
+The 19th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0023129280060351608
+The 20th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.001897677449898323
+The 21th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0013220767058944943
+The 22th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 0.0010847180128740704
+The 23th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 7.557031571815615E-4
+The 24th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 6.200281466973756E-4
+The 25th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.319622913352863E-4
+The 26th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 3.5441002143218674E-4
+The 27th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.469110019059906E-4
+The 28th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.0258187907408E-4
+The 29th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.4113510458683344E-4
+The 30th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.1579643828565704E-4
+The 31th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 8.067326943311315E-5
+The 32th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 6.618960804338895E-5
+The 33th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.611309443078386E-5
+The 34th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 3.783418802940839E-5
+The 35th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.635838975453157E-5
+The 36th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.1626140823403976E-5
+The 37th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.5066538454800915E-5
+The 38th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.236157008680576E-5
+The 39th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 8.612080750478102E-6
+The 40th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 7.065912326652184E-6
+The 41th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.922692433666064E-6
+The 42th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.0388977013876425E-6
+The 43th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.813826472175585E-6
+The 44th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.308646624526033E-6
+The 45th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.6083920583248633E-6
+The 46th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.3196296690767162E-6
+The 47th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 9.193619573527322E-7
+The 48th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 7.543044677940552E-7
+The 49th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 5.25510185346808E-7
+The 50th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.3116280535482476E-7
+The 51th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 3.003832741640806E-7
+The 52th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 2.464540151348543E-7
+The 53th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.7170002393555653E-7
+The 54th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 1.4087388989198328E-7
+The 55th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 9.814427354810595E-8
+The 56th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 8.052395844732188E-8
+The 57th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 5.609957530888975E-8
+The 58th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 4.60277477832054E-8
+The 59th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = 3.206669360874693E-8
+
+  To converge to |delta K| / |K| < 10^-7, it took iteration times of 59
+  [k0, k1, k2, k3, k4, k5] = [1.499999997298316, 0.0, -1.5000000096526447, 0.0, 1.4999999337272603, 0.0]
