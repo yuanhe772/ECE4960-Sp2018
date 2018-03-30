@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * Calculating π by Monte Carlo
+ * Note6: Calculating π by Monte Carlo
  */
 public class Note6_HP3 {
 
@@ -23,6 +23,7 @@ public class Note6_HP3 {
 		return 4*count/Math.pow(10, N);
 	}
 
+	// Calculate the absolute error
 	public static double[] error(double[] pi) {
 		double truePi = 3.14159265359;
 		double error[] = new double[pi.length];

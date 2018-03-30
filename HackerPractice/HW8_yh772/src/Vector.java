@@ -1,0 +1,87 @@
+
+/**
+ * Vector.java, ECE4960-P2
+ * Created by Yuan He(yh772) on 2018-03-04
+ * Platform: Java 8, Eclipse, MacOS
+ * Copyright © 2018 Yuan He. All rights reserved.
+ */
+
+
+public class Vector {
+
+	// Data structures for keeping the Vector
+	double[] v;
+	int len;
+
+	/**Function: Constructor, construct a Vector by passing in an array
+	 * Parameters: double[] a
+	 * Return : None*/
+	public Vector(double[] a) {
+		// Update the data structures
+		v = a.clone();
+		len = v.length;
+	}
+
+	/**Function: Constructor2, construct an empty Vector by indicating its length
+	 * Parameters: int length
+	 * Return: None*/
+	public Vector(int len) {
+		// Update the data structures
+		v = new double[len];
+		this.len = len;
+	}
+
+	/**Function: vectorA + d*VectorB
+	 * Parameters: Vector B, double d
+	 * Return: Vector sum*/
+	public Vector add(Vector B, double d) {
+		// Keep function invariants true
+		assert B.len == len: "Unmatched matrix sizes!";
+
+		// Create data structure for storing the adding result
+		Vector sum = new Vector(len);
+
+		// Iteratively add two vectors' corresponding values into the sum
+		for(int i=0; i<len; i++) {
+			sum.v[i] = v[i] + d*B.v[i];
+		}
+		return sum;
+	}
+	
+	/**Function: vectorA*t
+	 * Parameters: double t (the scaler)
+	 * Return: Vector r*/
+	public Vector scale(double t) {
+		double rr[] = new double[len];
+		for(int i=0; i<len; i++) {
+			rr[i] = v[i]*t;
+		}
+		return new Vector(rr);
+	}
+	
+	/**Function: || Vector x ||
+	 * Parameters: Vector x
+	 * Return: double norm*/
+	public double secondNorm() {
+		double sum = 0;
+		for(int i=0; i<len; i++) {
+			sum += Math.pow((v[i]),2);
+		}
+		sum = Math.pow(sum, 0.5);
+		return sum;
+	}
+
+	/**Function: Keep function invariants true: 0 <= index < size
+	 * Parameter: int i, int j
+	 * Return: None*/
+	public void assertInd(int i, int j) {
+		assert i>=0 && i<len;
+		assert j>=0 && j<len;
+	}
+	
+//	public static void main(String args[]) {
+//		double rr[] = {3,4};
+//		Vector r = new Vector(rr);
+//		System.out.println(r.secondNorm());
+//	}
+}

@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * To generate v with distribution function of p(v) from random()
+ * Note6: Generate v with distribution function of p(v) from random()
  */
 public class Note6_HP4 {
 	// Class varibles
