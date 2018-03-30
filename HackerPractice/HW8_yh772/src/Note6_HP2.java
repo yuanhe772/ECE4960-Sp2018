@@ -6,7 +6,8 @@ import java.util.ArrayList;
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * Note6: Construct a B-Spline curve with the following anchor points.
+ * Note6, p22:
+ * Construct a B-Spline curve with the following anchor points.
  */
 public class Note6_HP2 {
 

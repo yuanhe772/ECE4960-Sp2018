@@ -6,7 +6,8 @@ import java.util.Arrays;
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * Note6: Use the Quasi Newton method to perform the parameter extraction 
+ * Note6, p10:
+ * Use the Quasi Newton method to perform the parameter extraction 
  * for the power-law function y = axm with the known measurements:
  */
 public class Note6_HP1 {
@@ -146,7 +147,7 @@ public class Note6_HP1 {
 			}
 			Vector d=dx(am);
 			am = am.add(d,t);
-			System.out.println("     [a, m] = "+Arrays.toString(am.v)+
+			System.out.println("[a, m] = "+Arrays.toString(am.v)+
 					"     || dx(am) ||= "+dx(am).secondNorm()+"     t = "+t+"     || V(a, m) || ="
 					+error(am));
 			//			cou+=1;
@@ -156,7 +157,7 @@ public class Note6_HP1 {
 
 
 	public static void main(String args[]) {	
-		double amam[] = {2,1};
+		double amam[] = {80,2};
 		Newton(new Vector(amam));
 
 	}
