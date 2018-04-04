@@ -1,0 +1,270 @@
+/**
+ * HP1.java, ECE4960-HW9
+ * Created by Yuan He(yh772) on 2018/03/27
+ * Platform: Java 8, Eclipse, MacOS
+ * Copyright © 2018 Yuan He. All rights reserved.
+ * 
+ * New Note 6, P15:
+ * Compare the performance of:
+ * Backward and Trapezoid Euler estimation
+ */
+ ############################################## HP1 Output ####################################################
+ 
+
+When delta t = 0.5:
+	t = 0.0	  Backward Euler Error = 0.33333333333333337	Trapezoid Euler Error= 0.4
+	t = 0.5	  Backward Euler Error = 0.162086215268189	Trapezoid Euler Error= 0.24653065971263344
+	t = 1.0	  Backward Euler Error = 0.07158314487514605	Trapezoid Euler Error= 0.15187944117144234
+	t = 1.5	  Backward Euler Error = 0.025599295950898965	Trapezoid Euler Error= 0.09353016014842983
+	t = 2.0	  Backward Euler Error = 0.0036480404382588094	Trapezoid Euler Error= 0.057575283236612707
+	t = 2.5	  Backward Euler Error = 0.005706496575003786	Trapezoid Euler Error= 0.035428998623898804
+	t = 3.0	  Backward Euler Error = 0.00874059509807111	Trapezoid Euler Error= 0.021793468367863948
+	t = 3.5	  Backward Euler Error = 0.008821058888304867	Trapezoid Euler Error= 0.013401223422318503
+	t = 4.0	  Backward Euler Error = 0.007696655985014733	Trapezoid Euler Error= 0.00823794288873418
+	t = 4.5	  Backward Euler Error = 0.0062325333775902995	Trapezoid Euler Error= 0.005062378938242307
+	t = 5.0	  Backward Euler Error = 0.004823072944802937	Trapezoid Euler Error= 0.0031099764390854676
+	t = 5.5	  Backward Euler Error = 0.0036205751907948686	Trapezoid Euler Error= 0.0019099891024640671
+	t = 6.0	  Backward Euler Error = 0.0026594789095062644	Trapezoid Euler Error= 0.001172682775066359
+	t = 6.5	  Backward Euler Error = 0.0019220481978041762	Trapezoid Euler Error= 7.197975520175727E-4
+	t = 7.0	  Backward Euler Error = 0.001371776294966649	Trapezoid Euler Error= 4.4169698097851646E-4
+	t = 7.5	  Backward Euler Error = 9.6935447019961E-4	Trapezoid Euler Error= 2.709733794022338E-4
+	t = 8.0	  Backward Euler Error = 6.794965989957839E-4	Trapezoid Euler Error= 1.6619603345515194E-4
+	t = 8.5	  Backward Euler Error = 4.7317111558821965E-4	Trapezoid Euler Error= 1.0190841234222822E-4
+	t = 9.0	  Backward Euler Error = 3.276831856458963E-4	Trapezoid Euler Error= 6.247383008562999E-5
+	t = 9.5	  Backward Euler Error = 2.2587682993401663E-4	Trapezoid Euler Error= 3.829024548707086E-5
+	t = 10.0	  Backward Euler Error = 1.550858434519933E-4	Trapezoid Euler Error= 2.346297912210701E-5
+	t = 10.5	  Backward Euler Error = 1.0612073279323827E-4	Trapezoid Euler Error= 1.4374278965520453E-5
+	t = 11.0	  Backward Euler Error = 7.240308730507795E-5	Trapezoid Euler Error= 8.804398559709637E-6
+	t = 11.5	  Backward Euler Error = 4.927309846491836E-5	Trapezoid Euler Error= 5.391712260309097E-6
+	t = 12.0	  Backward Euler Error = 3.345791568903784E-5	Trapezoid Euler Error= 3.3011835503352418E-6
+	t = 12.5	  Backward Euler Error = 2.2674765522832028E-5	Trapezoid Euler Error= 2.02083589028289E-6
+	t = 13.0	  Backward Euler Error = 1.5340616389626076E-5	Trapezoid Euler Error= 1.2368390379035857E-6
+	t = 13.5	  Backward Euler Error = 1.0363004778020668E-5	Trapezoid Euler Error= 7.568648649376034E-7
+	t = 14.0	  Backward Euler Error = 6.991113857166267E-6	Trapezoid Euler Error= 4.630721862356792E-7
+	t = 14.5	  Backward Euler Error = 4.710747388278668E-6	Trapezoid Euler Error= 2.8327374284715486E-7
+	t = 15.0	  Backward Euler Error = 3.170827713395878E-6	Trapezoid Euler Error= 1.7325796866938588E-7
+	t = 15.5	  Backward Euler Error = 2.132280886336871E-6	Trapezoid Euler Error= 1.0595252516213389E-7
+	t = 16.0	  Backward Euler Error = 1.4326781736797202E-6	Trapezoid Euler Error= 6.478320805958075E-8
+	t = 16.5	  Backward Euler Error = 9.618861985026374E-7	Trapezoid Euler Error= 3.9604853767541684E-8
+	t = 17.0	  Backward Euler Error = 6.453621109894723E-7	Trapezoid Euler Error= 2.420866919036746E-8
+	t = 17.5	  Backward Euler Error = 4.3273100056077616E-7	Trapezoid Euler Error= 1.4795566758949294E-8
+	t = 18.0	  Backward Euler Error = 2.89997348334098E-7	Trapezoid Euler Error= 9.041324865618315E-9
+	t = 18.5	  Backward Euler Error = 1.9424743572390315E-7	Trapezoid Euler Error= 5.524256734514006E-9
+	t = 19.0	  Backward Euler Error = 1.3005379381971187E-7	Trapezoid Euler Error= 3.374880681063315E-9
+	t = 19.5	  Backward Euler Error = 8.703945901867102E-8	Trapezoid Euler Error= 2.0615183656106994E-9
+	t = 20.0	  Backward Euler Error = 5.823066426967217E-8	Trapezoid Euler Error= 1.259103950107935E-9
+
+
+When delta t = 0.1:
+	t = 0.0	  Backward Euler Error = 0.09090909090909094	Trapezoid Euler Error= 0.09523809523809534
+	t = 0.1	  Backward Euler Error = 0.07839113704422407	Trapezoid Euler Error= 0.08624331372756966
+	t = 0.2	  Backward Euler Error = 0.06741595217640417	Trapezoid Euler Error= 0.0780979920370577
+	t = 0.30000000000000004	  Backward Euler Error = 0.057804765316647355	Trapezoid Euler Error= 0.07072191307326281
+	t = 0.4	  Backward Euler Error = 0.04939872297648429	Trapezoid Euler Error= 0.06404243438989432
+	t = 0.5	  Backward Euler Error = 0.042056729658856096	Trapezoid Euler Error= 0.05799377298553088
+	t = 0.6	  Backward Euler Error = 0.03565351786331972	Trapezoid Euler Error= 0.05251635762664797
+	t = 0.7	  Backward Euler Error = 0.030077923581676214	Trapezoid Euler Error= 0.04755624232092437
+	t = 0.7999999999999999	  Backward Euler Error = 0.02523134574473679	Trapezoid Euler Error= 0.0430645751677351
+	t = 0.8999999999999999	  Backward Euler Error = 0.02102637031106752	Trapezoid Euler Error= 0.038997117357730426
+	t = 0.9999999999999999	  Backward Euler Error = 0.01738554169005002	Trapezoid Euler Error= 0.035313807586942136
+	t = 1.0999999999999999	  Backward Euler Error = 0.014240265987722933	Trapezoid Euler Error= 0.031978367597817525
+	t = 1.2	  Backward Euler Error = 0.011529832175514287	Trapezoid Euler Error= 0.028957944964346005
+	t = 1.3	  Backward Euler Error = 0.00920053872793275	Trapezoid Euler Error= 0.026222789604999935
+	t = 1.4000000000000001	  Backward Euler Error = 0.007204914572442961	Trapezoid Euler Error= 0.02374596083916644
+	t = 1.5000000000000002	  Backward Euler Error = 0.005501024358281176	Trapezoid Euler Error= 0.021503062103365056
+	t = 1.6000000000000003	  Backward Euler Error = 0.004051849094520249	Trapezoid Euler Error= 0.01947200071578728
+	t = 1.7000000000000004	  Backward Euler Error = 0.0028247341435208573	Trapezoid Euler Error= 0.01763277032423491
+	t = 1.8000000000000005	  Backward Euler Error = 0.0017908973950285234	Trapezoid Euler Error= 0.01596725389580106
+	t = 1.9000000000000006	  Backward Euler Error = 9.249911984914039E-4	Trapezoid Euler Error= 0.01445904530882916
+	t = 2.0000000000000004	  Backward Euler Error = 2.0471230557300713E-4	Trapezoid Euler Error= 0.013093287790788319
+	t = 2.1000000000000005	  Backward Euler Error = 3.8954532069052084E-4	Trapezoid Euler Error= 0.011856527611521783
+	t = 2.2000000000000006	  Backward Euler Error = 8.749994319137977E-4	Trapezoid Euler Error= 0.010736581591489006
+	t = 2.3000000000000007	  Backward Euler Error = 0.0012667542719668884	Trapezoid Euler Error= 0.009722417120610755
+	t = 2.400000000000001	  Backward Euler Error = 0.0015780448876517028	Trapezoid Euler Error= 0.008804043506475998
+	t = 2.500000000000001	  Backward Euler Error = 0.0018204542643413951	Trapezoid Euler Error= 0.007972413582194332
+	t = 2.600000000000001	  Backward Euler Error = 0.0020041062295208384	Trapezoid Euler Error= 0.007219334605172711
+	t = 2.700000000000001	  Backward Euler Error = 0.0021378367546636273	Trapezoid Euler Error= 0.006537387569556324
+	t = 2.800000000000001	  Backward Euler Error = 0.0022293460060669387	Trapezoid Euler Error= 0.005919854137900096
+	t = 2.9000000000000012	  Backward Euler Error = 0.002285333244760872	Trapezoid Euler Error= 0.005360650472643447
+	t = 3.0000000000000013	  Backward Euler Error = 0.00231161645137979	Trapezoid Euler Error= 0.004854267315887187
+	t = 3.1000000000000014	  Backward Euler Error = 0.0023132383512092236	Trapezoid Euler Error= 0.0043957157274836026
+	t = 3.2000000000000015	  Backward Euler Error = 0.002294560335058357	Trapezoid Euler Error= 0.003980477947156225
+	t = 3.3000000000000016	  Backward Euler Error = 0.002259345610964157	Trapezoid Euler Error= 0.003604462896811919
+	t = 3.4000000000000017	  Backward Euler Error = 0.0022108327780413425	Trapezoid Euler Error= 0.003263965884891147
+	t = 3.5000000000000018	  Backward Euler Error = 0.0021518008852882443	Trapezoid Euler Error= 0.0029556321159726097
+	t = 3.600000000000002	  Backward Euler Error = 0.0020846269232590274	Trapezoid Euler Error= 0.002676423646312945
+	t = 3.700000000000002	  Backward Euler Error = 0.002011336593798419	Trapezoid Euler Error= 0.0024235894599292616
+	t = 3.800000000000002	  Backward Euler Error = 0.0019336491112324147	Trapezoid Euler Error= 0.0021946383705564315
+	t = 3.900000000000002	  Backward Euler Error = 0.0018530167063756202	Trapezoid Euler Error= 0.0019873144826341935
+	t = 4.000000000000002	  Backward Euler Error = 0.001770659431429459	Trapezoid Euler Error= 0.0017995749696754389
+	t = 4.100000000000001	  Backward Euler Error = 0.001687595798387509	Trapezoid Euler Error= 0.0016295699511842988
+	t = 4.200000000000001	  Backward Euler Error = 0.0016046697251120654	Trapezoid Euler Error= 0.0014756242699557123
+	t = 4.300000000000001	  Backward Euler Error = 0.0015225742110624926	Trapezoid Euler Error= 0.0013362209903000858
+	t = 4.4	  Backward Euler Error = 0.0014418721180801224	Trapezoid Euler Error= 0.0012099864546819671
+	t = 4.5	  Backward Euler Error = 0.0013630143900745639	Trapezoid Euler Error= 0.0010956767516069315
+	t = 4.6	  Backward Euler Error = 0.0012863560083817508	Trapezoid Euler Error= 9.92165461487296E-4
+	t = 4.699999999999999	  Backward Euler Error = 0.0012121699464999365	Trapezoid Euler Error= 8.984325598015621E-4
+	t = 4.799999999999999	  Backward Euler Error = 0.0011406593584306537	Trapezoid Euler Error= 8.135543682585627E-4
+	t = 4.899999999999999	  Backward Euler Error = 0.0010719682085762773	Trapezoid Euler Error= 7.366944549973033E-4
+	t = 4.999999999999998	  Backward Euler Error = 0.0010061905277332734	Trapezoid Euler Error= 6.670953941991034E-4
+	t = 5.099999999999998	  Backward Euler Error = 9.433784588650344E-4	Trapezoid Euler Error= 6.040713039517859E-4
+	t = 5.1999999999999975	  Backward Euler Error = 8.83549237767108E-4	Trapezoid Euler Error= 5.470010888696721E-4
+	t = 5.299999999999997	  Backward Euler Error = 8.266912372060379E-4	Trapezoid Euler Error= 4.953223209135079E-4
+	t = 5.399999999999997	  Backward Euler Error = 7.72769188402106E-4	Trapezoid Euler Error= 4.4852569813945854E-4
+	t = 5.4999999999999964	  Backward Euler Error = 7.217286806402712E-4	Trapezoid Euler Error= 4.061500267978314E-4
+	t = 5.599999999999996	  Backward Euler Error = 6.735000281573749E-4	Trapezoid Euler Error= 3.677776773563387E-4
+	t = 5.699999999999996	  Backward Euler Error = 6.280015831108218E-4	Trapezoid Euler Error= 3.330304696900718E-4
+	t = 5.799999999999995	  Backward Euler Error = 5.851425642442701E-4	Trapezoid Euler Error= 3.015659469071102E-4
+	t = 5.899999999999995	  Backward Euler Error = 5.448254627044343E-4	Trapezoid Euler Error= 2.730740011062092E-4
+	t = 5.999999999999995	  Backward Euler Error = 5.069480792180073E-4	Trapezoid Euler Error= 2.4727381782916735E-4
+	t = 6.099999999999994	  Backward Euler Error = 4.7140524040907485E-4	Trapezoid Euler Error= 2.2391110910929737E-4
+	t = 6.199999999999994	  Backward Euler Error = 4.3809023633597155E-4	Trapezoid Euler Error= 2.027556078598499E-4
+	t = 6.299999999999994	  Backward Euler Error = 4.068960162726433E-4	Trapezoid Euler Error= 1.8359879892025036E-4
+	t = 6.399999999999993	  Backward Euler Error = 3.7771617528201975E-4	Trapezoid Euler Error= 1.6625186440896028E-4
+	t = 6.499999999999993	  Backward Euler Error = 3.504457601642035E-4	Trapezoid Euler Error= 1.5054382314259656E-4
+	t = 6.5999999999999925	  Backward Euler Error = 3.2498191985372055E-4	Trapezoid Euler Error= 1.3631984579243975E-4
+	t = 6.699999999999992	  Backward Euler Error = 3.012244222370766E-4	Trapezoid Euler Error= 1.2343972918045206E-4
+	t = 6.799999999999992	  Backward Euler Error = 2.790760566193399E-4	Trapezoid Euler Error= 1.11776514684444E-4
+	t = 6.8999999999999915	  Backward Euler Error = 2.5844293864616427E-4	Trapezoid Euler Error= 1.0121523714151973E-4
+	t = 6.999999999999991	  Backward Euler Error = 2.3923473234973354E-4	Trapezoid Euler Error= 9.165179192438186E-5
+	t = 7.099999999999991	  Backward Euler Error = 2.2136480210159526E-4	Trapezoid Euler Error= 8.299190902911644E-5
+	t = 7.19999999999999	  Backward Euler Error = 2.0475030559377442E-4	Trapezoid Euler Error= 7.515022406720507E-5
+	t = 7.29999999999999	  Backward Euler Error = 1.893122375065681E-4	Trapezoid Euler Error= 6.804943700908206E-5
+	t = 7.39999999999999	  Backward Euler Error = 1.7497543223443852E-4	Trapezoid Euler Error= 6.16195503909784E-5
+	t = 7.499999999999989	  Backward Euler Error = 1.616685329103581E-4	Trapezoid Euler Error= 5.579717947958203E-5
+	t = 7.599999999999989	  Backward Euler Error = 1.4932393297592702E-4	Trapezoid Euler Error= 5.0524927597907156E-5
+	t = 7.699999999999989	  Backward Euler Error = 1.3787769567369162E-4	Trapezoid Euler Error= 4.5750820457684486E-5
+	t = 7.799999999999988	  Backward Euler Error = 1.272694560752029E-4	Trapezoid Euler Error= 4.1427793924875517E-5
+	t = 7.899999999999988	  Backward Euler Error = 1.1744230959090206E-4	Trapezoid Euler Error= 3.751323017131173E-5
+	t = 7.999999999999988	  Backward Euler Error = 1.0834269032475205E-4	Trapezoid Euler Error= 3.396853764214266E-5
+	t = 8.099999999999987	  Backward Euler Error = 9.992024212773678E-5	Trapezoid Euler Error= 3.075877070043753E-5
+	t = 8.199999999999987	  Backward Euler Error = 9.212768476113338E-5	Trapezoid Euler Error= 2.7852285201182797E-5
+	t = 8.299999999999986	  Backward Euler Error = 8.492067719502585E-5	Trapezoid Euler Error= 2.5220426600893505E-5
+	t = 8.399999999999986	  Backward Euler Error = 7.825767973294973E-5	Trapezoid Euler Error= 2.2837247529604966E-5
+	t = 8.499999999999986	  Backward Euler Error = 7.209981636371757E-5	Trapezoid Euler Error= 2.067925204228129E-5
+	t = 8.599999999999985	  Backward Euler Error = 6.641073849093148E-5	Trapezoid Euler Error= 1.8725164029536598E-5
+	t = 8.699999999999985	  Backward Euler Error = 6.115649097464889E-5	Trapezoid Euler Error= 1.6955717505595034E-5
+	t = 8.799999999999985	  Backward Euler Error = 5.630538123387087E-5	Trapezoid Euler Error= 1.5353466706965758E-5
+	t = 8.899999999999984	  Backward Euler Error = 5.182785199921351E-5	Trapezoid Euler Error= 1.3902614130501678E-5
+	t = 8.999999999999984	  Backward Euler Error = 4.769635816897946E-5	Trapezoid Euler Error= 1.2588854816266012E-5
+	t = 9.099999999999984	  Backward Euler Error = 4.388524810593886E-5	Trapezoid Euler Error= 1.1399235340693023E-5
+	t = 9.199999999999983	  Backward Euler Error = 4.0370649613864445E-5	Trapezoid Euler Error= 1.0322026130473735E-5
+	t = 9.299999999999983	  Backward Euler Error = 3.713036074997009E-5	Trapezoid Euler Error= 9.346605838850877E-6
+	t = 9.399999999999983	  Backward Euler Error = 3.4143745559861734E-5	Trapezoid Euler Error= 8.46335664486436E-6
+	t = 9.499999999999982	  Backward Euler Error = 3.1391634763657555E-5	Trapezoid Euler Error= 7.663569443720148E-6
+	t = 9.599999999999982	  Backward Euler Error = 2.885623137401715E-5	Trapezoid Euler Error= 6.93935799391922E-6
+	t = 9.699999999999982	  Backward Euler Error = 2.6521021187569723E-5	Trapezoid Euler Error= 6.28358117504315E-6
+	t = 9.799999999999981	  Backward Euler Error = 2.4370688059451936E-5	Trapezoid Euler Error= 5.689772590015095E-6
+	t = 9.89999999999998	  Backward Euler Error = 2.2391033845305515E-5	Trapezoid Euler Error= 5.152076818028861E-6
+	t = 9.99999999999998	  Backward Euler Error = 2.0568902875224966E-5	Trapezoid Euler Error= 4.665191689876188E-6
+	t = 10.09999999999998	  Backward Euler Error = 1.8892110808980936E-5	Trapezoid Euler Error= 4.224316016750026E-6
+	t = 10.19999999999998	  Backward Euler Error = 1.7349377710674775E-5	Trapezoid Euler Error= 3.825102257342776E-6
+	t = 10.29999999999998	  Backward Euler Error = 1.5930265173191434E-5	Trapezoid Euler Error= 3.463613656724025E-6
+	t = 10.399999999999979	  Backward Euler Error = 1.4625117317878563E-5	Trapezoid Euler Error= 3.1362854345510613E-6
+	t = 10.499999999999979	  Backward Euler Error = 1.3425005492327565E-5	Trapezoid Euler Error= 2.8398896400710307E-6
+	t = 10.599999999999978	  Backward Euler Error = 1.2321676488564727E-5	Trapezoid Euler Error= 2.5715033275105226E-6
+	t = 10.699999999999978	  Backward Euler Error = 1.1307504105031364E-5	Trapezoid Euler Error= 2.328479738171215E-6
+	t = 10.799999999999978	  Backward Euler Error = 1.0375443878140381E-5	Trapezoid Euler Error= 2.108422205182488E-6
+	t = 10.899999999999977	  Backward Euler Error = 9.518990812685173E-6	Trapezoid Euler Error= 1.9091605236948833E-6
+	t = 10.999999999999977	  Backward Euler Error = 8.732139944723189E-6	Trapezoid Euler Error= 1.7287295535967178E-6
+	t = 11.099999999999977	  Backward Euler Error = 8.009349575571194E-6	Trapezoid Euler Error= 1.5653498438393255E-6
+	t = 11.199999999999976	  Backward Euler Error = 7.345507021070155E-6	Trapezoid Euler Error= 1.4174100873810387E-6
+	t = 11.299999999999976	  Backward Euler Error = 6.735896726167319E-6	Trapezoid Euler Error= 1.2834512338025994E-6
+	t = 11.399999999999975	  Backward Euler Error = 6.1761706010050075E-6	Trapezoid Euler Error= 1.1621521029849009E-6
+	t = 11.499999999999975	  Backward Euler Error = 5.662320441001969E-6	Trapezoid Euler Error= 1.0523163580347727E-6
+	t = 11.599999999999975	  Backward Euler Error = 5.190652299782092E-6	Trapezoid Euler Error= 9.528607090417692E-7
+	t = 11.699999999999974	  Backward Euler Error = 4.757762690178729E-6	Trapezoid Euler Error= 8.628042313806518E-7
+	t = 11.799999999999974	  Backward Euler Error = 4.360516494865038E-6	Trapezoid Euler Error= 7.812586932598405E-7
+	t = 11.899999999999974	  Backward Euler Error = 3.996026474385891E-6	Trapezoid Euler Error= 7.074197971640744E-7
+	t = 11.999999999999973	  Backward Euler Error = 3.661634266458483E-6	Trapezoid Euler Error= 6.405592488476138E-7
+	t = 12.099999999999973	  Backward Euler Error = 3.354892776337757E-6	Trapezoid Euler Error= 5.800175756915121E-7
+	t = 12.199999999999973	  Backward Euler Error = 3.073549863786645E-6	Trapezoid Euler Error= 5.251976236250654E-7
+	t = 12.299999999999972	  Backward Euler Error = 2.8155332377332092E-6	Trapezoid Euler Error= 4.755586685003226E-7
+	t = 12.399999999999972	  Backward Euler Error = 2.578936475024693E-6	Trapezoid Euler Error= 4.306110838654574E-7
+	t = 12.499999999999972	  Backward Euler Error = 2.3620060847944212E-6	Trapezoid Euler Error= 3.899115125674923E-7
+	t = 12.599999999999971	  Backward Euler Error = 2.1631295448363545E-6	Trapezoid Euler Error= 3.5305849458145175E-7
+	t = 12.69999999999997	  Backward Euler Error = 1.9808242410322494E-6	Trapezoid Euler Error= 3.196885079603791E-7
+	t = 12.79999999999997	  Backward Euler Error = 1.8137272452979529E-6	Trapezoid Euler Error= 2.894723838731646E-7
+	t = 12.89999999999997	  Backward Euler Error = 1.6605858717107758E-6	Trapezoid Euler Error= 2.621120603848902E-7
+	t = 12.99999999999997	  Backward Euler Error = 1.5202489544529557E-6	Trapezoid Euler Error= 2.3733764297376157E-7
+	t = 13.09999999999997	  Backward Euler Error = 1.391658794961974E-6	Trapezoid Euler Error= 2.1490474280260617E-7
+	t = 13.199999999999969	  Backward Euler Error = 1.2738437292230595E-6	Trapezoid Euler Error= 1.9459206650110874E-7
+	t = 13.299999999999969	  Backward Euler Error = 1.1659112694793379E-6	Trapezoid Euler Error= 1.7619923369449838E-7
+	t = 13.399999999999968	  Backward Euler Error = 1.0670417777782091E-6	Trapezoid Euler Error= 1.5954480075964986E-7
+	t = 13.499999999999968	  Backward Euler Error = 9.764826317263321E-7	Trapezoid Euler Error= 1.4446447132273292E-7
+	t = 13.599999999999968	  Backward Euler Error = 8.935428455982108E-7	Trapezoid Euler Error= 1.3080947585358585E-7
+	t = 13.699999999999967	  Backward Euler Error = 8.175881125428595E-7	Trapezoid Euler Error= 1.1844510437913378E-7
+	t = 13.799999999999967	  Backward Euler Error = 7.480362360676932E-7	Trapezoid Euler Error= 1.0724937784777799E-7
+	t = 13.899999999999967	  Backward Euler Error = 6.843529212567551E-7	Trapezoid Euler Error= 9.711184504369374E-8
+	t = 13.999999999999966	  Backward Euler Error = 6.26047898309807E-7	Trapezoid Euler Error= 8.79324931878058E-8
+	t = 14.099999999999966	  Backward Euler Error = 5.726713529775558E-7	Trapezoid Euler Error= 7.962076148311284E-8
+	t = 14.199999999999966	  Backward Euler Error = 5.238106403241632E-7	Trapezoid Euler Error= 7.20946478770218E-8
+	t = 14.299999999999965	  Backward Euler Error = 4.790872599786712E-7	Trapezoid Euler Error= 6.527990023245217E-8
+	t = 14.399999999999965	  Backward Euler Error = 4.381540726493804E-7	Trapezoid Euler Error= 5.9109283931725863E-8
+	t = 14.499999999999964	  Backward Euler Error = 4.00692739176512E-7	Trapezoid Euler Error= 5.3521918690890935E-8
+	t = 14.599999999999964	  Backward Euler Error = 3.664113647954189E-7	Trapezoid Euler Error= 4.846267804454485E-8
+	t = 14.699999999999964	  Backward Euler Error = 3.350423325815986E-7	Trapezoid Euler Error= 4.3881645579173156E-8
+	t = 14.799999999999963	  Backward Euler Error = 3.063403112559514E-7	Trapezoid Euler Error= 3.9733622552577834E-8
+	t = 14.899999999999963	  Backward Euler Error = 2.8008042364996036E-7	Trapezoid Euler Error= 3.597768204366348E-8
+	t = 14.999999999999963	  Backward Euler Error = 2.5605656317129606E-7	Trapezoid Euler Error= 3.2576765235664215E-8
+	t = 15.099999999999962	  Backward Euler Error = 2.3407984657603012E-7	Trapezoid Euler Error= 2.949731585136308E-8
+	t = 15.199999999999962	  Backward Euler Error = 2.139771922491568E-7	Trapezoid Euler Error= 2.670894913506531E-8
+	t = 15.299999999999962	  Backward Euler Error = 1.9559001402517315E-7	Trapezoid Euler Error= 2.4184152116750464E-8
+	t = 15.399999999999961	  Backward Euler Error = 1.7877302134948384E-7	Trapezoid Euler Error= 2.189801220230746E-8
+	t = 15.499999999999961	  Backward Euler Error = 1.6339311729356268E-7	Trapezoid Euler Error= 1.9827971413082627E-8
+	t = 15.59999999999996	  Backward Euler Error = 1.4932838659603413E-7	Trapezoid Euler Error= 1.7953603850909757E-8
+	t = 15.69999999999996	  Backward Euler Error = 1.364671665118313E-7	Trapezoid Euler Error= 1.6256414193826182E-8
+	t = 15.79999999999996	  Backward Euler Error = 1.2470719381579442E-7	Trapezoid Euler Error= 1.4719655235076347E-8
+	t = 15.89999999999996	  Backward Euler Error = 1.1395482182874397E-7	Trapezoid Euler Error= 1.3328162665801173E-8
+	t = 15.99999999999996	  Backward Euler Error = 1.0412430181622357E-7	Trapezoid Euler Error= 1.206820547186722E-8
+	t = 16.09999999999996	  Backward Euler Error = 9.51371235556024E-8	Trapezoid Euler Error= 1.0927350469274055E-8
+	t = 16.19999999999996	  Backward Euler Error = 8.692141027870468E-8	Trapezoid Euler Error= 9.894339642013871E-9
+	t = 16.29999999999996	  Backward Euler Error = 7.941136357706867E-8	Trapezoid Euler Error= 8.958979072518115E-9
+	t = 16.399999999999963	  Backward Euler Error = 7.254675420764532E-8	Trapezoid Euler Error= 8.112038369152687E-9
+	t = 16.499999999999964	  Backward Euler Error = 6.627245506036758E-8	Trapezoid Euler Error= 7.345159598753083E-9
+	t = 16.599999999999966	  Backward Euler Error = 6.053801284757481E-8	Trapezoid Euler Error= 6.6507748259314096E-9
+	t = 16.699999999999967	  Backward Euler Error = 5.52972553506161E-8	Trapezoid Euler Error= 6.022031445774295E-9
+	t = 16.79999999999997	  Backward Euler Error = 5.05079313128255E-8	Trapezoid Euler Error= 5.4527245734142935E-9
+	t = 16.89999999999997	  Backward Euler Error = 4.613138030206997E-8	Trapezoid Euler Error= 4.937235823559036E-9
+	t = 16.99999999999997	  Backward Euler Error = 4.213223008171932E-8	Trapezoid Euler Error= 4.470477876085836E-9
+	t = 17.099999999999973	  Backward Euler Error = 3.8478119227566635E-8	Trapezoid Euler Error= 4.047844280878608E-9
+	t = 17.199999999999974	  Backward Euler Error = 3.5139442911230054E-8	Trapezoid Euler Error= 3.6651640067594547E-9
+	t = 17.299999999999976	  Backward Euler Error = 3.208911993909108E-8	Trapezoid Euler Error= 3.3186602861600316E-9
+	t = 17.399999999999977	  Backward Euler Error = 2.9302379290980383E-8	Trapezoid Euler Error= 3.004913349548668E-9
+	t = 17.49999999999998	  Backward Euler Error = 2.6756564545640135E-8	Trapezoid Euler Error= 2.720826681996061E-9
+	t = 17.59999999999998	  Backward Euler Error = 2.4430954711425038E-8	Trapezoid Euler Error= 2.463596469003726E-9
+	t = 17.69999999999998	  Backward Euler Error = 2.230660010163522E-8	Trapezoid Euler Error= 2.2306839301776618E-9
+	t = 17.799999999999983	  Backward Euler Error = 2.0366172005120583E-8	Trapezoid Euler Error= 2.019790267815056E-9
+	t = 17.899999999999984	  Backward Euler Error = 1.8593825005113457E-8	Trapezoid Euler Error= 1.8288339832656955E-9
+	t = 17.999999999999986	  Backward Euler Error = 1.697507089333378E-8	Trapezoid Euler Error= 1.6559303372856717E-9
+	t = 18.099999999999987	  Backward Euler Error = 1.5496663212914653E-8	Trapezoid Euler Error= 1.4993727517499018E-9
+	t = 18.19999999999999	  Backward Euler Error = 1.4146491543213031E-8	Trapezoid Euler Error= 1.3576159692404465E-9
+	t = 18.29999999999999	  Backward Euler Error = 1.2913484712652505E-8	Trapezoid Euler Error= 1.2292608043680192E-9
+	t = 18.39999999999999	  Backward Euler Error = 1.1787522192901589E-8	Trapezoid Euler Error= 1.1130403363860251E-9
+	t = 18.499999999999993	  Backward Euler Error = 1.0759352989392339E-8	Trapezoid Euler Error= 1.0078074068743751E-9
+	t = 18.599999999999994	  Backward Euler Error = 9.820521399864422E-9	Trapezoid Euler Error= 9.125232991446968E-10
+	t = 18.699999999999996	  Backward Euler Error = 8.96329906467946E-9	Trapezoid Euler Error= 8.26247487676146E-10
+	t = 18.799999999999997	  Backward Euler Error = 8.180622780458921E-9	Trapezoid Euler Error= 7.481283564469934E-10
+	t = 18.9	  Backward Euler Error = 7.46603759249681E-9	Trapezoid Euler Error= 6.773947945854992E-10
+	t = 19.0	  Backward Euler Error = 6.813644721699866E-9	Trapezoid Euler Error= 6.133485864185899E-10
+	t = 19.1	  Backward Euler Error = 6.21805391880238E-9	Trapezoid Euler Error= 5.553575208339595E-10
+	t = 19.200000000000003	  Backward Euler Error = 5.674339872556735E-9	Trapezoid Euler Error= 5.028491519675933E-10
+	t = 19.300000000000004	  Backward Euler Error = 5.178002329760194E-9	Trapezoid Euler Error= 4.553051496544766E-10
+	t = 19.400000000000006	  Backward Euler Error = 4.724929613569362E-9	Trapezoid Euler Error= 4.1225618389870936E-10
+	t = 19.500000000000007	  Backward Euler Error = 4.311365252784624E-9	Trapezoid Euler Error= 3.732772928878206E-10
+	t = 19.60000000000001	  Backward Euler Error = 3.933877458849479E-9	Trapezoid Euler Error= 3.3798368884671315E-10
+	t = 19.70000000000001	  Backward Euler Error = 3.589331209380578E-9	Trapezoid Euler Error= 3.060269603464362E-10
+	t = 19.80000000000001	  Backward Euler Error = 3.2748627172857682E-9	Trapezoid Euler Error= 2.770916335945017E-10
+	t = 19.900000000000013	  Backward Euler Error = 2.9878560830892243E-9	Trapezoid Euler Error= 2.508920587752799E-10
+
+
+It could be concluded that:
+ - Trapezoid has smaller error;
+ - Smaller error comes with smaller delta t.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
