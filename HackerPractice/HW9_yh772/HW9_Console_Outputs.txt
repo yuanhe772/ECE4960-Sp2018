@@ -257,7 +257,6 @@ When delta t = 0.1:
 	t = 19.80000000000001	  Backward Euler Error = 3.2748627172857682E-9	Trapezoid Euler Error= 2.770916335945017E-10
 	t = 19.900000000000013	  Backward Euler Error = 2.9878560830892243E-9	Trapezoid Euler Error= 2.508920587752799E-10
 
-
 It could be concluded that:
  - Trapezoid has smaller error;
  - Smaller error comes with smaller delta t.
@@ -268,3 +267,60 @@ It could be concluded that:
  
  
  
+/**
+ * HP2.java, ECE4960-HW9
+ * Created by Yuan He(yh772) on 2018/03/29
+ * Platform: Java 8, Eclipse, MacOS
+ * Copyright © 2018 Yuan He. All rights reserved.
+ * 
+ * New Note 6, page 23:
+ * Compare the forward Euler method, the one-step Huen’s method (trapezoidal) 
+ * and the Huen’s method with iteration (using tol = 10-7).
+ */
+  ############################################## HP2 Output ####################################################
+t = 0.0
+   ForwardEuler: x =2.0, Error = 0.0.
+   OneStepHuen: x = 2.0, Error = 0.0.
+   IterativeHuen: x = 2.0, Error = 0.0
+t = 1.0
+   ForwardEuler: x =5.0, Error = 1.1946313772093724.
+   OneStepHuen: x = 6.701081856984936, Error = 0.5064504797755633.
+   IterativeHuen: x = 6.360865580372231, Error = 0.1662342031628583
+t = 2.0
+   ForwardEuler: x =11.402163713969871, Error = 3.441758193676618.
+   OneStepHuen: x = 16.31978193789828, Error = 1.4758600302517912.
+   IterativeHuen: x = 15.302236940864567, Error = 0.45831503321807787
+t = 3.0
+   ForwardEuler: x =25.513211554565395, Error = 8.163960213402774.
+   OneStepHuen: x = 37.199248896864745, Error = 3.5220771288965764.
+   IterativeHuen: x = 34.74327677029265, Error = 1.066105002324484
+t = 4.0
+   ForwardEuler: x =56.84931129984912, Error = 18.48965130930945.
+   OneStepHuen: x = 83.33776733540077, Error = 7.998804726242199.
+   IterativeHuen: x = 77.73509774492032, Error = 2.396135135761753t = 0.0
+   ForwardEuler: x =2.0, Error% = 0.0.
+   OneStepHuen: x = 2.0, Error% = 0.0.
+   IterativeHuen: x = 2.0, Error% = 0.0
+t = 1.0
+   ForwardEuler: x =5.0, Error% = 0.23892627544187447.
+   OneStepHuen: x = 6.701081856984936, Error% = 0.07557742027097608.
+   IterativeHuen: x = 6.360865580372231, Error% = 0.026133896568386605
+t = 2.0
+   ForwardEuler: x =11.402163713969871, Error% = 0.30185132225910716.
+   OneStepHuen: x = 16.31978193789828, Error% = 0.09043380823762757.
+   IterativeHuen: x = 15.302236940864567, Error% = 0.02995085195643189
+t = 3.0
+   ForwardEuler: x =25.513211554565395, Error% = 0.3199895158609264.
+   OneStepHuen: x = 37.199248896864745, Error% = 0.094681404419255.
+   IterativeHuen: x = 34.74327677029265, Error% = 0.030685217441437776
+t = 4.0
+   ForwardEuler: x =56.84931129984912, Error% = 0.3252396710979773.
+   OneStepHuen: x = 83.33776733540077, Error% = 0.09598054977943252.
+   IterativeHuen: x = 77.73509774492032, Error% = 0.030824366409423223
+
+
+
+
+
+
+
