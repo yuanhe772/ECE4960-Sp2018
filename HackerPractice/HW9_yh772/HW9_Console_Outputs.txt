@@ -1,13 +1,6 @@
-/**
- * HP1.java, ECE4960-HW9
- * Created by Yuan He(yh772) on 2018/03/27
- * Platform: Java 8, Eclipse, MacOS
- * Copyright © 2018 Yuan He. All rights reserved.
- * 
- * New Note 6, P15:
+/**New Note 6, P15:
  * Compare the performance of:
- * Backward and Trapezoid Euler estimation
- */
+ * Backward and Trapezoid Euler estimation*/
  ############################################## HP1 Output ####################################################
  
 
@@ -267,16 +260,9 @@ It could be concluded that:
  
  
  
-/**
- * HP2.java, ECE4960-HW9
- * Created by Yuan He(yh772) on 2018/03/29
- * Platform: Java 8, Eclipse, MacOS
- * Copyright © 2018 Yuan He. All rights reserved.
- * 
- * New Note 6, page 23:
+/**New Note 6, page 23:
  * Compare the forward Euler method, the one-step Huen’s method (trapezoidal) 
- * and the Huen’s method with iteration (using tol = 10-7).
- */
+ * and the Huen’s method with iteration (using tol = 10-7).*/
   ############################################## HP2 Output ####################################################
 t = 0.0
    ForwardEuler: x =2.0, Error = 0.0.
@@ -323,15 +309,8 @@ t = 4.0
 
 
 
-/**
- * HP3.java, ECE4960-HW9
- * Created by Yuan He(yh772) on 2018/03/29
- * Platform: Java 8, Eclipse, MacOS
- * Copyright © 2018 Yuan He. All rights reserved.
- * 
- * New note 6, page 37：
- * Calculate RK4 and compare with your previous results.
- */
+/**New note 6, page 37：
+ * Calculate RK4 and compare with your previous results.*/
   ############################################## HP3 Output ####################################################
 t = 0.0:    [k1, k2, k3, k4] = [3.0, 4.217298790565081, 3.912974092923811, 5.945676667507966],	 x = 6.201037072414292,	 |Error| % = 2.100518536207146
 t = 1.0:    [k1, k2, k3, k4] = [5.801645177762726, 8.729537860298365, 7.997564689664456, 12.712828816541085],	 x = 14.8624835881192,	 |Error| % = 1.3992523014040297
