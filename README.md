@@ -3,7 +3,7 @@
  @Author: Yuan He(yh772)
 
 - In this repo, homework == hacker practice. 
-- The hacker practice/homework are uniformally named in HWx_yh772(with x being the week number, also the sequence number of hacker practice/homework).
+- The hacker practices/homework are uniformally named in HWx_yh772(with x being the week number, also the sequence number of hacker practice/homework).
 
 - Source files named with shortcuts of "HP1, HP2, ..." stand for "Hacker Practice 1, Hacker Practice 2, ..."
 
