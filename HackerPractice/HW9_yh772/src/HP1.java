@@ -19,8 +19,8 @@ public class HP1 {
 	// Backward Euler and Trapezoid
 		public static void Euler(double dt) {
 			double currBack = 1;
-			double currTrapezoid = 1;
 			double preBack = 1;
+			double currTrapezoid = 1;
 			double preTrapezoid = 1;
 			System.out.println("\n\nWhen delta t = "+dt+":");
 			for(double t=0; t<=20; t+=dt) {
