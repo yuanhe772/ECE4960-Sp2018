@@ -2,8 +2,6 @@
  * Compare the performance of:
  * Backward and Trapezoid Euler estimation*/
  ############################################## HP1 Output ####################################################
- 
-
 When delta t = 0.5:
 	t = 0.0	  Backward Euler Error = 0.33333333333333337	Trapezoid Euler Error= 0.4
 	t = 0.5	  Backward Euler Error = 0.162086215268189	Trapezoid Euler Error= 0.24653065971263344
@@ -256,9 +254,7 @@ It could be concluded that:
  
  
  
- 
- 
- 
+
  
 /**New Note 6, page 23:
  * Compare the forward Euler method, the one-step Huen’s method (trapezoidal) 
@@ -303,7 +299,6 @@ t = 4.0
    ForwardEuler: x =56.84931129984912, Error% = 0.3252396710979773.
    OneStepHuen: x = 83.33776733540077, Error% = 0.09598054977943252.
    IterativeHuen: x = 77.73509774492032, Error% = 0.030824366409423223
-
 
 
 
