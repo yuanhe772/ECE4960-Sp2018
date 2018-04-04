@@ -62,9 +62,9 @@ public class HP2 {
 		// March with t being from 0~4
 		for(double t=0; t<=4; t+=1) {
 			System.out.println("t = "+t+
-					"\n   ForwardEuler: x ="+forwardEuler_x+", Error% = "+Math.abs(forwardEuler_x-xTrue(t))/forwardEuler_x+
-					".\n   OneStepHuen: x = "+oneStep_x+", Error% = "+Math.abs(oneStep_x-xTrue(t))/oneStep_x+
-					".\n   IterativeHuen: x = "+iterativ_x+", Error% = "+Math.abs(iterativ_x - xTrue(t))/iterativ_x);
+					"\n   ForwardEuler: x ="+forwardEuler_x+", |Error| % = "+Math.abs(forwardEuler_x-xTrue(t))/forwardEuler_x+
+					".\n   OneStepHuen: x = "+oneStep_x+", |Error| % = "+Math.abs(oneStep_x-xTrue(t))/oneStep_x+
+					".\n   IterativeHuen: x = "+iterativ_x+", |Error| % = "+Math.abs(iterativ_x - xTrue(t))/iterativ_x);
 			forwardEuler_x = predictor(forwardEuler_x, t);
 			oneStep_x = corrector(oneStep_x, predictor(oneStep_x,t), t);
 			iterativ_x = huenIterator(iterativ_x, t);
