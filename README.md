@@ -1,6 +1,6 @@
 # ECE4960-Sp2018
-## Hacker Practice(homework) and projects submission for ECE4960-18Spring, Cornell. 
-## @Author: Yuan He(yh772)
+ Hacker Practice(homework) and projects submission for ECE4960-18Spring, Cornell. 
+ @Author: Yuan He(yh772)
 
 ### In this repo, homework == hacker practice. 
 #### The hacker practice/homework are uniformally named in HWx_yh772(with x being the week number, also the sequence number of hacker practice/homework).
