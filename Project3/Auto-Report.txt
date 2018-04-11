@@ -1,0 +1,128 @@
+
+ECE4960-Project 3 Report:
+
+
+  Pre-Testing Helper Functions:
+	PASSED: FullMatrix.rowPermute()'s output correctness test! White-Box testing: by checking if a rank(3) matrix's Permuted(Calculated) == Permuted(Ground-Truth)
+	PASSED: FullMatrix.rowScale()'s output correctness test! White-Box testing: by checking if a rank(3) matrix's RowScaled(Calculated) == RowScaled(Ground-Truth)
+	PASSED: FullMatrix.product()'s output correctness test! White-Box testing: by checking if a rank(3) matrix's A*x(Calculated) == b(Ground-Truth)
+	PASSED: FullMatrix.inverseRank2()'s output correctness test! White-Box testing: by checking if a rank(2) matrix's Inverse(Calculated) == Inverse(Ground-Truth)
+	PASSED: FullMatrix.inverseRank3()'s output correctness test! White-Box testing: by checking if a rank(3) matrix's Inverse(Calculated) == Inverse(Ground-Truth)
+	PASSED: Vector.rowPermute()'s output correctness test! White-Box testing: by checking if a length(3) Vector's Permuted(Calculated) == Permuted(Ground-Truth)
+	PASSED: Vector.rowScale()'s output correctness test! White-Box testing: by checking if a length(3) Vector's RowScaled(Calculated) == RowScaled(Ground-Truth)
+	PASSED: Vector.Add()'s output correctness test! White-Box testing: by checking if a length(3) Vector's Sum(Calculated) == Sum(Ground-Truth)
+	PASSED: Vector.Scale()'s output correctness test! White-Box testing: by checking if a length(3) Vector's Scaled(Calculated) == Scaled(Ground-Truth)
+
+
+  TASK 1: Validation for Direct Matrix Solver:
+	PASSED: Direct matrix solver's output correctness test! Black-box testing: By testing with the ill-conditioned matrix in Note4, slide 50 to check if || Ax-b || < 10^-9
+	PASSED: Direct matrix solver's output correctness test! Black-box testing: By testing with a rank-up-to-4 matrix to check if || Ax-b || < 10^-9
+
+
+  TASK 2: Parameter Extraction with Power Law(Iterative Matrix Solver) and Linear Regression(Direct Matrix Solver):
+	Linear Regression(Direct Matrix Solver):
+		Extracted [a, m] = [9.867704672832248, -0.49157461285065995], V = 1.0956688801679006
+		< STATISTICS >: Time cost = 5ms, MEM usage = 3 Mb
+	Power Law(Iterative Matrix Solver):
+		Step Size = 0.1% of parameter
+		Initial [a, m] = [20.0, -1.0]
+		Extracted [a, m] = [9.94322837752545, -0.4904133804460987], V = 1.0838698208978432, ||delta|| = 2.1127569947132502E-8, iteration # = 12
+		Convergence Auto-Checking:
+			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: NO
+		< STATISTICS >: Time cost = 4ms, MEM usage = 3 Mb
+
+	< OBSERVATION >:
+		Linear Regression:
+			PROS: V is relatively small (<3), and could be considered to be correctly extracting the parameters; Predictable computational cost and performance (Time cost in (15ms, 90ms), MEM usage = 2MB, V in (0.3, 2.5))
+			CONS: although average case better than iterative solver, its best case is worse;
+		Power Law:
+			PROS: Through OBSERVATION, the best case of Power Law is better than Linear regression, in both aspects of performance (smaller V) and cost (faster computation).
+			CONS: Unpredictable computational cost and performance (Time cost in (4ms, 990ms), MEM usage in (2MB, 5MB), V in (0.1, 125)), due to occasional failures in convergence caused by fluctuating measured data and fixed initial guess.
+
+
+  TASK 3: Plot S(measure):
+	Available in the Report_of_Task_3_5_7.pdf
+
+
+  TASK 4: Extract EKV's parameters with iterative solver:
+	Quasi-Newton method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:
+		Step Size = 0.01% of parameter
+		Initial guess from Task 6 [Is, Kappa, Vth] = [3.0E-6, 0.6, 1.6]
+		Extracted [Is, kappa, Vth] = [2.0684584663090307E-6, 0.5981750701500969, 0.9382194330926751], V = 2.5381491606520476E-6, ||delta|| = 1.6688168962871515E-16, iteration # = 7
+		Convergence Auto-Checking:
+			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: YES
+	Secant method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:
+		Step Size = 0.01% of parameter
+		Initial guess from Task 6 [Is, Kappa, Vth] = [3.0E-6, 0.5, 1.0]
+		Extracted [Is, kappa, Vth] = [3.0000005043881878E-6, 0.500000084064698, 1.000000168129396], V = 9.437759315832478E-6, ||delta|| = 8.480245280276873E-14, iteration # = 1
+		Convergence Auto-Checking:
+			Terminated by MAX_ITERATION: NO, Linear Convergence: TOO_FEW_ITERATION_TO_OBSERVE, Quadratic Convergence: TOO_FEW_ITERATION_TO_OBSERVE
+
+	< OBSERVATION >:
+		Quasi-Newton:
+			PROS: Quadratic Convergence, and more robust against far-away initial guesses; In this case, when convergent, smaller V than Secant method.
+			CONS: Complex and costly inner-loop implementation;
+		Power Law:
+			PROS: straight-forward and less costly inner-loop implementation
+			CONS: At most Linear Convergence, and not Quadratic Convergence. 
+		In this case, the optimal initial guess generated from Task 6 is very good, so it only took one iteration to converge, so linear and quadratic convergence couldn't be observed. 
+			In other cases, based on the experience of when I didn't have Task 6 to get the optimal initial guesses, and when Quasi-Newton and Secant are given the same initial guesses and step sizes, Secant is at most linearly convergent, and Quasi-newton method always converges faster and is more robust against bad initial guesses. 
+			The Secant method is also observed to be more greedy and more 'local optimal' (prone to converge to an answer that's near the initial guess). Therefore it needs an initial guess to be very close to the 'true answer' to avoid wrong convergence.
+
+
+  TASK 5.1: Plot S(model)/S(measure):
+	Available in the Report_of_Task_3_5_7.pdf
+
+
+  TASK 5.2: Repeat Task 4 with normalized data
+	NORMALIZED: Quasi-Newton method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:
+		Step Size = 0.00001% of parameter
+		Initial [Is, Kappa, Vth] = [0.0, 1.0, 1.0, 115.18261086405002, 15.0, 2.37804927151225E-6, 0.5862092120641524, 1.1141313162669133, 6.5521668850843E-16]
+		Extracted [Is, kappa, Vth] = [2.37804927151225E-6, 0.5862092120641524, 1.1141313162669133], V = 115.18261086405002, ||delta|| = 6.5521668850843E-16, iteration # = 15
+		Convergence Auto-Checking:
+			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: YES
+	NORMALIZED: Secant method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:
+		Step Size = 0.01% of parameter
+		Initial [Is, Kappa, Vth] = [0.0, 0.0, 1.0, 115.52667019850594, 185.0, 2.350033344566595E-6, 0.5900083716145921, 1.1100157499867744, 1.7499477885230208E-14]
+		Extracted [Is, kappa, Vth] = [2.350033344566595E-6, 0.5900083716145921, 1.1100157499867744], V = 115.52667019850594, ||delta|| = 1.7499477885230208E-14, iteration # = 185
+		Convergence Auto-Checking:
+			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: NO
+
+	< OBSERVATION >:
+		The optimal initial guesses from Task 6 doesn't work for Task 5, either causes converging too slow or raises NAN. 
+		So I chose the initial guesses that are very close to the result extracted from Task 4. 
+		After converging, the ||V|| is much larger than ||V|| in task 4, because Without normalizing, the error will only be dominated by the large Ids data points. 
+		The fit is therefore good for large Ids data points, without a guarantee that the small Id values are also well fitted since they don't contribute much to ||V||. 
+		With normalization, the small Id errors contributes much more than before, so the ||V|| is much larger in this scenario.
+
+
+  TASK 6: Optimized Initial Guess Search:
+	Unnormalized data, Quasi-Newton:
+		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.6, 1.6], V = 2.594631282193693E-6
+	Unnormalized data, Secant:
+		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.5, 1.0], V = 9.437759315832478E-6
+	Normalized data, Quasi-Newton:
+		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.7, 1.3], V = 115.18763613806533
+	Normalized data, Secant:
+		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.5, 1.2], V = 191.2923199892063
+
+	< OBSERVATION >:
+		The result of task 6 is used in task 4, making both of the Quasi-Newton and Secant Method converges faster than using the other initial guesses I randomly chose. 
+		For each search, the MAX_ITERATION is set to 2, because through observation, the search doesn't have to wait until the solver to fully converge to render a reasonable initial guess. 
+		MAX_ITERATION == 2 is good enough for Quasi-Newton method to quadratically converge to a much smaller V after the second iteration, and for Secant method to get a sense of how much the magnitude of V would be when it finally converges. 
+		Therefore MAX_ITERATION is set to 2 to ensure computational efficiency.
+
+
+  TASK 7.1: Visualization:
+	Available in the Report_of_Task_3_5_7.pdf
+
+
+  TASK 7.2: Validation for iterative solver using Quasi-Newton method: 
+	PASSED: Approximation1 validation test of iterative solver using Quasi-Newton! Black-Box testing: By checking when Vgs < Vth: || error1% || < 10^-5
+	PASSED: Approximation2 validation test of iterative solver using Quasi-Newton! Black-Box testing: By checking when Vgs > Vth, Vds > Vdsat: || error2% || < 10^-3
+	PASSED: Approximation3 validation test of iterative solver using Quasi-Newton! Black-Box testing: By checking when Vgs > Vth, Vds < Vdsat: || error3% || < 10^-3
+	PASSED: The complete data set's approximation validation test of iterative solver! Black-Box testing: By checking if the accumulated error% that combines the previous three sections, || error% || < 10^-3
+
+	< OBSERVATION >:
+		The test is implemented by seperating the Vgs into three sections, and respectively calculate their approximaions under different scenarios. 
+		The accumulated relative error || error% || of the complete data set is < 10^-3, which is a value small enough to gaurantee that the iterative solver is implemented correctly.
