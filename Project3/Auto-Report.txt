@@ -65,7 +65,7 @@ ECE4960-Project 3 Report:
 		Power Law:
 			PROS: straight-forward and less costly inner-loop implementation
 			CONS: At most Linear Convergence, and not Quadratic Convergence. 
-		In this case, the optimal initial guess generated from Task 6 is very good, so it only took one iteration to converge, so linear and quadratic convergence couldn't be observed. 
+			In this case, the optimal initial guess generated from Task 6 is very good, so it only took one iteration to converge, so linear and quadratic convergence couldn't be observed. 
 			In other cases, based on the experience of when I didn't have Task 6 to get the optimal initial guesses, and when Quasi-Newton and Secant are given the same initial guesses and step sizes, Secant is at most linearly convergent, and Quasi-newton method always converges faster and is more robust against bad initial guesses. 
 			The Secant method is also observed to be more greedy and more 'local optimal' (prone to converge to an answer that's near the initial guess). Therefore it needs an initial guess to be very close to the 'true answer' to avoid wrong convergence.
 
