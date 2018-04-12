@@ -21,7 +21,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
  
  - ***FullMatrix.java, Vector.java:*** Implement operations for full matrixes and vectors.
   
- - ***Test.java:*** Test the helper functions; Verify the output of direct matrix solver(Task1), and the output of iterative solver(Task7).
+ - ***Test.java:*** Test helper functions; Verify outputs of direct matrix solver (Task1), and of iterative solver (Task7).
  
  - ***Main.java:*** Main entry for entire program, calls the modular tests and execute each task sequentially.
  
