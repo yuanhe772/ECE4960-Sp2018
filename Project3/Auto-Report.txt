@@ -97,13 +97,13 @@ ECE4960-Project 3 Report:
 
 
   TASK 6: Optimized Initial Guess Search:
-	Unnormalized data, Quasi-Newton:
+	UNNORMALIZED, Quasi-Newton:
 		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.6, 1.6], V = 2.594631282193693E-6
-	Unnormalized data, Secant:
+	UNNORMALIZED, Secant:
 		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.5, 1.0], V = 9.437759315832478E-6
-	Normalized data, Quasi-Newton:
+	NORMALIZED, Quasi-Newton:
 		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.7, 1.3], V = 115.18763613806533
-	Normalized data, Secant:
+	NORMALIZED, Secant:
 		Optimal initial guess [Is, Kappa, Vth] = [3.0E-6, 0.5, 1.2], V = 191.2923199892063
 
 	< OBSERVATION >:
