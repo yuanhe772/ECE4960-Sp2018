@@ -11,7 +11,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
 
 #### Source files:
 
- - ***iterativeSolver.java:*** the core script for this project, implements an iterative solver with line search that interfaces with any type of delta V vector, and Hessian matrix (Quasi-Newton, or Secant method), and any type of data (Normalized, or Unnormalized data).
+ - ***iterativeSolver.java:*** the core script for project3, implements an iterative solver with line search that interfaces with any type of delta V vector, and Hessian matrix (Quasi-Newton, or Secant method), and any type of data (Normalized, or Unnormalized data).
  
  - ***gradientEsti. java:*** the script that implements different gradient etimation methods (Quasi-Newton, Secant, or hybrid Quasi-Newton with real gradient for Power Law's parameter extraction) to render delta V vectors, and Hessian matrixes to the iterative solver.
  
