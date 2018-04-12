@@ -11,19 +11,19 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
 
 #### Source files:
 
- - ***iterativeSolver.java:*** the core script for project3, implements an iterative solver with line search that interfaces with any type of delta V vector, and Hessian matrix (Quasi-Newton, or Secant method), and any type of data (Normalized, or Unnormalized data).
+ - ***iterativeSolver.java:*** The core script for project3, implements an iterative solver with line search that interfaces with any type of delta V vector, and Hessian matrix (Quasi-Newton, or Secant method), and any type of data (Normalized, or Unnormalized data).
  
- - ***gradientEsti. java:*** the script that implements different gradient etimation methods (Quasi-Newton, Secant, or hybrid Quasi-Newton for Power Law's parameter extraction) to render delta V vectors, and Hessian matrixes to the iterative solver.
+ - ***gradientEsti. java:*** The script that implements different gradient etimation methods (Quasi-Newton, Secant, or hybrid Quasi-Newton for Power Law's parameter extraction) to render delta V vectors, and Hessian matrixes to the iterative solver.
  
- - ***dataIO.java:*** generate data for Power Law, and EKV models; generate initial guesses for iterative solver; implemented file operations for auto-generating report.
+ - ***dataIO.java:*** Generate data for Power Law, and EKV models; generate initial guesses for iterative solver; implemented file operations for auto-generating report.
  
- - ***directMatrixSolver.java:*** implement a direct matrix solver that is robust against ill-conditioned matrix.
+ - ***directMatrixSolver.java:*** Implement a direct matrix solver that is robust against ill-conditioned matrix.
  
- - ***FullMatrix.java, Vector.java:*** implement operations for full matrixes and vectors.
+ - ***FullMatrix.java, Vector.java:*** Implement operations for full matrixes and vectors.
   
- - ***Test.java:*** test the helper functions in FullMatrix.java and Vector.java; Verify the output of direct matrix solver(Task1), and the output of iterative solver(Task7).
+ - ***Test.java:*** Test the helper functions; Verify the output of direct matrix solver(Task1), and the output of iterative solver(Task7).
  
- - ***Main.java:*** main entry for entire program, calls the modular tests and execute each task sequentially.
+ - ***Main.java:*** Main entry for entire program, calls the modular tests and execute each task sequentially.
  
  - ***Plot.ipynb:*** The Python script for plotting Task 3, 5, and 7.
 
