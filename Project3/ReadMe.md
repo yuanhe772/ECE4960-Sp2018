@@ -7,7 +7,7 @@ This program is written in java, and compiled with Eclipse (java 8) on Mac OS.
 
 ### 2. Program Breakdown:
 
-The program breaks down into 8 java classes, and a python script for plotting.
+The program breaks down into 8 java classes, and 1 python script for plotting.
 
 #### Source files:
 
