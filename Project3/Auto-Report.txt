@@ -33,7 +33,7 @@ ECE4960-Project 3 Report:
 
 	< OBSERVATION >:
 		Linear Regression:
-			PROS: V is relatively small (<3), and could be considered to be correctly extracting the parameters; Predictable computational cost and performance (Time cost in (15ms, 90ms), MEM usage = 2MB, V in (0.3, 2.5))
+			PROS: V is relatively small (always<3), so could be considered extracting the parameters correctly; Predictable computational cost and performance (Time cost in (15ms, 90ms), MEM usage = 2MB, V in (0.3, 2.5))
 			CONS: although average case better than iterative solver, its best case is worse;
 		Power Law:
 			PROS: Through OBSERVATION, the best case of Power Law is better than Linear regression, in both aspects of performance (smaller V) and cost (faster computation).
