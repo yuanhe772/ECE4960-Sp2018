@@ -19,7 +19,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
  
  - ***directMatrixSolver.java:*** implement a direct matrix solver that is robust against ill-conditioned matrix.
  
- - ***FullMatrix.java, Vector.java:*** implement operations for FullMatrixes and Vectors.
+ - ***FullMatrix.java, Vector.java:*** implement operations for full matrixes and vectors.
   
  - ***Test.java:*** test the helper functions in FullMatrix.java and Vector.java; Verify the output of direct matrix solver(Task1), and the output of iterative solver(Task7).
  
