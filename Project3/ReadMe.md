@@ -31,7 +31,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
 
 #### Reports and ouputs:
 
- - ***Auto_Report.txt:*** The **program-generated** report for entire project's numerical testing results, and observations.
+ - ***Auto_Report.txt:*** The **program-generated** report for entire project's numerical testing results, meta data, and observations.
  
  - ***Visual_Report_of_Task_3_5_7.pdf:*** The report with visualization results, and observations.
  
