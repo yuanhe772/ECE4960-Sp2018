@@ -71,8 +71,8 @@ public class Main {
 		dataIO.computationCost(endTime - startTime);
 
 		// Result OBSERVATION:
-		dataIO.output("\n\n\t< OBSERVATION >:\n\t\tLinear Regression:\n\t\t\tPROS: V is relatively small (<3), and could be "
-				+ "considered to be correctly extracting the parameters; Predictable computational cost and "
+		dataIO.output("\n\n\t< OBSERVATION >:\n\t\tLinear Regression:\n\t\t\tPROS: V is relatively small (<3), "
+				+ "so could be considered extracting the parameters correctly; Predictable computational cost and "
 				+ "performance (Time cost in (15ms, 90ms), MEM usage = 2MB, V in (0.3, 2.5))\n\t\t\tCONS: "
 				+ "although average case better than iterative solver, its best case is worse"
 				+ ";\n\t\tPower Law:"
@@ -111,15 +111,14 @@ public class Main {
 
 		// Result OBSERVATION:
 		dataIO.output("\n\n\t< OBSERVATION >:\n\t\tQuasi-Newton:\n\t\t\tPROS: Quadratic Convergence, and more "
-				+ "robust against far-away initial guesses; In this case, when convergent, smaller V than "
-				+ "Secant method.\n\t\t\tCONS: Complex and costly inner-loop implementation;"
+				+ "robust against far-away initial guesses; After convergence, often renders smaller V than Secant "
+				+ "method.\n\t\t\tCONS: Complex and costly inner-loop implementation;"
 				+ "\n\t\tPower Law:\n\t\t\tPROS: straight-forward and less costly inner-loop implementation"
 				+ "\n\t\t\tCONS: At most Linear Convergence, and not Quadratic Convergence. \n\t\t\tIn this case, "
 				+ "the optimal initial guess generated from Task 6 is very good, so it only took one iteration "
-				+ "to converge, so linear and quadratic convergence couldn't be observed. "
+				+ "to converge, thus linear and quadratic convergence couldn't be observed. "
 				+ "\n\t\t\tIn other cases, based on the experience of when I didn't have Task 6 to get "
-				+ "the optimal initial guesses, and when Quasi-Newton and Secant are given the same initial "
-				+ "guesses and step sizes, Secant is at most linearly convergent, and Quasi-newton method always"
+				+ "the optimal initial guesses, Secant is at most linearly convergent; Quasi-newton method always"
 				+ " converges faster and is more robust "
 				+ "against bad initial guesses. \n\t\t\tThe Secant method is also observed to be more greedy "
 				+ "and more 'local optimal' (prone to converge to an answer that's near the initial guess). "
@@ -134,10 +133,10 @@ public class Main {
 		dataIO.output("\n\tNORMALIZED: Quasi-Newton method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:");
 		gradientEsti.changePerturb(0.0000001);
 		double tolerance2 = 1.75*Math.pow(10, -14);
-		double initQNNormal[] = {2e-06, 6e-01, 9e-01};
+		double initQNNormal[] = {2E-06, 6E-01, 9E-01};
 		double NormResQN[] = iterativeSolver.iterSolver(QN, NORM, EKV, new Vector(initQNNormal), tolerance2);
 		dataIO.output("\n\t\tStep Size = 0.00001% of parameter\n\t\tInitial [Is, Kappa, Vth] = "
-				+Arrays.toString(NormResQN));
+				+Arrays.toString(initQNNormal));
 		dataIO.result(NormResQN);
 		dataIO.convergenceObserve(NormResQN);
 
@@ -147,18 +146,18 @@ public class Main {
 		double initSCNormal[] = {2.35E-6, 0.59, 1.11};
 		double NormResSC[] = iterativeSolver.iterSolver(SC, NORM, EKV, new Vector(initSCNormal), tolerance2);
 		dataIO.output("\n\t\tStep Size = 0.01% of parameter\n\t\tInitial [Is, Kappa, Vth] = "
-				+Arrays.toString(NormResSC));
+				+Arrays.toString(initSCNormal));
 		dataIO.result(NormResSC);
 		dataIO.convergenceObserve(NormResSC);
 
 		// Result OBSERVATION:
 		dataIO.output("\n\n\t< OBSERVATION >:\n\t\tThe optimal initial guesses from Task 6 doesn't work for Task 5, "
-				+ "either causes converging too slow or raises NAN. \n\t\tSo I chose the initial guesses that are very close"
+				+ "either causes slow convergence or raises NAN. \n\t\tSo I chose the initial guesses that are very close"
 				+ " to the result extracted from Task 4. \n\t\tAfter converging, the ||V|| is much larger than ||V||"
 				+ " in task 4, because Without normalizing, the error will only be dominated by the large Ids data points. \n\t\t"
 				+ "The fit is therefore good for large Ids data points, without a guarantee that the small Id values "
 				+ "are also well fitted since they don't contribute much to ||V||. \n\t\tWith normalization, the small "
-				+ "Id errors contributes much more than before, so the ||V|| is much larger in this scenario.");
+				+ "Id errors would contribute as much as the other data points, therefore increases the overall ||V|| greatly");
 
 
 		/* ---------------------------------------- Task 6: ----------------------------------------- */
@@ -184,10 +183,10 @@ public class Main {
 		dataIO.output("\n\n\t< OBSERVATION >:\n\t\tThe result of task 6 is used in task 4, making both of the "
 				+ "Quasi-Newton and Secant Method converges faster than using the other initial guesses I randomly "
 				+ "chose. \n\t\tFor each search, the MAX_ITERATION is set "
-				+ "to 2, because through observation, the search doesn't have to wait until the solver to fully "
-				+ "converge to render a reasonable initial guess. \n\t\tMAX_ITERATION == 2 is good enough for Quasi-Newton "
+				+ "to 2, because through observation, to render a reasonable initial guess, the search doesn't "
+				+ "have to wait until the solver to fully converge. \n\t\tMAX_ITERATION == 2 is good enough for Quasi-Newton "
 				+ "method to quadratically converge to a much smaller V after the second iteration, and for "
-				+ "Secant method to get a sense of how much the magnitude of V would be when it finally converges. "
+				+ "Secant method to get a sense of how much the magnitude of V would be at convergence. "
 				+ "\n\t\tTherefore MAX_ITERATION is set to 2 to ensure computational efficiency.");
 
 
@@ -204,6 +203,6 @@ public class Main {
 				+ "sections, and respectively calculate their approximaions under different scenarios. \n\t\tThe "
 				+ "accumulated relative error || error% || of the complete data set is < 10^-3; \n\t\tTogether "
 				+ "with the visual validation of Fig.[4] in Visual_Report_of_Task_3_5_7.pdf, it could be concluded"
-				+ " that the the iterative solver is implemented correctly..");
+				+ " that the iterative solver is implemented correctly..");
 	}
 }

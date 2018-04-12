@@ -279,7 +279,7 @@ public class Test {
 				+ "By checking when Vgs > Vth, Vds < Vdsat: || error3% || < 10^-3");
 		dataIO.output("\n\t"+ (error < 7*Math.pow(10, -3)? "PASSED" : "FAILED") +
 				": The complete data set's approximation validation test of iterative solver! Black-Box testing: "
-				+ "By checking if the accumulated error% that combines the previous three sections, || error% || < 10^-3");
+				+ "By checking if the accumulated error% of previous three sections, || error% || < 10^-3");
 	}
 
 	/**Function: approximation for Vgs < Vth, x1 = Kappa*(Vgs-Vth) / VT, x2 = (Kappa*(Vgs-Vth)-Vds) / VT,
