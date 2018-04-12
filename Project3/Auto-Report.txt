@@ -28,7 +28,7 @@ ECE4960-Project 3 Report:
 		Initial [a, m] = [20.0, -1.0]
 		Extracted [a, m] = [9.94322837752545, -0.4904133804460987], V = 1.0838698208978432, ||delta|| = 2.1127569947132502E-8, iteration # = 12
 		Convergence Auto-Checking:
-			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: NO
+			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: YES
 		< STATISTICS >: Time cost = 4ms, MEM usage = 3 Mb
 
 	< OBSERVATION >:
