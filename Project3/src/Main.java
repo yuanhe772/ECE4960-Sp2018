@@ -114,7 +114,7 @@ public class Main {
 				+ "robust against far-away initial guesses; In this case, when convergent, smaller V than "
 				+ "Secant method.\n\t\t\tCONS: Complex and costly inner-loop implementation;"
 				+ "\n\t\tPower Law:\n\t\t\tPROS: straight-forward and less costly inner-loop implementation"
-				+ "\n\t\t\tCONS: At most Linear Convergence, and not Quadratic Convergence. \n\t\tIn this case, "
+				+ "\n\t\t\tCONS: At most Linear Convergence, and not Quadratic Convergence. \n\t\t\tIn this case, "
 				+ "the optimal initial guess generated from Task 6 is very good, so it only took one iteration "
 				+ "to converge, so linear and quadratic convergence couldn't be observed. "
 				+ "\n\t\t\tIn other cases, based on the experience of when I didn't have Task 6 to get "

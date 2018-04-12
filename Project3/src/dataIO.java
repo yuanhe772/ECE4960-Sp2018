@@ -111,7 +111,7 @@ public class dataIO {
 	 * Return: None
 	 * @throws Exception */
 	public static void initialGuess(int estType, int normType, int modelType, double tolerance) throws Exception {
-		output("\n\t"+(normType==NORM ? "Normalized" : "Unnormalized")+" data"+(estType==QN ? ", Quasi-Newton:" : ", Secant:"));
+		output("\n\t"+(normType==NORM ? "NORMALIZED" : "UNNORMALIZED")+(estType==QN ? ", Quasi-Newton:" : ", Secant:"));
 
 		// Structures for iterative solvers results
 		double V= 0;
