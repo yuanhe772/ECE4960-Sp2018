@@ -23,7 +23,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
   
  - ***Test.java:*** Test helper functions; Verify outputs of direct matrix solver (Task1), and of iterative solver (Task7).
  
- - ***Main.java:*** Main entry for entire program, calls the modular tests and execute each task sequentially.
+ - ***Main.java:*** Main entry for entire program, calls modular testing functions and execute task 1-7 sequentially.
  
  - ***Plot.ipynb:*** The Python script for plotting Task 3, 5, and 7.
 
