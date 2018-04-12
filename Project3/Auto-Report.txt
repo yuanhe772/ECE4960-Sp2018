@@ -41,7 +41,7 @@ ECE4960-Project 3 Report:
 
 
   TASK 3: Plot S(measure):
-	Available in the Report_of_Task_3_5_7.pdf
+	Available in the Visual_Report_of_Task_3_5_7.pdf
 
 
   TASK 4: Extract EKV's parameters with iterative solver:
@@ -71,7 +71,7 @@ ECE4960-Project 3 Report:
 
 
   TASK 5.1: Plot S(model)/S(measure):
-	Available in the Report_of_Task_3_5_7.pdf
+	Available in the Visual_Report_of_Task_3_5_7.pdf
 
 
   TASK 5.2: Repeat Task 4 with normalized data
@@ -114,7 +114,7 @@ ECE4960-Project 3 Report:
 
 
   TASK 7.1: Visualization:
-	Available in the Report_of_Task_3_5_7.pdf
+	Available in the Visual_Report_of_Task_3_5_7.pdf
 
 
   TASK 7.2: Validation for iterative solver using Quasi-Newton method: 
@@ -125,4 +125,5 @@ ECE4960-Project 3 Report:
 
 	< OBSERVATION >:
 		The test is implemented by seperating the Vgs into three sections, and respectively calculate their approximaions under different scenarios. 
-		The accumulated relative error || error% || of the complete data set is < 10^-3, which is a value small enough to gaurantee that the iterative solver is implemented correctly.
+		The accumulated relative error || error% || of the complete data set is < 10^-3;
+		Together with the visual validation of Fig.[4] in Visual_Report_of_Task_3_5_7.pdf, it could be concluded that the the iterative solver is implemented correctly.
