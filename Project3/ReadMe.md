@@ -33,4 +33,4 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
  
  - ***Visual_Report_of_Task_3_5_7.pdf:***  The report with visualization results, and observations.
  
- - ***Log.txt:*** The **program-generated**  log file for iterative solver, reports the parameter(and their sensitivities), || V ||, || Delta || within each iteration.
+ - ***Log.txt:*** The **program-generated**  logs for iterative solver, records the parameter, sensitivities, || V ||, || Delta || within each iteration.
