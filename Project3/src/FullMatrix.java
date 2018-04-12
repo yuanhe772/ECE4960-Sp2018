@@ -6,7 +6,7 @@
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project3, Type FullMatrix:
- * Constructed type FullMatrix, and implemented FullMatrix's basic operation.
+ * Constructs type FullMatrix, and implements FullMatrix's basic operation.
  */
 
 public class FullMatrix {
@@ -15,7 +15,7 @@ public class FullMatrix {
 	double[][] full;
 	int rank;
 
-	
+
 	/* Class Methods:*/
 	/**Function: Constructor, construct a FullMatrix with a 2-d array
 	 * Parameters: double[][] m
@@ -34,16 +34,15 @@ public class FullMatrix {
 		full = fm;
 		this.rank = rank;
 	}
-	
+
 	/**Function: compare two matrixes element to element to see if they are equivalent to each other
 	 * Parameters: this.FullMatrix, FullMatrix B
 	 * Return: int indicator, with 0 representing in-equivalent and 1 representing equivalent*/
 	public int equals(FullMatrix B) {
 		for(int i=0; i<rank; i++) {
 			for(int j=0; j<rank; j++) {
-				if(full[i][j] != B.full[i][j]) {
+				if(full[i][j] != B.full[i][j])
 					return 0;
-				}
 			}
 		}
 		return 1;

@@ -9,8 +9,9 @@ import java.util.Arrays;
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project 3, dataIO:
- * Generating measured data, optimal initial guesses; implementing file operations for file reading 
- * and report generating.
+ * Generates measured data, optimal initial guesses; 
+ * Implements file operations for file reading;
+ * Generates reports.
  */
 
 public class dataIO {

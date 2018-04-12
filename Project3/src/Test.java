@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project 3, Testing program:
- * For task 1, 2, 7's validation, and modular testing of helper functions
+ * For task 1, 2, 7's validation, and modular testing of helper functions.
  */
 
 public class Test {
@@ -23,7 +23,6 @@ public class Test {
 
 
 	/* Class Methods:*/
-
 	/* Testing for helper functions in Class FullMatrix: */
 	/**Functions: test the FullMatrix.rowPermute(), FullMatrix.rowScale(), by testing whether the 
 	 * 			  calculate matrix equals a known ground-truth. (White-box testing)
@@ -254,17 +253,17 @@ public class Test {
 				error3 += Math.pow((yModel - yApprox), 2);
 			}
 		}
-		
+
 		// The || error% || of Vgs < Vth, Y(model)'s magnitude is dominated around 10^-7
 		error1 = Math.pow(error1, 0.5);
 		error1 /= Math.pow(10, -7);
-		
+
 		// The || error% || of Vgs > Vth, Y(model)'s magnitude is dominated around 10^-3
 		error2 = Math.pow(error2, 0.5);
 		error2 /= 3*Math.pow(10, -3);
 		error3 = Math.pow(error3, 0.5);
 		error3 /= 4*Math.pow(10, -3);
-		
+
 		// The accumulative || error% ||:
 		double error = error1 + error2 + error3;
 

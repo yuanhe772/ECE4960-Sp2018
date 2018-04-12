@@ -8,8 +8,8 @@ import java.util.Arrays;
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project 3, iterative solver:
- * The core program for project3, implemented the iterative solver, and is integrated with 
- * the gradientEsti script, which calculates the delta V and Hessian Matrix
+ * The core program for project3, implements the iterative solver
+ * Integrated with the gradientEsti script (which calculates the delta V and Hessian Matrix)
  */
 
 public class iterativeSolver {
@@ -277,7 +277,7 @@ public class iterativeSolver {
 	public static void logModeEnable(boolean en) {
 		printEnable = en;
 	}
-	
+
 	/**Function: change the MAX_ITERATION
 	 * Parameters: int iter
 	 * Return: None*/

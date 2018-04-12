@@ -5,7 +5,7 @@
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project3, type Vector:
- * Construct type Vector, and implement Vector operations.
+ * Constructs type Vector, and implement Vector operations.
  */
 
 public class Vector {
@@ -14,7 +14,7 @@ public class Vector {
 	double[] v;
 	int len;
 
-	
+
 	/* Class methods:*/
 	/**Function: Constructor, construct a Vector with an array
 	 * Parameters: double[] a

@@ -193,7 +193,7 @@ public class Main {
 
 		/* ---------------------------------------- Task 7: ----------------------------------------- */
 		dataIO.output("\n\n\n  TASK 7.1: Visualization:\n\tAvailable in the Visual_Report_of_Task_3_5_7.pdf");
-		
+
 		// Test the parameters extracted from task 4, Quasi-Newton method, by looking at model's approximation
 		dataIO.output("\n\n\n  TASK 7.2: Validation for iterative solver using Quasi-Newton method: ");
 		double paraQN[] = {resQN[5], resQN[6], resQN[7]};

@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project 3, direct matrix solver:
- * Solve x out of Ax - V = 0
+ * Solves x out of Ax - V = 0
  * In project 3, the Power Law problem could be transformed into, log(y) = log(c) + m * log(x), 
  * and be combined with this direct matrix solver to render solution for c and m without doing 
  * Newton iterations.

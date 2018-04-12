@@ -6,7 +6,7 @@
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project 3, gradient estimations:
- * Calculate the delta V and Hessian Matrix according to:
+ * Calculates the delta V and Hessian Matrix using:
  * Either Quasi-newton method, or Secant method.
  */
 
@@ -189,7 +189,7 @@ public class gradientEsti {
 		}
 		return delVQN;
 	}
-	
+
 	/**Function: Calculate the Hessian V by Secant gradient estimation
 	 * 			 Also use 2nd 2nd-order central-difference: f(x+2h) - f(x) - f(x-2h)/ 4*h*h,
 	 * 			 but only assign values to the diagonal elements to make Secant Hessian matrix diagonal 
