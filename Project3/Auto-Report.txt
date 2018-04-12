@@ -92,8 +92,8 @@ ECE4960-Project 3 Report:
 		The optimal initial guesses from Task 6 doesn't work for Task 5, either causes slow convergence or raises NAN. 
 		So I chose the initial guesses that are very close to the result extracted from Task 4. 
 		After converging, the ||V|| is much larger than ||V|| in task 4, because Without normalizing, the error will only be dominated by the large Ids data points. 
-		The fit is therefore good for large Ids data points, without a guarantee that the small Id values are also well fitted since they don't contribute much to ||V||. 
-		With normalization, the small Id errors contributes much more than before, so the ||V|| is much larger in this scenario.
+		(The fit is therefore good for large Ids data points, without a guarantee that the small Id values are also well fitted since they don't contribute much to ||V||.) 
+		With normalization, the small Id errors would contribute as much as the other data points, therefore increases the overall ||V|| greatly.
 
 
   TASK 6: Optimized Initial Guess Search:
@@ -108,8 +108,8 @@ ECE4960-Project 3 Report:
 
 	< OBSERVATION >:
 		The result of task 6 is used in task 4, making both of the Quasi-Newton and Secant Method converges faster than using the other initial guesses I randomly chose. 
-		For each search, the MAX_ITERATION is set to 2, because through observation, the search doesn't have to wait until the solver to fully converge to render a reasonable initial guess. 
-		MAX_ITERATION == 2 is good enough for Quasi-Newton method to quadratically converge to a much smaller V after the second iteration, and for Secant method to get a sense of how much the magnitude of V would be when it finally converges. 
+		For each search, the MAX_ITERATION is set to 2, because through observation, to render a reasonable initial guess, the search doesn't have to wait until the solver to fully converge. 
+		MAX_ITERATION == 2 is good enough for Quasi-Newton method to quadratically converge to a much smaller V after the second iteration, and for Secant method to get a sense of how much the magnitude of V would be at convergence. 
 		Therefore MAX_ITERATION is set to 2 to ensure computational efficiency.
 
 
@@ -121,9 +121,9 @@ ECE4960-Project 3 Report:
 	PASSED: Approximation1 validation test of iterative solver using Quasi-Newton! Black-Box testing: By checking when Vgs < Vth: || error1% || < 10^-5
 	PASSED: Approximation2 validation test of iterative solver using Quasi-Newton! Black-Box testing: By checking when Vgs > Vth, Vds > Vdsat: || error2% || < 10^-3
 	PASSED: Approximation3 validation test of iterative solver using Quasi-Newton! Black-Box testing: By checking when Vgs > Vth, Vds < Vdsat: || error3% || < 10^-3
-	PASSED: The complete data set's approximation validation test of iterative solver! Black-Box testing: By checking if the accumulated error% that combines the previous three sections, || error% || < 10^-3
+	PASSED: The complete data set's approximation validation test of iterative solver! Black-Box testing: By checking if the accumulated error% of previous three sections, || error% || < 10^-3
 
 	< OBSERVATION >:
 		The test is implemented by seperating the Vgs into three sections, and respectively calculate their approximaions under different scenarios. 
 		The accumulated relative error || error% || of the complete data set is < 10^-3;
-		Together with the visual validation of Fig.[4] in Visual_Report_of_Task_3_5_7.pdf, it could be concluded that the the iterative solver is implemented correctly.
+		Together with the visual validation of Fig.[4] in Visual_Report_of_Task_3_5_7.pdf, it could be concluded that the iterative solver is implemented correctly.
