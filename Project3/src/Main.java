@@ -84,7 +84,7 @@ public class Main {
 
 
 		/* ---------------------------------------- Task 3: ----------------------------------------- */
-		dataIO.output("\n\n\n  TASK 3: Plot S(measure):\n\tAvailable in the Report_of_Task_3_5_7.pdf");
+		dataIO.output("\n\n\n  TASK 3: Plot S(measure):\n\tAvailable in the Visual_Report_of_Task_3_5_7.pdf");
 
 
 		/* ---------------------------------------- Task 4: ----------------------------------------- */
@@ -127,7 +127,7 @@ public class Main {
 
 
 		/* ---------------------------------------- Task 5: ----------------------------------------- */
-		dataIO.output("\n\n\n  TASK 5.1: Plot S(model)/S(measure):\n\tAvailable in the Report_of_Task_3_5_7.pdf");
+		dataIO.output("\n\n\n  TASK 5.1: Plot S(model)/S(measure):\n\tAvailable in the Visual_Report_of_Task_3_5_7.pdf");
 
 		// Normalized data, Quasi-Newton estimation: stepSize/parameter = 0.00001%
 		dataIO.output("\n\n\n  TASK 5.2: Repeat Task 4 with normalized data");
@@ -192,7 +192,7 @@ public class Main {
 
 
 		/* ---------------------------------------- Task 7: ----------------------------------------- */
-		dataIO.output("\n\n\n  TASK 7.1: Visualization:\n\tAvailable in the Report_of_Task_3_5_7.pdf");
+		dataIO.output("\n\n\n  TASK 7.1: Visualization:\n\tAvailable in the Visual_Report_of_Task_3_5_7.pdf");
 		
 		// Test the parameters extracted from task 4, Quasi-Newton method, by looking at model's approximation
 		dataIO.output("\n\n\n  TASK 7.2: Validation for iterative solver using Quasi-Newton method: ");
@@ -202,7 +202,8 @@ public class Main {
 		// Result OBSERVATION:
 		dataIO.output("\n\n\t< OBSERVATION >:\n\t\tThe test is implemented by seperating the Vgs into three "
 				+ "sections, and respectively calculate their approximaions under different scenarios. \n\t\tThe "
-				+ "accumulated relative error || error% || of the complete data set is < 10^-3, which is a value"
-				+ " small enough to gaurantee that the iterative solver is implemented correctly.");
+				+ "accumulated relative error || error% || of the complete data set is < 10^-3; \n\t\tTogether "
+				+ "with the visual validation of Fig.[4] in Visual_Report_of_Task_3_5_7.pdf, it could be concluded"
+				+ " that the the iterative solver is implemented correctly..");
 	}
 }
