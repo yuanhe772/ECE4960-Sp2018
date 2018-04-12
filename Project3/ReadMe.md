@@ -13,7 +13,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
 
  - ***iterativeSolver.java:***  The core script for project3, implements an iterative solver with line search that interfaces with any type of delta V vector, and Hessian matrix (Quasi-Newton, or Secant method), and any type of data (Normalized, or Unnormalized data).
  
- - ***gradientEsti. java:***  The script that implements different gradient etimation methods (Quasi-Newton, Secant, or hybrid Quasi-Newton for Power Law's parameter extraction) to render delta V vectors, and Hessian matrixes to the iterative solver.
+ - ***gradientEsti. java:***  Implements different gradient etimation methods (Quasi-Newton, Secant, or hybrid Quasi-Newton for Power Law's parameter extraction) to render delta V vectors, and Hessian matrixes to the iterative solver.
  
  - ***dataIO.java:***  Generate data for Power Law, and EKV models; generate initial guesses for iterative solver; implemented file operations for auto-generating report.
  
@@ -25,7 +25,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
  
  - ***Main.java:***  Main entry for entire program, calls modular test func() and execute task 1-7 sequentially.
  
- - ***Plot.ipynb:***  The Python script for plotting Task 3, 5, and 7.
+ - ***Plot.ipynb:***  A Python script for plotting Task 3, 5, and 7.
 
 #### Reports and ouputs:
 
