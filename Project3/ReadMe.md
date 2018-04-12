@@ -15,7 +15,7 @@ The program breaks down into 8 java classes, and 1 python script for plotting.
  
  - ***gradientEsti. java:*** the script that implements different gradient etimation methods (Quasi-Newton, Secant, or hybrid Quasi-Newton for Power Law's parameter extraction) to render delta V vectors, and Hessian matrixes to the iterative solver.
  
- - ***dataIO.java:*** generate input data for Power Law, and EKV models; generate initial guesses as the input into the iterativeSolver; implemented file operations for auto-generating report.
+ - ***dataIO.java:*** generate data for Power Law, and EKV models; generate initial guesses for iterative solver; implemented file operations for auto-generating report.
  
  - ***directMatrixSolver.java:*** implement a direct matrix solver that is robust against ill-conditioned matrix.
  
