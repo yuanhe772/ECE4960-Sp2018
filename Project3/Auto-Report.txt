@@ -60,13 +60,13 @@ ECE4960-Project 3 Report:
 
 	< OBSERVATION >:
 		Quasi-Newton:
-			PROS: Quadratic Convergence, and more robust against far-away initial guesses; In this case, when convergent, smaller V than Secant method.
+			PROS: Quadratic Convergence, and more robust against far-away initial guesses; After convergence, often renders smaller V than Secant method.
 			CONS: Complex and costly inner-loop implementation;
 		Power Law:
 			PROS: straight-forward and less costly inner-loop implementation
 			CONS: At most Linear Convergence, and not Quadratic Convergence. 
-			In this case, the optimal initial guess generated from Task 6 is very good, so it only took one iteration to converge, so linear and quadratic convergence couldn't be observed. 
-			In other cases, based on the experience of when I didn't have Task 6 to get the optimal initial guesses, and when Quasi-Newton and Secant are given the same initial guesses and step sizes, Secant is at most linearly convergent, and Quasi-newton method always converges faster and is more robust against bad initial guesses. 
+			In this case, the optimal initial guess generated from Task 6 is very good, so it only took one iteration to converge, thus linear and quadratic convergence couldn't be observed. 
+			In other cases, based on the experience of when I didn't have Task 6 to get the optimal initial guesses, Secant is at most linearly convergent; Quasi-newton method always converges faster and is more robust against bad initial guesses. 
 			The Secant method is also observed to be more greedy and more 'local optimal' (prone to converge to an answer that's near the initial guess). Therefore it needs an initial guess to be very close to the 'true answer' to avoid wrong convergence.
 
 
@@ -77,19 +77,19 @@ ECE4960-Project 3 Report:
   TASK 5.2: Repeat Task 4 with normalized data
 	NORMALIZED: Quasi-Newton method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:
 		Step Size = 0.00001% of parameter
-		Initial [Is, Kappa, Vth] = [0.0, 1.0, 1.0, 115.18261086405002, 15.0, 2.37804927151225E-6, 0.5862092120641524, 1.1141313162669133, 6.5521668850843E-16]
+		Initial [Is, Kappa, Vth] = [2E-06, 6E-01, 9E-01]
 		Extracted [Is, kappa, Vth] = [2.37804927151225E-6, 0.5862092120641524, 1.1141313162669133], V = 115.18261086405002, ||delta|| = 6.5521668850843E-16, iteration # = 15
 		Convergence Auto-Checking:
 			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: YES
 	NORMALIZED: Secant method, with 2nd-order central-difference: f(x + h) - f(x - h) / 2h:
 		Step Size = 0.01% of parameter
-		Initial [Is, Kappa, Vth] = [0.0, 0.0, 1.0, 115.52667019850594, 185.0, 2.350033344566595E-6, 0.5900083716145921, 1.1100157499867744, 1.7499477885230208E-14]
+		Initial [Is, Kappa, Vth] = [2E-06, 0.59, 1.11]
 		Extracted [Is, kappa, Vth] = [2.350033344566595E-6, 0.5900083716145921, 1.1100157499867744], V = 115.52667019850594, ||delta|| = 1.7499477885230208E-14, iteration # = 185
 		Convergence Auto-Checking:
 			Terminated by MAX_ITERATION: NO, Linear Convergence: YES, Quadratic Convergence: NO
 
 	< OBSERVATION >:
-		The optimal initial guesses from Task 6 doesn't work for Task 5, either causes converging too slow or raises NAN. 
+		The optimal initial guesses from Task 6 doesn't work for Task 5, either causes slow convergence or raises NAN. 
 		So I chose the initial guesses that are very close to the result extracted from Task 4. 
 		After converging, the ||V|| is much larger than ||V|| in task 4, because Without normalizing, the error will only be dominated by the large Ids data points. 
 		The fit is therefore good for large Ids data points, without a guarantee that the small Id values are also well fitted since they don't contribute much to ||V||. 
