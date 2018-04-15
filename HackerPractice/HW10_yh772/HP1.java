@@ -18,8 +18,6 @@ public class HP1 {
 	static double Tol2 = 1e-6;
 	static int m = 1;
 
-	//First Taylor expansion, after expansion each *parameter is a
-
 	// The groundtruth
 	public static double trueX(double t) {
 		double a = Math.exp(0.8*t)-Math.exp(-0.5*t);
@@ -82,7 +80,6 @@ public class HP1 {
 			xRK4 = RK4(x_i0, k[0], k[1], k[2], k[3]);
 			r= r(xRK3, xRK4);
 		}
-
 		double estimateError= Math.abs(xRK3-xRK4);
 		double[] res= {xRK4, estimateError, xRK3 - xRK4};
 		return res;
