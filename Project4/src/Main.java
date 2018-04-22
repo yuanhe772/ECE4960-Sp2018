@@ -37,7 +37,7 @@ public class Main {
 
 		/* ---------------- Task 5: ---------------- */
 
-		/* Step size = 1ns: */
+		/* Step size = 1ns: */ 
 		Simulation.simulate("Circuit2", 1e-9, "Forward Euler");
 		Simulation.simulate("Circuit2", 1e-9, "RK4");
 		Simulation.simulate("Circuit2", 1e-9, "RK34");

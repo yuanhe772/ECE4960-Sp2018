@@ -96,7 +96,7 @@ public class Solvers {
 		double Kappa = 0.7;
 		double Vth = 1;
 		double Vt = 0.026;
-		
+
 		// The calculation
 		double former= 1 + Math.exp(Kappa*(V1-Vth) / (2*Vt));
 		double latter= 1 + Math.exp((Kappa*(V1-Vth)-V2) / (2*Vt));
@@ -142,7 +142,7 @@ public class Solvers {
 		Vector K2 = K.get(1);
 		Vector K3 = K.get(2);
 		Vector K4 = K.get(3);
-
+		
 		// Calculate x(RK3)
 		Vector KsumRK3 = ((K1.scale(2.0)).add(K2, 3.0)).add(K3, 4.0);
 		Vector x_i1_RK3 = x.add(KsumRK3, h*1.0/9.0);
@@ -188,7 +188,7 @@ public class Solvers {
 		}
 		return x;
 	}
-	
+
 	/**Function: Calculate the normalized error r = (xRK3 - xRK4) / (eR*xRK4 + eA)
 	 * @param: ArrayList<Vector> RK3_RK4, double eR, double eA
 	 * @return: double r*/
