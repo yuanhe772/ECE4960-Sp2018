@@ -18,7 +18,7 @@ public class Solvers {
 	static final double Tol2 = 1e-6;
 
 	/* Class Methods: */
-	/**Function: The ground truth x(t)
+	/**Function: The ground-truth x(t)
 	 * @param: double ti, String fxType
 	 * @return: */
 	public static double trueX(double t, String fType) {

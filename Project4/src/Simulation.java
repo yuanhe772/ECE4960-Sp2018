@@ -17,8 +17,8 @@ public class Simulation {
 	static final String fTypeCircuit2[] = {"Circuit2-1", "Circuit2-2"};
 
 	/* Class method: */
-	/**Function: Simulate circuit1's transient analysis data with adaptive RK34
-	 * @param: double step-size
+	/**Function: Simulate different circuits with different ODE solvers
+	 * @param: String Circuit, double stepSize, String solverType
 	 * @return: None
 	 * @throws Exception */
 	public static void simulate(String Circuit, double stepSize, String solverType) throws Exception {
