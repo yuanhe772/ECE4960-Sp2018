@@ -1,0 +1,4 @@
+Testing helper functions: 
+	PASSED: Vector.norm()'s output correctness test! White-Box testing: by checking if a known Vector's norm(Calculated) == norm(Ground-Truth)
+	PASSED: Vector.Scale()'s output correctness test! White-Box testing: by checking if a length(3) Vector's Scaled(Calculated) == Scaled(Ground-Truth)
+	PASSED: Vector.Add()'s output correctness test! White-Box testing: by checking if a length(3) Vector's Sum(Calculated) == Sum(Ground-Truth)
