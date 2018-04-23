@@ -53,7 +53,7 @@ public class Test {
 	 * Parameters: None
 	 * Return: None*/
 	public static void testHelper() {
-		FileIO.createReport("TestHelper.txt", "Testing helper functions: ");
+		FileIO.createReport("TestHelperReport.txt", "Testing helper functions: ");
 		
 		// The calculated
 		double vec[] = {1,2,3};
