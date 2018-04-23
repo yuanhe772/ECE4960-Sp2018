@@ -36,8 +36,8 @@ public class HP1 {
 		System.out.println("\t|Error| = "+computeError(A, res, V));
 	}
 	
-	public static double computeError(FullMatrix A, Vector si, Vector b) {
-		Vector res= A.product(si);
+	public static double computeError(FullMatrix A, Vector Res, Vector b) {
+		Vector res= A.product(Res);
 		return (res.add(b, -1)).norm();
 	}
 }
