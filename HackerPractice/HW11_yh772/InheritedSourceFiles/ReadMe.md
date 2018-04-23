@@ -1,1 +1,1 @@
-- The inherited source files fro previous HP
+- The inherited source files from previous HP
