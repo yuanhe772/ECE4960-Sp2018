@@ -1,0 +1,6 @@
+Both conditions are Dirichlet conditions:
+	[Phi(1), Phi(2), Phi(3), Phi(4)] = [0.032, 0.023999999999999994, 0.015999999999999993, 0.007999999999999998]
+	|Error| = 1.1636878843346593E-17
+One is Dirichlet condition, the other is Neumann condition:
+	[Phi(1), Phi(2), Phi(3), Phi(4)] = [0.039999999999999994, 0.03999999999999998, 0.03999999999999997, 0.03999999999999997]
+	|Error| = 0.007999999999999995
