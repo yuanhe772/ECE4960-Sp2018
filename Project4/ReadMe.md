@@ -19,6 +19,8 @@ The program breaks down into 4 (and 2 inherited previous-written helper classes)
  
  - ***Main.java:*** Main entry for entire project, tests helper functions, validate ODE solvers, and executes circuit simulations.
  
+ - ***Plot.ipynb:*** Plots the auto-generated output data.
+ 
 #### Inherited source files:
 
 - ***Vector.java:*** Imported from previous-written java project "MatrixAndVector", constructs Vector type, and implements vector operations.
