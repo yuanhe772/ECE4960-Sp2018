@@ -33,4 +33,4 @@ The program breaks down into 4 (and 2 inherited previous-written helper classes)
  
  - ***TestHelper.txt:*** Auto-generated helper functions' test results.
 
- - ***OutputLogFiles:*** Auto-generated output files of ODE solvers' validation, and simulation results of RC and Amplifier circuits
+ - ***OutputLogFiles:*** Output of ODE solvers' validation, and simulation results of RC and Amplifier circuits
