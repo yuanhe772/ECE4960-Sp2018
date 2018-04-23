@@ -5,8 +5,7 @@
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * Project 4, simulation of Task 4 and Task 5:
- * Create circuit simulation log files for different circuits' different 
- * simulations
+ * Creates circuit simulation log files for different circuits
  */
 public class Simulation {
 
@@ -18,7 +17,7 @@ public class Simulation {
 
 	/* Class method: */
 	/**Function: Simulate different circuits with different ODE solvers
-	 * @param: String Circuit, double stepSize, String solverType
+	 * @param: String CircuitType, double stepSize, String solverType
 	 * @return: None
 	 * @throws Exception */
 	public static void simulate(String Circuit, double stepSize, String solverType) throws Exception {

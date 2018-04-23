@@ -6,8 +6,8 @@
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * P4, Main script:
- * The main entry for entire project 4, for testing helper functions, 
- * testing ODE solvers, and executing circuit simulation
+ * The main entry for entire project 4, executes testing for helper functions, 
+ * and ODE solvers, and executes circuit simulations
  */
 public class Main {
 	public static void main(String args[]) throws Exception {
@@ -15,7 +15,7 @@ public class Main {
 
 		/* Test helper functions: */
 		Test.testHelper();
-		
+
 		/* Test ODE solvers: */
 		Test.validateODESolvers("Forward Euler");
 		Test.validateODESolvers("RK4");

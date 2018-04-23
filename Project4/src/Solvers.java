@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
  * P4, implement ODE solvers:
- * Implement ODE solvers, including forward Euler, RK4, and RK34 with time adaption
+ * Implements ODE solvers, including forward Euler, RK4, and RK34 with time adaption
  */
 public class Solvers {
 
@@ -134,7 +134,7 @@ public class Solvers {
 	}
 
 	/**Function: Calculate x[] by RK3 and RK4
-	 * @param: Vector x_i0, double t_i0, double h, String[] fType
+	 * @param: Vector x, double t, double h(step length), String[] fType
 	 * @return: ArrayList<Vector> X = [X(RK3), X(RK4)]*/
 	public static ArrayList<Vector> xRK3_xRK4(Vector x, double t, double h, String[] fType) {
 		ArrayList<Vector> K = K(x, t, h, fType);
@@ -159,7 +159,7 @@ public class Solvers {
 	}
 
 	/**Function: Calculate x[] by RK34 with adaptive h
-	 * @param: Vector x_i0, double t_i0, double h, String fType[]
+	 * @param: Vector x, double t, double h(step length), String fType[]
 	 * @return: */
 	public static Vector RK34AdaptiveH(Vector x, double t, double h, String fType[]) {
 		// Initialize the method data structures
@@ -190,7 +190,7 @@ public class Solvers {
 	}
 
 	/**Function: Calculate the normalized error r = (xRK3 - xRK4) / (eR*xRK4 + eA)
-	 * @param: ArrayList<Vector> RK3_RK4, double eR, double eA
+	 * @param: ArrayList<Vector> [x(RK3), x(RK4)]
 	 * @return: double r*/
 	public static double r(ArrayList<Vector> xRK3_xRK4) {
 		Vector xRK3 = xRK3_xRK4.get(0);
