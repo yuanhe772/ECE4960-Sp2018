@@ -31,6 +31,6 @@ The program breaks down into 4 (and 2 inherited previous-written helper classes)
  
  - ***P4Report.pdf:*** Reports results(plots) and observations for Task1-Task5.
  
- - ***TestHelper.txt:*** Auto-generated helper functions' test results.
+ - ***TestHelperReport.txt:*** Auto-generated helper functions' test results.
 
  - ***OutputLogFiles:*** Output of ODE solvers' validation, and simulation results of RC and Amplifier circuits
