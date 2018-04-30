@@ -26,7 +26,10 @@ Neumann boundary:
 
 
 
-/** Note 7, */
+/** Note 7, page 57
+ * Use the following 1D grid with zero Dirichlet boundary conditions at x = 0 and x = 6. 
+ * The initial condition is u(x=2) = 10 and u(x) = 0 otherwise. 
+ * Solve for u(t, x) for t from 2 to 5.*/
  ############################################## HP2 Output ####################################################
 Up-winding Forward Euler:
     When t = 2: 
