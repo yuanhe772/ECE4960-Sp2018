@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * HP1.java, ECE4960-HW12
@@ -21,7 +22,7 @@ public class HP1 {
 		double ele2 = -D / (h*h);
 		double ele3 = 1.0/deltaT;
 
-		/* 0 Direchlet boundary:*/
+		/* Direchlet boundary:*/
 
 		// Matrix A:
 		double[] valueA = {ele1, ele2, ele2, ele1, ele2, ele2, ele1};
@@ -44,10 +45,10 @@ public class HP1 {
 		for(int i=2; i<=5;i++) {
 			b = B.product(n);
 			n = Jacobi.solver(A,b);
-			System.out.println("    When t = "+i+": \n        n1 = "+n.v[0]+", n2 = "+n.v[1]+", n3 = "+n.v[2]);
+			System.out.println("    When t = "+i+": \n        [n1, n2, n3] = "+Arrays.toString(n.v));
 		}
 
-		/* 0 Neumann boundary:*/
+		/* Neumann boundary:*/
 
 		// Matrix A:
 		double[] valueAA = {ele1-1, ele2, ele2, ele1, ele2, ele2, ele1-1};
@@ -62,7 +63,7 @@ public class HP1 {
 		for(int i=2; i<=5;i++) {
 			b = B.product(nn);
 			nn = Jacobi.solver(AA,b);
-			System.out.println("    When t = "+i+": \n        n1 = "+nn.v[0]+", n2 = "+nn.v[1]+", n3 = "+nn.v[2]);
+			System.out.println("    When t = "+i+": \n        [n1, n2, n3] = "+Arrays.toString(nn.v));
 		}
 	}
 }
