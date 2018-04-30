@@ -40,7 +40,7 @@ public class HP1 {
 		Vector n = new Vector(valueN);
 		Vector b = B.product(n);
 
-		System.out.println("0 Direchlet boundary:");
+		System.out.println("Direchlet boundary:");
 		for(int i=2; i<=5;i++) {
 			b = B.product(n);
 			n = Jacobi.solver(A,b);
@@ -58,7 +58,7 @@ public class HP1 {
 		Vector nn = new Vector(valueNN);
 		b = B.product(nn);
 
-		System.out.println("0 Neumann boundary:");
+		System.out.println("Neumann boundary:");
 		for(int i=2; i<=5;i++) {
 			b = B.product(nn);
 			nn = Jacobi.solver(AA,b);
