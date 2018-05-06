@@ -1,0 +1,118 @@
+/**
+ * HP1.java, ECE4960-HW13
+ * Created by Yuan He(yh772) on 2018/05/01
+ * Note 7, Page 12;
+ * Using RoofTop estimation to estimate sin(x) over (0, pi) */
+ ######################################### HP1 #########################################
+The 1th point: Ground truth f(x) = 0.0,	Approximated f(x) = 0.0
+The 2th point: Ground truth f(x) = 0.03141075907812829,	Approximated f(x) = 0.030614674589207184
+The 3th point: Ground truth f(x) = 0.06279051952931337,	Approximated f(x) = 0.06122934917841437
+The 4th point: Ground truth f(x) = 0.09410831331851433,	Approximated f(x) = 0.09184402376762156
+The 5th point: Ground truth f(x) = 0.12533323356430426,	Approximated f(x) = 0.12245869835682874
+The 6th point: Ground truth f(x) = 0.15643446504023087,	Approximated f(x) = 0.15307337294603593
+The 7th point: Ground truth f(x) = 0.1873813145857246,	Approximated f(x) = 0.1836880475352431
+The 8th point: Ground truth f(x) = 0.2181432413965425,	Approximated f(x) = 0.21430272212445026
+The 9th point: Ground truth f(x) = 0.24868988716485474,	Approximated f(x) = 0.24491739671365742
+The 10th point: Ground truth f(x) = 0.2789911060392292,	Approximated f(x) = 0.2755320713028646
+The 11th point: Ground truth f(x) = 0.30901699437494734,	Approximated f(x) = 0.30614674589207175
+The 12th point: Ground truth f(x) = 0.3387379202452913,	Approximated f(x) = 0.33676142048127894
+The 13th point: Ground truth f(x) = 0.36812455268467786,	Approximated f(x) = 0.36737609507048613
+The 14th point: Ground truth f(x) = 0.3971478906347805,	 Approximated f(x) = 0.395660366317948
+The 15th point: Ground truth f(x) = 0.42577929156507255,	 Approximated f(x) = 0.4216142342236646
+The 16th point: Ground truth f(x) = 0.4539904997395467,	 Approximated f(x) = 0.4475681021293812
+The 17th point: Ground truth f(x) = 0.4817536741017152,	 Approximated f(x) = 0.4735219700350979
+The 18th point: Ground truth f(x) = 0.5090414157503713,	 Approximated f(x) = 0.4994758379408145
+The 19th point: Ground truth f(x) = 0.5358267949789967,	 Approximated f(x) = 0.5254297058465311
+The 20th point: Ground truth f(x) = 0.5620833778521306,	 Approximated f(x) = 0.5513835737522479
+The 21th point: Ground truth f(x) = 0.5877852522924732,	 Approximated f(x) = 0.5773374416579645
+The 22th point: Ground truth f(x) = 0.6129070536529766,	 Approximated f(x) = 0.6032913095636812
+The 23th point: Ground truth f(x) = 0.6374239897486899,	 Approximated f(x) = 0.6292451774693978
+The 24th point: Ground truth f(x) = 0.661311865323652,	 Approximated f(x) = 0.6551990453751145
+The 25th point: Ground truth f(x) = 0.6845471059286888,	 Approximated f(x) = 0.681152913280831
+The 26th point: Ground truth f(x) = 0.7071067811865477,	 Approximated f(x) = 0.7071067811865476
+The 27th point: Ground truth f(x) = 0.7289686274214118,	 Approximated f(x) = 0.7244486012925268
+The 28th point: Ground truth f(x) = 0.7501110696304598,	 Approximated f(x) = 0.741790421398506
+The 29th point: Ground truth f(x) = 0.7705132427757895,	 Approximated f(x) = 0.7591322415044851
+The 30th point: Ground truth f(x) = 0.7901550123756906,	 Approximated f(x) = 0.7764740616104644
+The 31th point: Ground truth f(x) = 0.8090169943749478,	 Approximated f(x) = 0.7938158817164435
+The 32th point: Ground truth f(x) = 0.8270805742745622,	 Approximated f(x) = 0.8111577018224226
+The 33th point: Ground truth f(x) = 0.8443279255020154,	 Approximated f(x) = 0.8284995219284018
+The 34th point: Ground truth f(x) = 0.8607420270039439,	 Approximated f(x) = 0.8458413420343809
+The 35th point: Ground truth f(x) = 0.8763066800438639,	 Approximated f(x) = 0.8631831621403602
+The 36th point: Ground truth f(x) = 0.8910065241883681,	 Approximated f(x) = 0.8805249822463392
+The 37th point: Ground truth f(x) = 0.9048270524660198,	 Approximated f(x) = 0.8978668023523184
+The 38th point: Ground truth f(x) = 0.9177546256839815,	 Approximated f(x) = 0.9152086224582977
+The 39th point: Ground truth f(x) = 0.9297764858882517,	 Approximated f(x) = 0.9269243512108354
+The 40th point: Ground truth f(x) = 0.9408807689542258,	 Approximated f(x) = 0.9330139886099325
+The 41th point: Ground truth f(x) = 0.9510565162951539,	 Approximated f(x) = 0.9391036260090295
+The 42th point: Ground truth f(x) = 0.9602936856769433,	 Approximated f(x) = 0.9451932634081266
+The 43th point: Ground truth f(x) = 0.9685831611286313,	 Approximated f(x) = 0.9512829008072237
+The 44th point: Ground truth f(x) = 0.9759167619387477,	 Approximated f(x) = 0.9573725382063207
+The 45th point: Ground truth f(x) = 0.9822872507286888,	 Approximated f(x) = 0.9634621756054178
+The 46th point: Ground truth f(x) = 0.9876883405951379,	 Approximated f(x) = 0.969551813004515
+The 47th point: Ground truth f(x) = 0.992114701314478,	 Approximated f(x) = 0.9756414504036119
+The 48th point: Ground truth f(x) = 0.9955619646030801,	 Approximated f(x) = 0.981731087802709
+The 49th point: Ground truth f(x) = 0.9980267284282717,	 Approximated f(x) = 0.9878207252018061
+The 50th point: Ground truth f(x) = 0.9995065603657316,	 Approximated f(x) = 0.9939103626009032
+The 51th point: Ground truth f(x) = 1.0,	 Approximated f(x) = 0.9999999999999997
+The 52th point: Ground truth f(x) = 0.9995065603657315,	 Approximated f(x) = 0.9939103626009027
+The 53th point: Ground truth f(x) = 0.9980267284282714,	 Approximated f(x) = 0.9878207252018056
+The 54th point: Ground truth f(x) = 0.9955619646030799,	 Approximated f(x) = 0.9817310878027086
+The 55th point: Ground truth f(x) = 0.9921147013144777,	 Approximated f(x) = 0.9756414504036115
+The 56th point: Ground truth f(x) = 0.9876883405951375,	 Approximated f(x) = 0.9695518130045144
+The 57th point: Ground truth f(x) = 0.9822872507286884,	 Approximated f(x) = 0.9634621756054174
+The 58th point: Ground truth f(x) = 0.9759167619387471,	 Approximated f(x) = 0.9573725382063203
+The 59th point: Ground truth f(x) = 0.9685831611286307,	 Approximated f(x) = 0.9512829008072232
+The 60th point: Ground truth f(x) = 0.9602936856769426,	 Approximated f(x) = 0.9451932634081261
+The 61th point: Ground truth f(x) = 0.9510565162951531,	 Approximated f(x) = 0.9391036260090291
+The 62th point: Ground truth f(x) = 0.9408807689542249,	 Approximated f(x) = 0.933013988609932
+The 63th point: Ground truth f(x) = 0.9297764858882508,	 Approximated f(x) = 0.9269243512108349
+The 64th point: Ground truth f(x) = 0.9177546256839804,	 Approximated f(x) = 0.9152086224582962
+The 65th point: Ground truth f(x) = 0.9048270524660187,	 Approximated f(x) = 0.8978668023523169
+The 66th point: Ground truth f(x) = 0.8910065241883671,	 Approximated f(x) = 0.8805249822463379
+The 67th point: Ground truth f(x) = 0.8763066800438629,	 Approximated f(x) = 0.863183162140359
+The 68th point: Ground truth f(x) = 0.860742027003943,	 Approximated f(x) = 0.8458413420343798
+The 69th point: Ground truth f(x) = 0.8443279255020144,	 Approximated f(x) = 0.8284995219284008
+The 70th point: Ground truth f(x) = 0.8270805742745613,	 Approximated f(x) = 0.8111577018224218
+The 71th point: Ground truth f(x) = 0.809016994374947,	 Approximated f(x) = 0.7938158817164428
+The 72th point: Ground truth f(x) = 0.79015501237569,	 Approximated f(x) = 0.7764740616104637
+The 73th point: Ground truth f(x) = 0.7705132427757889,	 Approximated f(x) = 0.7591322415044847
+The 74th point: Ground truth f(x) = 0.7501110696304594,	 Approximated f(x) = 0.7417904213985056
+The 75th point: Ground truth f(x) = 0.7289686274214114,	 Approximated f(x) = 0.7244486012925266
+The 76th point: Ground truth f(x) = 0.7071067811865476,	 Approximated f(x) = 0.7071067811865476
+The 77th point: Ground truth f(x) = 0.6845471059286888,	 Approximated f(x) = 0.681152913280831
+The 78th point: Ground truth f(x) = 0.6613118653236523,	 Approximated f(x) = 0.6551990453751146
+The 79th point: Ground truth f(x) = 0.6374239897486902,	 Approximated f(x) = 0.6292451774693981
+The 80th point: Ground truth f(x) = 0.6129070536529772,	 Approximated f(x) = 0.6032913095636817
+The 81th point: Ground truth f(x) = 0.5877852522924739,	 Approximated f(x) = 0.5773374416579653
+The 82th point: Ground truth f(x) = 0.5620833778521316,	 Approximated f(x) = 0.5513835737522488
+The 83th point: Ground truth f(x) = 0.5358267949789978,	 Approximated f(x) = 0.5254297058465323
+The 84th point: Ground truth f(x) = 0.5090414157503726,	 Approximated f(x) = 0.4994758379408158
+The 85th point: Ground truth f(x) = 0.48175367410171677,	 Approximated f(x) = 0.4735219700350994
+The 86th point: Ground truth f(x) = 0.45399049973954847,	 Approximated f(x) = 0.4475681021293829
+The 87th point: Ground truth f(x) = 0.4257792915650745,	 Approximated f(x) = 0.42161423422366645
+The 88th point: Ground truth f(x) = 0.3971478906347827,	 Approximated f(x) = 0.39566036631794993
+The 89th point: Ground truth f(x) = 0.3681245526846802,	 Approximated f(x) = 0.3673760950704885
+The 90th point: Ground truth f(x) = 0.3387379202452938,	 Approximated f(x) = 0.33676142048128155
+The 91th point: Ground truth f(x) = 0.30901699437495006,	 Approximated f(x) = 0.3061467458920745
+The 92th point: Ground truth f(x) = 0.2789911060392321,	 Approximated f(x) = 0.2755320713028675
+The 93th point: Ground truth f(x) = 0.24868988716485782,	 Approximated f(x) = 0.24491739671366047
+The 94th point: Ground truth f(x) = 0.21814324139654578,	 Approximated f(x) = 0.21430272212445345
+The 95th point: Ground truth f(x) = 0.18738131458572807,	 Approximated f(x) = 0.18368804753524642
+The 96th point: Ground truth f(x) = 0.1564344650402345,	 Approximated f(x) = 0.15307337294603943
+The 97th point: Ground truth f(x) = 0.12533323356430806,	 Approximated f(x) = 0.1224586983568324
+The 98th point: Ground truth f(x) = 0.09410831331851832,	 Approximated f(x) = 0.09184402376762539
+The 99th point: Ground truth f(x) = 0.06279051952931758,	 Approximated f(x) = 0.061229349178418366
+The 100th point: Ground truth f(x) = 0.03141075907813268,	 Approximated f(x) = 0.030614674589211344
+The 101th point: Ground truth f(x) = 4.563356778415361E-15,	 Approximated f(x) = 4.327628737163782E-15
+Approximated integral = 1.973625727435231, where true integral = 2, the percentage error in the estimated area = %1.3187136282384548
+
+
+
+
+
+/**
+ * HP2.java, ECE4960-HW13
+ * Created by Yuan He(yh772) on 2018/05/03
+ * Note 7(2), page 25 */
+ ######################################### HP2 #########################################
