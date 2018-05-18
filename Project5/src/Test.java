@@ -5,10 +5,10 @@
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * Testing the helper functions in thr progress of implementing this project.
+ * Testing the helper functions used in this project.
  */
 public class Test {
-
+	/*Class Variants: */
 	// A known full matrix, and its equivalent sparse matrix
 	static double full[][] = {{1,2,0,0,3},{4,5,6,0,0},{0,7,8,0,9},{0,0,0,10,0},{11,0,0,0,12}};
 	static double value[] = {1,2,3,4,5,6,7,8,9,10,11,12};
@@ -16,6 +16,7 @@ public class Test {
 	static int colInd[] = {0,1,4,0,1,2,1,2,4,3,0,4};
 	static SparseMatrix sp = new SparseMatrix(value,rowPtr,colInd) ;
 
+	/*Class Methods: */
 	/**Function: Test SparseMatrix.retrieveElement()
 	 * Parameter: None
 	 * Return: None*/

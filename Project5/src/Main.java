@@ -20,7 +20,7 @@ public class Main {
 		Test.testJacobi();
 
 
-		/*------------------------- Validating: 1D Parabolic PDE --------------------------*/
+		/*------------------------- Validating: 1D Parabolic PDE, Heat Conduction Equation --------------------------*/
 		// Initial conditions, and constants
 		double[] initCondition1D = {0, 0, 0, 0, 0, 0, 10, 10, 10, 0, 0, 0, 0, 0, 0};
 		double D1 = 0.15;
@@ -42,7 +42,7 @@ public class Main {
 		PDESolver.solve(new trapezoid1D(), "1D", initial1D, h1, D1, dt1, startTime1, endTime1);
 
 
-		/*------------------------- Validating: 2D Parabolic PDE --------------------------*/
+		/*------------------------- Validating: 2D Parabolic PDE, Heat Conduction Equation --------------------------*/
 		// Initial conditions, and constants
 		double[] initCondition2D = {0,0,0,0,10,0,0,0,0};
 		double D2 = 0.15;

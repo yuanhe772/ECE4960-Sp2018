@@ -58,7 +58,7 @@ public class PDESolver {
 		}
 	}
 
-	/**Function: Construct Matrix A and B for solving 1D parabolic PDE
+	/**Function: Construct Matrix A or B for solving 1D parabolic PDE
 	 * @param: int rank, double term1, double term2
 	 * @return: SparseMatrix A (or B)*/
 	public static SparseMatrix Construct1D(int rank, double term1, double term2) {
@@ -99,7 +99,7 @@ public class PDESolver {
 		return new SparseMatrix(value, rowPtr, colInd);
 	}
 
-	/**Function: Construct Matrix A for solving 2D parabolic PDE
+	/**Function: Construct Matrix A or B for solving 2D parabolic PDE
 	 * @param: int rank, double term1, double term2
 	 * @return: SparseMatrix A (or B)*/
 	public static SparseMatrix Construct2D(int rank, double term1, double term2) {

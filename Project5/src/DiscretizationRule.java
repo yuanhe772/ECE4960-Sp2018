@@ -4,14 +4,14 @@
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * This interface is used to construct Matrix A, B for different discretization rules
- * under different space dimensions (1D and 2D) 
+ * This interface is used to create method handlers for constructing Matrix A and B
+ * for different discretization rules in 1D and 2D 
  */
 
 /**@Interface: provide method handler for different discretizating rules*/
 interface ruleType {
 	
-	/**Function: Construct the elements A1, A2, B1, B2 for constructing matrix A and B
+	/**Function: Construct the elements A1, A2, B1, B2 for matrix A and B
 	 * @param: double h, double D, double dt
 	 * @return: [A1, A2, B1, B2]*/
 	public double[] A1A2B1B2(double h, double D, double dt);
@@ -22,7 +22,7 @@ interface ruleType {
 	public String ruleName();
 }
 
-/**@Protected_classes: implements the abstract methods in interface ruleType*/
+/**@Protected_classes: forward Euler in 1D, implements the abstract methods in interface ruleType*/
 class forward1D implements ruleType {
 	
 	@Override
@@ -40,6 +40,7 @@ class forward1D implements ruleType {
 	}
 }
 
+/**@Protected_classes: backward Euler in 1D, implements the abstract methods in interface ruleType*/
 class backward1D implements ruleType {
 	
 	@Override
@@ -59,6 +60,7 @@ class backward1D implements ruleType {
 	}
 }
 
+/**@Protected_classes: trapezoid Euler in 1D, implements the abstract methods in interface ruleType*/
 class trapezoid1D implements ruleType {
 	
 	@Override
@@ -78,6 +80,7 @@ class trapezoid1D implements ruleType {
 	}
 }
 
+/**@Protected_classes: forward Euler in 2D, implements the abstract methods in interface ruleType*/
 class forward2D implements ruleType {
 
 	@Override
@@ -95,6 +98,7 @@ class forward2D implements ruleType {
 	}
 }
 
+/**@Protected_classes: backward Euler in 2D, implements the abstract methods in interface ruleType*/
 class backward2D implements ruleType {
 	
 	@Override
@@ -114,6 +118,7 @@ class backward2D implements ruleType {
 	}
 }
 
+/**@Protected_classes: trapezoid Euler in 2D, implements the abstract methods in interface ruleType*/
 class trapezoid2D implements ruleType {
 	
 	@Override
