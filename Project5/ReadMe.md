@@ -10,21 +10,21 @@ The program is broken down into: PDESolver.java, DiscretizationRule.java, Main.j
 
 #### Source files:
 
- - ***PDESolver.java:*** Java class, a generic 1D/2D parabolic PDE solver that could take in any arbitrary length of input, constant D, grid size h, delta_t, start and end time. It also interfaces with DiscretizationRule.java, which provides different finite difference discretization rules for solving parabolic PDEs.
+ - ***PDESolver.java:***  Java class, a generic 1D/2D parabolic PDE solver that takes in any arbitrary length of input, constant D, grid size h, delta_t, start and end time. It also interfaces with DiscretizationRule.java, which provides different finite difference discretization rules for solving parabolic PDEs.
  
- - ***DiscretizationRule.java:*** Java interface, provides method handlers for various finite difference discretization rules including forward, backward, trapezoid Euler in both 1D and 2D.
+ - ***DiscretizationRule.java:*** Java interface, provides handlers for different finite difference discretization rules including forward, backward, trapezoid Euler in both 1D and 2D.
  
  - ***TestHelper.java:*** Implements white box testing for helper functions used in this project.
  
- - ***Main.java:*** The main entrance for this project, invokes tests for helper functions, and validates heat equations’ simulation.
+ - ***Main.java:*** The main entrance for this project, invokes tests for helper functions, and validates heat equations’ simulation results.
   
 #### Inherited source files:
 
-- ***Vector.java, SparseMatrix.java:*** Imported from previous-written java project "MatrixAndVector", the data structures for solving PDE equations. Instead of using FullMatrix, SparseMatrix is used because it would be more space efficient when the input vector space is tremendously large.
+- ***Vector.java, SparseMatrix.java:*** Imported from previous-written java project, the data structures for implementing PDE solvers. Instead of FullMatrix, SparseMatrix is used because it would be more space efficient when the input vector space is tremendously large.
 
-- ***FileIO.java:*** Imported from previous-written java project "MatrixAndVector", auto-generate output files and test reports.
+- ***FileIO.java:***  Implements white box testing for helper functions used in this project.
 
-- ***Jacobi.java:*** Imported from previous-written java project "MatrixAndVector", A generic Jacobi-iterative matrix solver, solves PDE equations.
+- ***Jacobi.java:*** Imported from previous-written java project, a generic Jacobi-iterative matrix solver, helps solve PDE equations.
 
 #### Plotting Scripts:
 - ***Plot1D.mat & Plot2D.mat:*** Create the 1D plot and 2D animations for Heat Equations' simulation.
