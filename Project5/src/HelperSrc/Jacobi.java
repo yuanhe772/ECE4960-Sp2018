@@ -66,7 +66,7 @@ public class Jacobi {
 			// Iff the precision decreases with more iteration
 			if(currNN < prevNN) {flag = false;}
 		}		
-		
+
 		// Javobi-Iterative-solver does converge
 		if(flag = true)
 			return currX;
