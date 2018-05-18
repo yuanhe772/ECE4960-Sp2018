@@ -5,6 +5,9 @@ import java.util.ArrayList;
  * Created by Yuan He(yh772) on 2018-03-04
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
+ * 
+ * type SparseMatrix:
+ * Constructs type SparseMatrix, and implement SparseMatrix operations.
  */
 
 public class SparseMatrix {

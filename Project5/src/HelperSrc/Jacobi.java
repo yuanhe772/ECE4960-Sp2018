@@ -3,6 +3,8 @@
  * Created by Yuan He(yh772) on 2018/03/07
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
+ * 
+ * Jacobi Iterative solver.
  */
 
 
@@ -60,13 +62,11 @@ public class Jacobi {
 
 			// Output current iteration's normalized norm to check its convergence
 			currNN = normalNorm(A,currX,b);
-			//			System.out.println("\n		The "+i+"th iteration's normalized-second-norm error: ||A*x - b|| / ||b|| = "+currNN);
 
 			// Iff the precision decreases with more iteration
 			if(currNN < prevNN) {flag = false;}
 		}		
-		//		System.out.println("\n 			To converge to |delta| / |x| < 10^-7, it took iteration times of "+i);
-
+		
 		// Javobi-Iterative-solver does converge
 		if(flag = true)
 			return currX;
