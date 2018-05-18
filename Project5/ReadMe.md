@@ -10,21 +10,21 @@ The program is broken down into: PDESolver.java, DiscretizationRule.java, Main.j
 
 #### Source files:
 
- - ***Solver.java:*** Implements ODE solevrs, including Forward Euler, RK4, and RK34 with time adaption.
+ - ***PDESolver.java:*** Java class, a generic 1D/2D parabolic PDE solver that could take in any arbitrary length of input, constant D, grid size h, delta_t, start and end time. It also interfaces with DiscretizationRule.java, which provides different finite difference discretization rules for solving parabolic PDEs.
  
- - ***Simulation.java:*** Simulates RC circuit and Amplifier circuit by iteratively calling Solver.java, and outputs simulating log files for plotting.
+ - ***DiscretizationRule.java:*** Java interface, provides method handlers for various finite difference discretization rules including forward, backward, trapezoid Euler in both 1D and 2D.
  
- - ***Test.java:*** Validates ODE solvers with the example in previous Hacker Practice, and output ||error%|| log files for plotting; Tests helper functions.
+ - ***TestHelper.java:*** Implements white box testing for helper functions used in this project.
  
- - ***Main.java:*** Main entry for entire project, tests helper functions, validate ODE solvers, and executes circuit simulations.
- 
- - ***Plot.ipynb:*** Plots the auto-generated output data.
- 
+ - ***Main.java:*** The main entrance for this project, invokes tests for helper functions, and validates heat equations’ simulation.
+  
 #### Inherited source files:
 
-- ***Vector.java:*** Imported from previous-written java project "MatrixAndVector", constructs Vector type, and implements vector operations.
+- ***Vector.java, SparseMatrix.java:*** Imported from previous-written java project "MatrixAndVector", the data structures for solving PDE equations. Instead of using FullMatrix, SparseMatrix is used because it would be more space efficient when the input vector space is tremendously large.
 
-- ***FileIO.java:*** Imported from previous-written java project "MatrixAndVector", implements file operations.
+- ***FileIO.java:*** Imported from previous-written java project "MatrixAndVector", auto-generate output files and test reports.
+
+- ***Jacobi.java:*** Imported from previous-written java project "MatrixAndVector", A generic Jacobi-iterative matrix solver, solves PDE equations.
 
 #### Plotting Scripts:
 - ***Plot1D.mat & Plot2D.mat:*** Create the 1D plot and 2D animations for Heat Equations' simulation.
