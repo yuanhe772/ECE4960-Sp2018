@@ -1,1 +1,1 @@
-- The plots and animations in Matlab format, supporting zooming and tilting.
+- The plots and animations in Matlab format, supporting figures' zooming and tilting.
