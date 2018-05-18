@@ -1,0 +1,17 @@
+
+
+
+  SparseMatrix.retrieveElement() Testing: 
+	PASSED: Function's output correctness testing! By comparing if the retrieved elements of a SparseMatrix is identical to a known FullMatrix.
+
+
+  SparseMatrix.matrixSetter() Testing: 
+	PASSED: Function's output correctness testing! By comparing if the matrix created by matrixSetter() is identical to a known FullMatrix.
+
+
+  SparseMatrix.product() Testing: 
+	PASSED: Function's output correctness testing! By comparing if the product of Matrix*Vector equals to the known ground truth.
+
+
+  Jacobi.Solver() Testing: 
+	PASSED: Function's output correctness testing! By comparing if the calculated X is identical to a known ground truth.
