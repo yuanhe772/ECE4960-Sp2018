@@ -1,2 +1,2 @@
 - The numerical outputs of heat equation's simulation.
-- Within the .txt files, each row represents a "screenshot" of the space's temperature at a specific time stamp.
+- Within the .txt files, each row represents a "screenshot" of the space's temperature at a specific time.
