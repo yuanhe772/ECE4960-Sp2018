@@ -1,5 +1,5 @@
 # ECE4960 - Programming Assignment 5
-## A Generic 1D/2D Parabolic PDE Solver for Heat Equation with Finite Difference
+- A Generic 1D/2D Parabolic PDE Solver for Heat Equation with Finite Difference
 ## Name: Yuan He(yh772)
 
 ### 1. Overview:
