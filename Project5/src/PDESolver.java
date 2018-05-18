@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Platform: Java 8, Eclipse, MacOS
  * Copyright © 2018 Yuan He. All rights reserved.
  * 
- * Generic Parabolic PDE solver.
+ * Generic Parabolic PDE solver in 1D and 2D.
  */
 public class PDESolver {
 
@@ -32,9 +32,7 @@ public class PDESolver {
 			b = B.productVec(init);
 			// The initial condition (boundary condition comes from previous solutions)
 			init = Jacobi.solver(A,b);
-			//			FileIO.output("    When t = "+i+": \n        [n] = "+Arrays.toString(init.v));
 			FileIO.output(Arrays.toString(init.v)+"\n");
-
 		}
 	}
 
@@ -52,13 +50,11 @@ public class PDESolver {
 
 		// Create log files to store the output
 		FileIO.createReport(rule.ruleName()+".txt","");
-		
+
 		// Solve step-wisely
 		for(double i=startT; i<=endT;i++) {
 			init = A.productVec(init);
 			FileIO.output(Arrays.toString(init.v)+"\n");
-
-			//			System.out.println("    When t = "+i+": \n        [n1, n2, n3] = "+Arrays.toString(init.v));
 		}
 	}
 

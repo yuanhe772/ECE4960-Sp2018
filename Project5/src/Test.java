@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 /**
  * Test.java, ECE4960-P5
@@ -110,13 +109,6 @@ public class Test {
 		// The ground-truth
 		double[] xTruth = {-0.3793103119831519, -0.4083483960392904, -0.11615241724631017, -0.056261322732868616, -0.1088929016802376};
 		Vector XTruth = new Vector(xTruth);
-		
-		for(int i=0; i<2; i++) {
-			for(int j=0; j<2; j++) {
-				System.out.println(A.retrieveElement(i, j)[1]);
-			}
-		}
-		System.out.println(Arrays.toString(res.v));
 
 		// Comparing
 		boolean flag = true;
@@ -145,5 +137,4 @@ public class Test {
 		}
 		return i+j == 2*sp.rank;
 	}
-
 }
