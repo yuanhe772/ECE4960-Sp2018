@@ -1,0 +1,1 @@
+- The animations, plots and output log files for parabolic PDE solver that simulates the heat conduction equations in 1D and 2D.
