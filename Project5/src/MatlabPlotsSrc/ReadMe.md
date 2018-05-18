@@ -1,1 +1,1 @@
-- The matlab scripts for 1D plots and 2D animations.
+- The matlab scripts for creating 1D plots and 2D animations.
