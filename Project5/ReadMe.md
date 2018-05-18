@@ -26,10 +26,15 @@ The program is broken down into: PDESolver.java, DiscretizationRule.java, Main.j
 
 - ***FileIO.java:*** Imported from previous-written java project "MatrixAndVector", implements file operations.
 
+#### Plotting Scripts:
+- ***Plot1D.mat & Plot2D.mat:*** Create the 1D plot and 2D animations for Heat Equations' simulation.
+
 #### Reports and ouputs:
  
- - ***P4Report.pdf:*** Reports results(plots) and observations for Task1-Task5.
+ - ***Report.pdf:*** Implementation details, testing strategies, program results(plots) and observations for this project.
  
  - ***TestHelperReport.txt:*** Auto-generated helper functions' test results.
 
- - ***OutputLogFiles:*** Output of ODE solvers' validation, and simulation results of RC and Amplifier circuits
+ - ***HeatEquationSimulationLogFiles:*** Simulation results of heat equations solved by this generic parabolic PDE solver.
+ 
+ - ***.jpg & .gif files***: Heat equations' simulation visualizations in 1D and 2D.
